@@ -29,8 +29,8 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                         'alias' => 'p',
                         'type' => 'static',
                         'column' => 'id',
-                        'value' => '5',
                         'route' => '',
+                        'value' => '5',
                         'value_id' => ''
                     ]
                 ],
@@ -53,8 +53,8 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                         'alias' => 'c',
                         'type' => 'static',
                         'column' => 'slug',
-                        'value' => ['service'],
                         'route' => '',
+                        'value' => ['service'],
                         'value_id' => []
                     ]
                 ],
@@ -62,8 +62,8 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                     [
                         'alias' => 'p',
                         'type' => 'dynamic',
-                        'route' => 'slug',
                         'column' => 'slug',
+                        'route' => 'slug',
                         'value' => '',
                         'value_id' => ''
                     ]
@@ -86,8 +86,8 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                     [
                         'alias' => 'p',
                         'type' => 'static',
-                        'route' => 'slug',
                         'column' => 'slug',
+                        'route' => 'slug',
                         'value' => '',
                         'value_id' => ''
                     ]
@@ -127,8 +127,8 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                     [
                         'alias' => 'p',
                         'type' => 'dynamic',
-                        'route' => 'slug',
                         'column' => 'slug',
+                        'route' => 'slug',
                         'value' => '',
                         'value_id' => ''
                     ]
