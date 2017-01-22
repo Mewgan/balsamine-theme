@@ -10,7 +10,7 @@ use Jet\Models\Page;
 use Jet\Models\Section;
 use Jet\Models\Website;
 
-class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
+class LoadContent extends AbstractFixture implements OrderedFixtureInterface
 {
     private $data = [
         /* Balsamine website post module content */
@@ -30,8 +30,7 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                         'type' => 'static',
                         'column' => 'id',
                         'route' => '',
-                        'value' => '5',
-                        'value_id' => ''
+                        'value' => [5],
                     ]
                 ],
             ]
@@ -54,8 +53,7 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                         'type' => 'static',
                         'column' => 'slug',
                         'route' => '',
-                        'value' => ['service'],
-                        'value_id' => []
+                        'value' => [1]
                     ]
                 ],
                 'link' => [
@@ -111,7 +109,6 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                         'column' => 'id',
                         'route' => 'id',
                         'value' => [],
-                        'value_id' => []
                     ],*/
                     [
                         'alias' => 'c',
@@ -119,7 +116,6 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                         'column' => 'slug',
                         'route' => 'slug',
                         'value' => [],
-                        'value_id' => []
                     ],
                 ],
                 'route_name' => 'module:post.type:dynamic.action:read',
@@ -151,8 +147,7 @@ class LoadPostContent extends AbstractFixture implements OrderedFixtureInterface
                         'type' => 'dynamic',
                         'column' => 'slug',
                         'route' => 'slug',
-                        'value' => [],
-                        'value_id' => []
+                        'value' => []
                     ]
                 ]
             ]
