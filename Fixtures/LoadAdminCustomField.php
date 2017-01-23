@@ -15,15 +15,15 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
     use LoadPostFixture;
 
     protected $data = [
-        /* Aster fields */
-        'aster_opening_hours' => [
+        /* Balsamine fields */
+        'balsamine_opening_hours' => [
             'scope' => 'global',
             'title' => 'Horaires d\'ouverture',
             'name' => 'opening_hours',
             'type' => 'wysiwyg',
             'position' => 0,
             'parent' => null,
-            'cf' => 'Aster Default Global',
+            'cf' => 'Balsamine Default Global',
             'data' => [],
             'content' => ['value' => '<p><strong>Monday - Wednesday</strong><br/>
                 09 AM - 6 PM
@@ -35,28 +35,28 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 closed
             </p>']
         ],
-        'aster_social' => [
+        'balsamine_social' => [
             'scope' => 'global',
             'title' => 'Réseaux sociaux',
             'name' => 'social_networks',
             'type' => 'repeater',
             'position' => 1,
             'parent' => null,
-            'cf' => 'Aster Default Global',
+            'cf' => 'Balsamine Default Global',
             'data' => [],
             'content' => [
                 'type' => 'repeater',
                 'rows' => [0,1]
             ]
         ],
-        'aster_social_name' => [
+        'balsamine_social_name' => [
             'scope' => 'global',
             'title' => 'Nom',
             'name' => 'name',
             'type' => 'string',
             'position' => 0,
-            'parent' => 'aster_social',
-            'cf' => 'Aster Specific Global',
+            'parent' => 'balsamine_social',
+            'cf' => 'Balsamine Default Global',
             'data' => [],
             'content' => [
                 'value' => [
@@ -65,14 +65,14 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 ]
             ]
         ],
-        'aster_social_link' => [
+        'balsamine_social_link' => [
             'scope' => 'global',
             'title' => 'Lien',
             'name' => 'link',
             'type' => 'string',
             'position' => 1,
-            'parent' => 'aster_social',
-            'cf' => 'Aster Specific Global',
+            'parent' => 'balsamine_social',
+            'cf' => 'Balsamine Default Global',
             'data' => [],
             'content' => [
                 'value' => [
@@ -81,432 +81,251 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 ]
             ]
         ],
-        'aster_loading_media' => [
+        'balsamine_booking' => [
             'scope' => 'global',
-            'title' => 'Image du loader',
-            'name' => 'loading_media',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => null,
-            'cf' => 'Aster Specific Global',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['value' => '/src/Themes/Aster/Resources/public/img/logo-intro.png']
-        ],
-        'aster_header_subtitle' => [
-            'scope' => 'global',
-            'title' => 'Sous titre',
-            'name' => 'header_subtitle',
+            'title' => 'Lien du rendez-vous en ligne',
+            'name' => 'booking_link',
             'type' => 'string',
-            'position' => 1,
-            'parent' => null,
-            'cf' => 'Aster Specific Global',
-            'data' => [],
-            'content' => ['value' => 'Services of the utmost quality']
-        ],
-        'aster_header_background' => [
-            'scope' => 'global',
-            'title' => 'Image du slider',
-            'name' => 'header_background',
-            'type' => 'media',
             'position' => 2,
             'parent' => null,
-            'cf' => 'Aster Specific Global',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['value' => '/src/Themes/Aster/Resources/public/img/hero.jpg']
+            'cf' => 'Balsamine Default Global',
+            'data' => [],
+            'content' => ['value' => '#']
         ],
-        /* Aster home page fields */
-        'aster_home_top_left_bloc' => [
-            'scope' => 'specified',
-            'title' => 'Titre de bienvenue',
-            'name' => 'welcome_title',
-            'type' => 'string',
+        /* Theme specific */
+        'balsamine_homepage_layout' => [
+            'scope' => 'global',
+            'title' => 'Modèle de thème pour la page d\'accueil',
+            'name' => 'homepage_model',
+            'type' => 'select',
             'position' => 0,
             'parent' => null,
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' => 'BIENVENUE SUR ASTER SOCIETY']
+            'cf' => 'Balsamine Specific Global',
+            'data' => [
+                'contents' => [
+                    ['key' => 'static','value' => 'Statique'],
+                    ['key' => 'slider','value' => 'Slider'],
+                    ['key' => 'video','value' => 'Vidéo'],
+                ],
+                'multiple' => false
+            ],
+            'content' => ['value' => 'static']
         ],
-        'aster_home_top_center_bloc' => [
-            'scope' => 'specified',
-            'title' => 'Texte de bienvenue',
-            'name' => 'welcome_text',
-            'type' => 'wysiwyg',
+        'balsamine_theme_color' => [
+            'scope' => 'global',
+            'title' => 'Couleur du thème',
+            'name' => 'theme_color',
+            'type' => 'select',
             'position' => 1,
             'parent' => null,
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => [
-                'page@society-aster-home' => 'Established in 1995, the salon always was a place, where people with sense for current trends found a stylist who understood to turn their vision into reality, and who was able to create a look that ephasized their individuality. 
-
-Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur.'
-            ]
+            'cf' => 'Balsamine Specific Global',
+            'data' => [
+                'contents' => [
+                    ['key' => 'green','value' => 'Vert'],
+                    ['key' => 'orange','value' => 'Orange'],
+                    ['key' => 'red','value' => 'Rouge'],
+                    ['key' => 'blue','value' => 'Bleu'],
+                    ['key' => 'pink','value' => 'Route'],
+                    ['key' => 'yellow','value' => 'Jaune'],
+                    ['key' => 'purple','value' => 'Violet'],
+                    ['key' => 'brown','value' => 'Marron'],
+                    ['key' => 'aqua','value' => 'Aqua'],
+                ],
+                'multiple' => false
+            ],
+            'content' => ['value' => 'pink']
         ],
-        'aster_home_carrousel' => [
-            'scope' => 'specified',
-            'title' => 'Carrousel',
-            'name' => 'carrousel',
+        'balsamine_header_style' => [
+            'scope' => 'global',
+            'title' => 'Position du menu',
+            'name' => 'navigation_position',
+            'type' => 'select',
+            'position' => 2,
+            'parent' => null,
+            'cf' => 'Balsamine Specific Global',
+            'data' => [
+                'contents' => [
+                    ['key' => 'center','value' => 'Milieu'],
+                    ['key' => 'left','value' => 'Gauche'],
+                ],
+                'multiple' => false
+            ],
+            'content' => ['value' => 'center']
+        ],
+        'balsamine_homepage_1' => [
+            'scope' => 'global',
+            'title' => 'Configuration pour le modèle "Statique"',
+            'name' => 'homepage_1',
             'type' => 'repeater',
-            'position' => 2,
+            'position' => 3,
             'parent' => null,
-            'cf' => 'Aster Home Page',
+            'cf' => 'Balsamine Specific Global',
             'data' => [
-                'min_row' => '3',
-                'max_row' => '3'
+                'min_row' => 1,
+                'max_row' => 1,
             ],
             'content' => [
                 'type' => 'repeater',
-                'rows@page@society-aster-home' => [0,1,2]
+                'rows' => [0]
             ]
         ],
-        'aster_home_carrousel_img' => [
-            'scope' => 'specified',
-            'title' => 'Image',
+        'balsamine_homepage_1_background' => [
+            'scope' => 'global',
+            'title' => 'Image du background',
+            'name' => 'background_image',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => 'balsamine_homepage_1',
+            'cf' => 'Balsamine Specific Global',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['value' =>
+                ['/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg']
+            ]
+        ],
+        'balsamine_homepage_1_activities' => [
+            'scope' => 'global',
+            'title' => 'Activités',
+            'name' => 'activities',
+            'type' => 'repeater',
+            'position' => 1,
+            'parent' => 'balsamine_homepage_1',
+            'cf' => 'Balsamine Specific Global',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows' => [ 0 => [0,1,2,3,4,5]]
+            ]
+        ],
+        'balsamine_homepage_1_activity_title' => [
+            'scope' => 'global',
+            'title' => 'Titre',
+            'name' => 'title',
+            'type' => 'string',
+            'position' => 0,
+            'parent' => 'balsamine_homepage_1_activities',
+            'cf' => 'Balsamine Specific Global',
+            'data' => [],
+            'content' => [
+                'value' => [0 => ['Hair Care', 'Make Up', 'Facial', 'Massage', 'Nail Care', 'Waxing']]
+            ]
+        ],
+        'balsamine_homepage_2' => [
+            'scope' => 'global',
+            'title' => 'Configuration pour le modèle "Slider"',
+            'name' => 'homepage_2',
+            'type' => 'repeater',
+            'position' => 4,
+            'parent' => null,
+            'cf' => 'Balsamine Specific Global',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows' => [0,1]
+            ]
+        ],
+        'balsamine_homepage_2_slider_image' => [
+            'scope' => 'global',
+            'title' => 'Images du slider',
             'name' => 'image',
             'type' => 'media',
             'position' => 0,
-            'parent' => 'aster_home_carrousel',
-            'cf' => 'Aster Home Page',
+            'parent' => 'balsamine_homepage_2',
+            'cf' => 'Balsamine Specific Global',
             'data' => [
                 'media_render_type' => 'object'
             ],
-            'content' => [
-                'page@society-aster-home' => [
-                    '/src/Themes/Aster/Resources/public/img/slide-1.jpg',
-                    '/src/Themes/Aster/Resources/public/img/slide-2.jpg',
-                    '/src/Themes/Aster/Resources/public/img/slide-3.jpg',
-                ]
+            'content' => ['value' => [
+                    '/src/Themes/Balsamine/Resources/public/img/images-slider/wide7.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/images-slider/wide8.jpg'
+                ],
             ]
         ],
-        'aster_home_second_left_bloc' => [
-            'scope' => 'specified',
-            'title' => 'Titre du bloc 2',
-            'name' => 'second_bloc_title',
+        'balsamine_homepage_2_slider_title' => [
+            'scope' => 'global',
+            'title' => 'Titre du slider',
+            'name' => 'title',
             'type' => 'string',
-            'position' => 3,
-            'parent' => null,
-            'cf' => 'Aster Home Page',
+            'position' => 1,
+            'parent' => 'balsamine_homepage_2',
+            'cf' => 'Balsamine Specific Global',
             'data' => [],
-            'content' => ['page@society-aster-home' => 'NOTRE SALON']
+            'content' => ['value' => [
+                    'BEAUTY SALON',
+                    'FROM HEAD TO TOE'
+                ],
+            ]
         ],
-        'aster_home_second_right_bloc' => [
-            'scope' => 'specified',
-            'title' => 'Image du bloc 2',
-            'name' => 'second_bloc_image',
-            'type' => 'media',
-            'position' => 4,
-            'parent' => null,
-            'cf' => 'Aster Home Page',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-aster-home' => '/src/Themes/Aster/Resources/public/img/panorama.jpg']
+        'balsamine_homepage_2_slider_link' => [
+            'scope' => 'global',
+            'title' => 'Lien du slider',
+            'name' => 'link',
+            'type' => 'string',
+            'position' => 2,
+            'parent' => 'balsamine_homepage_2',
+            'cf' => 'Balsamine Specific Global',
+            'data' => [],
+            'content' => ['value' =>
+                ['#',''],
+            ]
         ],
-        'aster_home_third_bloc' => [
-            'scope' => 'specified',
-            'title' => 'Article',
-            'name' => 'third_post_bloc',
-            'type' => 'post',
-            'website' => 'Aster Website',
+        'balsamine_homepage_3' => [
+            'scope' => 'global',
+            'title' => 'Configuration pour le modèle "Vidéo"',
+            'name' => 'homepage_3',
+            'type' => 'repeater',
             'position' => 5,
             'parent' => null,
-            'cf' => 'Aster Home Page',
+            'cf' => 'Balsamine Specific Global',
             'data' => [
-                'categories' => ['actualite']
+                'min_row' => 1,
+                'max_row' => 1,
             ],
-            'content' => ['page@society-aster-home' => 'aster-the-master-vision']
-        ],
-        'aster_home_team' => [
-            'scope' => 'specified',
-            'title' => 'Equipe',
-            'name' => 'team',
-            'type' => 'repeater',
-            'position' => 6,
-            'parent' => null,
-            'cf' => 'Aster Home Page',
-            'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows@page@society-aster-home' => [0,1,2,3,4,5,6,7,8]
+                'rows' => [0]
             ]
         ],
-        'aster_home_team_barber_name' => [
-            'scope' => 'specified',
-            'title' => 'Nom',
-            'name' => 'name',
+        'balsamine_homepage_3_background' => [
+            'scope' => 'global',
+            'title' => 'Lien du vidéo de background',
+            'name' => 'background_video',
             'type' => 'string',
             'position' => 0,
-            'parent' => 'aster_home_team',
-            'cf' => 'Aster Home Page',
+            'parent' => 'balsamine_homepage_3',
+            'cf' => 'Balsamine Specific Global',
             'data' => [],
-            'content' => ['page@society-aster-home' =>
-                [
-                    'Gina','Adam','Josh','Valerie','Lucy','Mike','Robin','Jessica','Amy'
-                ]
+            'content' => ['value' =>
+                ['/src/Themes/Balsamine/Resources/public/video/salon_1.mp4']
             ]
         ],
-        'aster_home_team_barber_photo' => [
-            'scope' => 'specified',
-            'title' => 'Photo',
-            'name' => 'photo',
-            'type' => 'media',
-            'position' => 1,
-            'parent' => 'aster_home_team',
-            'cf' => 'Aster Home Page',
-            'data' => ['media_render_type' => 'object'],
-            'content' => ['page@society-aster-home' => [
-                    '/src/Themes/Aster/Resources/public/img/team-gina.jpg',
-                    '/src/Themes/Aster/Resources/public/img/team-adam.jpg',
-                    '/src/Themes/Aster/Resources/public/img/team-josh.jpg',
-                    '/src/Themes/Aster/Resources/public/img/team-valerie.jpg',
-                    '/src/Themes/Aster/Resources/public/img/team-lucy.jpg',
-                    '/src/Themes/Aster/Resources/public/img/team-mike.jpg',
-                    '/src/Themes/Aster/Resources/public/img/team-robin.jpg',
-                    '/src/Themes/Aster/Resources/public/img/team-jessica.jpg',
-                    '/src/Themes/Aster/Resources/public/img/team-amy.jpg',
-                ]
-            ]
-        ],
-        'aster_home_team_barber_profession' => [
-            'scope' => 'specified',
-            'title' => 'Profession',
-            'name' => 'profession',
-            'type' => 'string',
-            'position' => 2,
-            'parent' => 'aster_home_team',
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' => [
-                'Evening Styles','Men\'s Styles','Fashion Cuts','Color Artist','Youngsters Styles','Creative Colors','Evening Styles','Extensions','Make Overs']
-            ]
-        ],
-        'aster_home_team_barber_description' => [
-            'scope' => 'specified',
-            'title' => 'Description',
-            'name' => 'description',
-            'type' => 'textarea',
-            'position' => 3,
-            'parent' => 'aster_home_team',
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' =>
-                [
-                    'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient.',
-                    'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient.',
-                    'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient.',
-                    'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient.',
-                    'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient.',
-                    'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient.',
-                    'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient.',
-                    'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient.',
-                    'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient.',
-                ]
-            ]
-        ],
-        'aster_home_service_category' => [
-            'scope' => 'specified',
-            'title' => 'Catégories de service',
-            'name' => 'service_categories',
-            'type' => 'repeater',
-            'position' => 7,
-            'parent' => null,
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-aster-home' => [0,1]
-            ]
-        ],
-        'aster_home_service_category_name' => [
-            'scope' => 'specified',
-            'title' => 'Nom',
-            'name' => 'name',
-            'type' => 'string',
-            'position' => 0,
-            'parent' => 'aster_home_service_category',
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' => ['Basics','Color']]
-        ],
-        'aster_home_service' => [
-            'scope' => 'specified',
-            'title' => 'Services',
-            'name' => 'services',
-            'type' => 'repeater',
-            'position' => 8,
-            'parent' => null,
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-aster-home' => [0,1,2,3,4,5,6,7]
-            ]
-        ],
-        'aster_home_service_name' => [
-            'scope' => 'specified',
-            'title' => 'Nom',
-            'name' => 'name',
-            'type' => 'string',
-            'position' => 0,
-            'parent' => 'aster_home_service',
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' => ['Cut & Style','Quick cut','Coloration','Wash & Go','Evening Style','Highlights','Hightlights & Lowlights','Balayage']]
-        ],
-        'aster_home_service_cat' => [
-            'scope' => 'specified',
-            'title' => 'Catégorie',
-            'name' => 'category',
-            'type' => 'string',
-            'position' => 1,
-            'parent' => 'aster_home_service',
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' => ['Basics','Basics','Color','Basics','Basics','Color','Color','Color']]
-        ],
-        'aster_home_service_description' => [
-            'scope' => 'specified',
-            'title' => 'Description',
-            'name' => 'description',
-            'type' => 'textarea',
-            'position' => 2,
-            'parent' => 'aster_home_service',
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' => ['Basic cut and fashion style','Basic cut and fashion style','Full head coloration','Wash and blow dry','A festive hair do for your event','Basic cut and fashion style','A complete color transformation','Freestyle color application by one of our top stylists']]
-        ],
-        'aster_home_service_price' => [
-            'scope' => 'specified',
-            'title' => 'Prix',
-            'name' => 'price',
-            'type' => 'string',
-            'position' => 3,
-            'parent' => 'aster_home_service',
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' => ['$ 139','$ 89','$ 139','$ 149','$ 159','$ 39','$ 239','$ 339']]
-        ],
-        'aster_home_testimonial' => [
-            'scope' => 'specified',
-            'title' => 'Témoignages',
-            'name' => 'testimonial',
-            'type' => 'repeater',
-            'position' => 9,
-            'parent' => null,
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-aster-home' => [0,1,2]
-            ]
-        ],
-        'aster_home_testimonial_text' => [
-            'scope' => 'specified',
-            'title' => 'Texte',
-            'name' => 'text',
-            'type' => 'wysiwyg',
-            'position' => 0,
-            'parent' => 'aster_home_testimonial',
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' =>
-                [
-                    '<p>I was blown away - literally - by the style Gina did for my
-                            red carpet event. <br/>She managed to make me look fabulous but still catch my personal style.  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                        </p>',
-                    '<p>When it comes to hair, there shouldn\'t be compromise.<br/>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.Est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                        </p>',
-                    '<p>Nobody\'s got time for bad hair days!<br/>Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                        </p>'
-
-                ]
-            ]
-        ],
-        'aster_home_testimonial_user' => [
-            'scope' => 'specified',
-            'title' => 'Client',
-            'name' => 'user',
-            'type' => 'string',
-            'position' => 1,
-            'parent' => 'aster_home_testimonial',
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => ['page@society-aster-home' => ['Jennifer Lawrence','Heidi Klum','Taylor Swift']]
-        ],
-        'aster_home_gallery' => [
-            'scope' => 'specified',
-            'title' => 'Gallerie',
-            'name' => 'gallery',
-            'type' => 'repeater',
-            'position' => 10,
-            'parent' => null,
-            'cf' => 'Aster Home Page',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-aster-home' => [0,1,2,3,4,5]
-            ]
-        ],
-        'aster_home_gallery_image' => [
-            'scope' => 'specified',
-            'title' => 'Photo',
-            'name' => 'photo',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => 'aster_home_gallery',
-            'cf' => 'Aster Home Page',
-            'data' => ['media_render_type' => 'object'],
-            'content' => ['page@society-aster-home' => [
-                '/src/Themes/Aster/Resources/public/img/client-sabrina.jpg',
-                '/src/Themes/Aster/Resources/public/img/client-kameko.jpg',
-                '/src/Themes/Aster/Resources/public/img/client-marin.jpg',
-                '/src/Themes/Aster/Resources/public/img/client-josh.jpg',
-               '/src/Themes/Aster/Resources/public/img/client-steve.jpg',
-                '/src/Themes/Aster/Resources/public/img/client-boy.jpg',
-            ]
-            ]
-        ],
-        'aster_home_gallery_title' => [
-            'scope' => 'specified',
+        'balsamine_homepage_3_background_title' => [
+            'scope' => 'global',
             'title' => 'Titre',
             'name' => 'title',
             'type' => 'string',
             'position' => 1,
-            'parent' => 'aster_home_gallery',
-            'cf' => 'Aster Home Page',
+            'parent' => 'balsamine_homepage_3',
+            'cf' => 'Balsamine Specific Global',
             'data' => [],
-            'content' => ['page@society-aster-home' => [
-                'Sabrina with a twist',
-                'Kameko on her big day',
-                'The redhead',
-                'Adam showing off',
-                'Boys want to look good too',
-                '*caption this* :-)',
-            ]]
+            'content' => ['value' =>
+                ['QUALITY & SERVICES']
+            ]
         ],
-        'aster_home_gallery_content' => [
-            'scope' => 'specified',
-            'title' => 'Contenu',
-            'name' => 'content',
-            'type' => 'textarea',
+        'balsamine_homepage_3_background_link' => [
+            'scope' => 'global',
+            'title' => 'Lien',
+            'name' => 'link',
+            'type' => 'string',
             'position' => 2,
-            'parent' => 'aster_home_gallery',
-            'cf' => 'Aster Home Page',
+            'parent' => 'balsamine_homepage_3',
+            'cf' => 'Balsamine Specific Global',
             'data' => [],
-            'content' => ['page@society-aster-home' => [
-                'Our top stylist Josh did a grat job with this \'twisted\' hair style for Sabrina.',
-                'Kameko trusted us with the hair do for the big day. Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla.',
-                'There is only one person Marin entrusts her red mane...',
-                'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo.',
-                'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo.',
-                'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo.',
-            ]]
-        ],
+            'content' => ['value' =>
+                ['#'],
+            ]
+        ]
     ];
 
     public function load(ObjectManager $manager)
@@ -524,10 +343,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus molli
     function getDependencies()
     {
         return [
-            'Jet\Themes\Aster\Fixtures\LoadMedia',
-            'Jet\Themes\Aster\Fixtures\LoadPage',
-            'Jet\Themes\Aster\Fixtures\LoadWebsite',
-            'Jet\Themes\Aster\Fixtures\LoadCustomField'
+            'Jet\Themes\Balsamine\Fixtures\LoadMedia',
+            'Jet\Themes\Balsamine\Fixtures\LoadPage',
+            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
+            'Jet\Themes\Balsamine\Fixtures\LoadCustomField'
         ];
     }
 }

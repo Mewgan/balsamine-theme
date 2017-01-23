@@ -14,89 +14,117 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
     use LoadPostFixture;
 
     protected $data = [
-        /* Aster website posts */
-        'aster-the-master-vision' => [
-            'title' => 'The master vision',
-            'slug' => 'the-master-vision',
-            'short_description' => 'Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'content' => '<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur.</p>
-                <p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <span class="signature">Jacques Aux Mains D’Argent</span>
-                </p>',
-            'thumbnail' => '/src/Themes/Aster/Resources/public/img/master.jpg',
+        /* Balsamine website posts */
+        'balsamine-service-1' => [
+            'title' => 'Hair',
+            'slug' => 'hair',
+            'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-1.jpg',
+            'categories' => [
+                'service'
+            ],
+            'website' => 'balsamine-society'
+        ],
+        'balsamine-service-2' => [
+            'title' => 'Make Up',
+            'slug' => 'make-up',
+            'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-2.jpg',
+            'categories' => [
+                'service'
+            ],
+            'website' => 'balsamine-society'
+        ],
+        'balsamine-service-3' => [
+            'title' => 'Facial',
+            'slug' => 'facial',
+            'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-3.jpg',
+            'categories' => [
+                'service'
+            ],
+            'website' => 'balsamine-society'
+        ],
+        'balsamine-service-4' => [
+            'title' => 'Massage',
+            'slug' => 'massage',
+            'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-4.jpg',
+            'categories' => [
+                'service'
+            ],
+            'website' => 'balsamine-society'
+        ],
+        'balsamine-service-5' => [
+            'title' => 'Nail',
+            'slug' => 'nail',
+            'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-5.jpg',
+            'categories' => [
+                'service'
+            ],
+            'website' => 'balsamine-society'
+        ],
+        'balsamine-service-6' => [
+            'title' => 'Waxing',
+            'slug' => 'waxing',
+            'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-6.jpg',
+            'categories' => [
+                'service'
+            ],
+            'website' => 'balsamine-society'
+        ],
+        'balsamine-actu-1' => [
+            'title' => 'How to Make Your Hair Grow Faster',
+            'slug' => 'how-to-make-your-hair-grow-faster',
+            'short_description' => 'Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one\'s hair type and according to various processes that can be applied to hair. All hair is not the same; hair is a manifestation of human diversity.',
+            'content' => '<p>Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one\'s hair type and according to various processes that can be applied to hair. All hair is not the same; hair is a manifestation of human diversity.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/blog/pic-blog-1.jpg',
             'categories' => [
                 'actualite'
             ],
-            'website' => 'aster-society'
+            'website' => 'balsamine-society'
         ],
-        'aster-mariage' => [
-            'title' => 'Mariage',
-            'slug' => 'mariage',
-            'short_description' => 'Parce que le mariage est un moment unique, Aster Society propose de nombreux services pour satisfaire toutes les envies des mariés.',
-            'content' => 'Parce que le mariage est un moment unique, Aster Society propose de nombreux services pour satisfaire toutes les envies des mariés.
-
-En plus des coiffures traditionnelles, nos spécialistes vous conseillent (à l\'aide de photos modèles) afin de réaliser la coiffure dont vous rêvez. N\'hésitez pas à venir en discuter avec notre équipe.',
-            'thumbnail' => '/public/media/article-1.jpg',
+        'balsamine-actu-2' => [
+            'title' => '5 Ways to Make Hair Look Gorgeous',
+            'slug' => '5-ways-to-make-hair-look-gorgeous',
+            'short_description' => 'Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one\'s hair type and according to various processes that can be applied to hair. All hair is not the same; hair is a manifestation of human diversity.',
+            'content' => '<p>Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one\'s hair type and according to various processes that can be applied to hair. All hair is not the same; hair is a manifestation of human diversity.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/blog/pic-blog-2.jpg',
             'categories' => [
-                'service'
+                'actualite'
             ],
-            'website' => 'aster-society'
+            'website' => 'balsamine-society'
         ],
-        'aster-intervention-en-entreprise' => [
-            'title' => 'Intervention en entreprise',
-            'slug' => 'intervention-en-entreprise',
-            'short_description' => 'De plus en plus d\'entreprises organisent des journées ou demi-journées sur le thème de la coiffure pour leurs employés. Conviviaux et fédérateurs, ces moments sont des plus agréables. D\'autant que les employés sont coiffés sans frais !',
-            'content' => 'De plus en plus d\'entreprises organisent des journées ou demi-journées sur le thème de la coiffure pour leurs employés. Conviviaux et fédérateurs, ces moments sont des plus agréables. D\'autant que les employés sont coiffés sans frais !
-
-Aster Society propose d\'intervenir dans ce cadre. Contactez-nous pour plus d\'informations. ',
-            'thumbnail' => '/public/media/article-2.jpg',
+        'balsamine-actu-3' => [
+            'title' => '14 Easy Ways to Get Standout Eyes',
+            'slug' => '14-easy-ways-to-get-standout-eyes',
+            'short_description' => 'Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one\'s hair type and according to various processes that can be applied to hair. All hair is not the same; hair is a manifestation of human diversity.',
+            'content' => '<p>Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one\'s hair type and according to various processes that can be applied to hair. All hair is not the same; hair is a manifestation of human diversity.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/blog/pic-blog-3.jpg',
             'categories' => [
-                'service'
+                'actualite'
             ],
-            'website' => 'aster-society'
+            'website' => 'balsamine-society'
         ],
-        'aster-couleur' => [
-            'title' => 'Couleur',
-            'slug' => 'couleur',
-            'short_description' => 'Esthétique Coiffure Manuela bénéficie d\'une large gamme de produits qui permet aux coiffeurs de proposer de nombreuses teintes sous trois formes principales : les colorations intégrales, les mèches et les balayages.',
-            'content' => 'Esthétique Coiffure Manuela bénéficie d\'une large gamme de produits qui permet aux coiffeurs de proposer de nombreuses teintes sous trois formes principales : les colorations intégrales, les mèches et les balayages.
-
-Nos coiffeurs sont à votre écoute pour comprendre vos envies et trouver la couleur dont vous rêvez.',
-            'thumbnail' => '/public/media/article-3.jpg',
+        'balsamine-actu-4' => [
+            'title' => 'An Owner’s Guide to Naturally Wavy Hair',
+            'slug' => 'an-owner-s-guide-to-naturally-wavy-hair',
+            'short_description' => 'Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one\'s hair type and according to various processes that can be applied to hair. All hair is not the same; hair is a manifestation of human diversity.',
+            'content' => '<p>Hair care is an overall term for parts of hygiene and cosmetology involving the hair on the human head. Hair care will differ according to one\'s hair type and according to various processes that can be applied to hair. All hair is not the same; hair is a manifestation of human diversity.</p>',
+            'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/blog/pic-blog-4.jpg',
             'categories' => [
-                'service'
+                'actualite'
             ],
-            'website' => 'aster-society'
+            'website' => 'balsamine-society'
         ],
-        'aster-offrir-des-cadeaux' => [
-            'title' => 'Offrir des cadeaux',
-            'slug' => 'offrir-des-cadeaux',
-            'short_description' => 'Aster Society vous propose un large panel de cadeaux à offrir aux personnes de votre choix',
-            'content' => 'Aster Society vous propose un large panel de cadeaux à offrir aux personnes de votre choix :
-
-- Offre anniversaire : sous forme d\'un chèque cadeau au montant que vous définissez. 
-
-- Offre découverte : permet de faire découvrir les coupes et services originaux que nous proposons. 
-
-- Offre parrainage : faites découvrir notre salon à vos amis et réalisez des économies à chaque coupe.',
-            'thumbnail' => '/public/media/article-4.jpg',
-            'categories' => [
-                'service'
-            ],
-            'website' => 'aster-society'
-        ],
-        'aster-prestations-coiffure' => [
-            'title' => 'Prestations coiffure',
-            'slug' => 'prestations-coiffure',
-            'short_description' => 'Aster Society propose les services "classiques" de la coiffure',
-            'content' => 'Aster Society propose les services "classiques" de la coiffure, pour hommes, femmes et enfants : shampoing, coupe, brushing, ... Vous trouverez un résumé plus détaillé de nos prestations dans la partie Tarifs de notre site.',
-            'thumbnail' => '/public/media/article-5.jpg',
-            'categories' => [
-                'service'
-            ],
-            'website' => 'aster-society'
-        ]
     ];
 
     public function load(ObjectManager $manager)
@@ -114,8 +142,8 @@ Nos coiffeurs sont à votre écoute pour comprendre vos envies et trouver la cou
     {
         return [
             'Jet\Modules\Post\Fixtures\LoadPostCategory',
-            'Jet\Themes\Aster\Fixtures\LoadWebsite',
-            'Jet\Themes\Aster\Fixtures\LoadMedia',
+            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
+            'Jet\Themes\Balsamine\Fixtures\LoadMedia',
         ];
     }
 }

@@ -20,43 +20,75 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_page_layout' => [
-            'name' => 'ThemeBalsaminePageFileLayout',
-            'title' => 'Theme Balsamine Page Template',
-            'content' => 'Balsamine/Views/page',
-            'category' => 'layout',
-            'scope' => 'specified',
-            'type' => 'file'
-        ],
-        'balsamine_home_page_layout' => [
+        'balsamine_simple_home_page_layout' => [
             'name' => 'ThemeBalsamineHomePageFileLayout',
             'title' => 'Theme Balsamine Home Page Template',
-            'content' => 'Aster/Views/index',
+            'content' => 'Balsamine/Views/index',
             'category' => 'layout',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'aster_post_list_partial' => [
-            'name' => 'ThemeAsterPostListFilePartial',
-            'title' => 'Theme Aster Post List Template',
-            'content' => 'Aster/Views/post_list',
+        'balsamine_navigation_partial' => [
+            'name' => 'ThemeBalsamineNavigationFilePartial',
+            'title' => 'Theme Balsamine Navigation Template',
+            'content' => 'Balsamine/Views/navigation',
             'category' => 'partial',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'aster_single_post_partial' => [
-            'name' => 'ThemeAsterPostFilePartial',
-            'title' => 'Theme Aster Post Template',
-            'content' => 'Aster/Views/post',
+        'balsamine_post_list_partial' => [
+            'name' => 'ThemeBalsaminePostListFilePartial',
+            'title' => 'Theme Balsamine Post List Template',
+            'content' => 'Balsamine/Views/post_list',
             'category' => 'partial',
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'aster_navigation_partial' => [
-            'name' => 'ThemeAsterNavigationFilePartial',
-            'title' => 'Theme Aster Navigation Template',
-            'content' => 'Aster/Views/navigation',
+        'balsamine_single_post_partial' => [
+            'name' => 'ThemeBalsaminePostFilePartial',
+            'title' => 'Theme Balsamine Post Template',
+            'content' => 'Balsamine/Views/post',
             'category' => 'partial',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
+        'balsamine_home_list_service_partial' => [
+            'name' => 'ThemeBalsamineHomeServiceListFilePartial',
+            'title' => 'Theme Balsamine Home Service List Template',
+            'content' => 'Balsamine/Views/home_list_service',
+            'category' => 'partial',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
+        'balsamine_home_list_news_partial' => [
+            'name' => 'ThemeBalsamineHomeNewsListFilePartial',
+            'title' => 'Theme Balsamine Home News List Template',
+            'content' => 'Balsamine/Views/home_list_news',
+            'category' => 'partial',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
+        'balsamine_team_layout' => [
+            'name' => 'ThemeBalsamineTeamFileLayout',
+            'title' => 'Theme Balsamine Team Template',
+            'content' => 'Balsamine/Views/team_list',
+            'category' => 'layout',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
+        'balsamine_gallery_layout' => [
+            'name' => 'ThemeBalsamineGalleryFileLayout',
+            'title' => 'Theme Balsamine Gallery Template',
+            'content' => 'Balsamine/Views/gallery',
+            'category' => 'layout',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
+        'balsamine_contact_layout' => [
+            'name' => 'ThemeBalsamineContactFileLayout',
+            'title' => 'Theme Balsamine Contact Template',
+            'content' => 'Balsamine/Views/contact',
+            'category' => 'layout',
             'scope' => 'specified',
             'type' => 'file'
         ],

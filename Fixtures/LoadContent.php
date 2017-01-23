@@ -3,151 +3,156 @@
 namespace Jet\Themes\Balsamine\Fixtures;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
-use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Jet\Models\Content;
-use Jet\Models\Page;
-use Jet\Models\Section;
-use Jet\Models\Website;
+use Jet\Modules\Navigation\Services\LoadNavigationFixture;
+use Jet\Modules\Post\Services\LoadPostFixture;
+use Jet\Services\LoadFixture;
 
-class LoadContent extends AbstractFixture implements OrderedFixtureInterface
+class LoadContent extends AbstractFixture implements DependentFixtureInterface
 {
-    private $data = [
+
+    use LoadFixture;
+    use LoadPostFixture;
+    use LoadNavigationFixture;
+
+    protected $data = [
+        /* Balsamine website navigation module content */
+        'balsamine_navigation_content' => [
+            'cat_mod' => 'navigation',
+            'name' => 'Menu',
+            'block' => 'navigation',
+            'website' => 'balsamine-society',
+            'module' => 'module_simple_menu',
+            'template' => 'balsamine_navigation_partial',
+            'section' => null,
+            'page' => null,
+            'data' => [
+                'class' => '',
+                'navigation' => 'balsamine-menu'
+            ]
+        ],
         /* Balsamine website post module content */
-        'balsamine_welcome_content' => [
-            'name' => 'Bienvenue',
-            'block' => 'home_content',
-            'website' => 'balsamine-society',
-            'module' => 'module_single_post',
-            'template' => 'post_whole_content',
-            'section' => 1,
-            'page' => '5',
-            'data' => [
-                'class' => 'col-md-6',
-                'db' => [
-                    [
-                        'alias' => 'p',
-                        'type' => 'static',
-                        'column' => 'id',
-                        'route' => '',
-                        'value' => [5],
-                    ]
-                ],
-            ]
-        ],
-        'balsamine_list_static_home_post_content' => [
-            'name' => 'Services',
-            'block' => 'list_home_post',
+        'balsamine_list_home_service_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Liste de services',
+            'block' => 'list_home_service',
             'website' => 'balsamine-society',
             'module' => 'module_post_list',
-            'template' => 'post_basic_list',
+            'template' => 'balsamine_home_list_service_partial',
             'section' => null,
-            'page' => '5',
+            'page' => 'society-balsamine-home',
             'data' => [
-                'class' => 'col-md-6',
+                'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
-                'total_row' => 3,
+                'total_row' => 100,
                 'db' => [
                     [
                         'alias' => 'c',
                         'type' => 'static',
-                        'column' => 'slug',
+                        'column' => '',
                         'route' => '',
-                        'value' => [1]
+                        'value' => ['service'],
                     ]
                 ],
                 'link' => [
                     [
                         'alias' => 'p',
                         'type' => 'dynamic',
-                        'column' => 'slug',
                         'route' => 'slug',
+                        'column' => 'slug',
                         'value' => '',
                         'value_id' => ''
                     ]
                 ],
             ]
         ],
-        'balsamine_list_static_post_content' => [
-            'name' => 'Articles statique',
-            'block' => 'list_post',
+        'balsamine_list_home_news_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Liste d\'actualités',
+            'block' => 'list_home_news',
             'website' => 'balsamine-society',
             'module' => 'module_post_list',
-            'template' => 'post_basic_list',
+            'template' => 'balsamine_home_list_news_partial',
             'section' => null,
-            'page' => '6',
+            'page' => 'society-balsamine-home',
             'data' => [
-                'class' => 'col-md-12',
+                'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
-                'db' => [],
+                'total_row' => 100,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['actualite'],
+                    ]
+                ],
                 'link' => [
                     [
                         'alias' => 'p',
-                        'type' => 'static',
-                        'column' => 'slug',
+                        'type' => 'dynamic',
                         'route' => 'slug',
+                        'column' => 'slug',
                         'value' => '',
                         'value_id' => ''
                     ]
                 ],
             ]
         ],
-        'balsamine_list_dynamic_post_content' => [
-            'name' => 'Articles',
+        'balsamine_list_post_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Liste d\'articles',
             'block' => 'list_post',
             'website' => 'balsamine-society',
             'module' => 'module_post_list',
-            'template' => 'post_basic_list',
-            'section' => 1,
-            'page' => '7',
+            'template' => 'balsamine_post_list_partial',
+            'section' => null,
+            'page' => 'society-balsamine-list-post',
             'data' => [
-                'class' => 'col-md-12',
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 100,
                 'db' => [
-                   /* [
-                        'alias' => 'c',
-                        'type' => 'dynamic',
-                        'column' => 'id',
-                        'route' => 'id',
-                        'value' => [],
-                    ],*/
                     [
                         'alias' => 'c',
                         'type' => 'dynamic',
                         'column' => 'slug',
                         'route' => 'slug',
                         'value' => [],
-                    ],
+                    ]
                 ],
-                'route_name' => 'module:post.type:dynamic.action:read',
                 'link' => [
                     [
                         'alias' => 'p',
                         'type' => 'dynamic',
-                        'column' => 'slug',
                         'route' => 'slug',
+                        'column' => 'slug',
                         'value' => '',
                         'value_id' => ''
                     ]
-                ]
+                ],
             ]
         ],
         'balsamine_single_post_content' => [
+            'cat_mod' => 'post',
             'name' => 'Article',
             'block' => 'single_post',
             'website' => 'balsamine-society',
             'module' => 'module_single_post',
-            'template' => 'post_whole_content',
-            'section' => 1,
-            'page' => '8',
+            'template' => 'balsamine_single_post_partial',
+            'section' => null,
+            'page' => 'society-balsamine-single-post',
             'data' => [
-                'class' => 'col-md-12',
+                'class' => '',
                 'db' => [
                     [
                         'alias' => 'p',
                         'type' => 'dynamic',
                         'column' => 'slug',
                         'route' => 'slug',
-                        'value' => []
+                        'value' => [],
                     ]
                 ]
             ]
@@ -156,34 +161,26 @@ class LoadContent extends AbstractFixture implements OrderedFixtureInterface
 
     public function load(ObjectManager $manager)
     {
-        foreach($this->data as $key => $data) {
-            $website = Website::findOneByDomain($data['website']);
-            $content = (Content::where('website',$website)->where('block',$data['block'])->where('name',$data['name'])->count() == 0)
-                ?  new Content()
-                : Content::findOneBy(['website' => $website, 'block' => $data['block'], 'name' => $data['name']]);
-            $content->setName($data['name']);
-            $content->setBlock($data['block']);
-            if(!is_null($data['page']))$content->setPage(Page::findOneById($data['page']));
-            $content->setWebsite($website);
-            $content->setModule($this->getReference($data['module']));
-            $content->setTemplate($this->getReference($data['template']));
-            if (!is_null($data['section']))
-                $content->setSection(Section::findOneById($data['section']));
-            $content->setData($data['data']);
-            $this->setReference($key, $content);
-            $manager->persist($content);
-        }
-
-        $manager->flush();
+        $this->loadContent($manager);
     }
 
     /**
-     * Get the order of this fixture
+     * This method must return an array of fixtures classes
+     * on which the implementing class depends on
      *
-     * @return integer
+     * @return array
      */
-    public function getOrder()
+    function getDependencies()
     {
-        return 108;
+        return [
+            'Jet\DataFixtures\LoadSection',
+            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
+            'Jet\Themes\Balsamine\Fixtures\LoadPage',
+            'Jet\Themes\Balsamine\Fixtures\LoadPost',
+            'Jet\Themes\Balsamine\Fixtures\LoadNavigation',
+            'Jet\Themes\Balsamine\Fixtures\LoadTemplate',
+            'Jet\Modules\Post\Fixtures\LoadPostModule',
+            'Jet\Modules\Navigation\Fixtures\LoadNavigationModule',
+        ];
     }
 }

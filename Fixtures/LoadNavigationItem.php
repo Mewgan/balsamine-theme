@@ -5,6 +5,7 @@ use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Jet\Modules\Navigation\Services\LoadNavigationFixture;
+use Jet\Modules\Post\Services\LoadPostFixture;
 
 /**
  * Class LoadNavigationItem
@@ -13,6 +14,7 @@ use Jet\Modules\Navigation\Services\LoadNavigationFixture;
 class LoadNavigationItem extends AbstractFixture implements DependentFixtureInterface
 {
 
+    use LoadPostFixture;
     use LoadNavigationFixture;
     /**
      * @var array
@@ -20,75 +22,75 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
     protected $data = [
         [
             'title' => 'Accueil',
-            'navigation' => 'aster-menu',
+            'navigation' => 'balsamine-menu',
             'parent' => null,
             'children' => [],
             'url' => '/',
             'route' => null,
             'type' => 'page',
-            'type_id' => 'society-aster-home',
+            'type_id' => 'society-balsamine-home',
             'position' => 0,
-            'website' => 'aster-society',
-        ],
-        [
-            'title' => 'Équipe',
-            'navigation' => 'aster-menu',
-            'parent' => null,
-            'children' => [],
-            'url' => '/#team',
-            'route' => null,
-            'type' => 'custom',
-            'type_id' => null,
-            'position' => 1,
-            'website' => 'aster-society',
+            'website' => 'balsamine-society',
         ],
         [
             'title' => 'Services',
-            'navigation' => 'aster-menu',
+            'navigation' => 'balsamine-menu',
             'parent' => null,
             'children' => [],
-            'url' => '/#services',
-            'route' => null,
-            'type' => 'custom',
-            'type_id' => null,
+            'url' => '/articles/service',
+            'route' => 'module:post.type:dynamic.action:all',
+            'type' => 'post_category',
+            'type_id' => 'service',
+            'position' => 1,
+            'website' => 'balsamine-society',
+        ],
+        [
+            'title' => 'Équipe',
+            'navigation' => 'balsamine-menu',
+            'parent' => null,
+            'children' => [],
+            'url' => '/equipe',
+            'route' => 'module:team.type:static.action:all',
+            'type' => 'page',
+            'type_id' => 'society-balsamine-team',
             'position' => 2,
-            'website' => 'aster-society',
+            'website' => 'balsamine-society',
         ],
         [
-            'title' => 'Galleries',
-            'navigation' => 'aster-menu',
+            'title' => 'Galerie',
+            'navigation' => 'balsamine-menu',
             'parent' => null,
             'children' => [],
-            'url' => '/#snapshots',
-            'route' => null,
-            'type' => 'custom',
-            'type_id' => null,
+            'url' => '/galerie',
+            'route' => 'module:gallery.type:static.action:all',
+            'type' => 'page',
+            'type_id' => 'society-balsamine-gallery',
             'position' => 3,
-            'website' => 'aster-society',
+            'website' => 'balsamine-society',
         ],
         [
-            'title' => 'Articles',
-            'navigation' => 'aster-menu',
+            'title' => 'Actualité',
+            'navigation' => 'balsamine-menu',
             'parent' => null,
             'children' => [],
-            'url' => '/#news',
-            'route' => null,
-            'type' => 'custom',
-            'type_id' => null,
+            'url' => '/articles/actualite',
+            'route' => 'module:post.type:dynamic.action:all',
+            'type' => 'post_category',
+            'type_id' => 'actualite',
             'position' => 4,
-            'website' => 'aster-society',
+            'website' => 'balsamine-society',
         ],
         [
             'title' => 'Contact',
-            'navigation' => 'aster-menu',
+            'navigation' => 'balsamine-menu',
             'parent' => null,
             'children' => [],
-            'url' => '/#contact',
-            'route' => null,
-            'type' => 'custom',
-            'type_id' => null,
+            'url' => '/contact',
+            'route' => 'module:contact.type:static.action:show',
+            'type' => 'page',
+            'type_id' => 'society-balsamine-contact',
             'position' => 5,
-            'website' => 'aster-society',
+            'website' => 'balsamine-society',
         ]
     ];
 
@@ -97,6 +99,8 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
      */
     public function load(ObjectManager $manager)
     {
+        $this->addNavigationTypeCallback('post','getPostTypeId');
+        $this->addNavigationTypeCallback('post_category','getPostCategoryTypeId');
         $this->loadNavigationItem($manager);
     }
 
@@ -110,10 +114,11 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
     function getDependencies()
     {
         return [
-            'Jet\Themes\Aster\Fixtures\LoadWebsite',
-            'Jet\Themes\Aster\Fixtures\LoadNavigation',
+            'Jet\Modules\Post\Fixtures\LoadPostRoute',
+            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
+            'Jet\Themes\Balsamine\Fixtures\LoadNavigation',
             'Jet\DataFixtures\LoadRoute',
-            'Jet\Themes\Aster\Fixtures\LoadPage'
+            'Jet\Themes\Balsamine\Fixtures\LoadPage'
         ];
     }
 }

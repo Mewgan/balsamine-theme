@@ -12,26 +12,26 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
     use LoadFixture;
 
     protected $data = [
-        'Aster Specific Global' => [
+        'Balsamine Specific Global' => [
             'title' => 'Données spécifique au thème',
             'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
-            'website' => 'Aster Website'
+            'website' => 'Balsamine Website'
         ],
-        'Aster Default Global' => [
+        'Balsamine Default Global' => [
             'title' => 'Données globales',
             'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
-            'website' => 'Aster Website'
+            'website' => 'Balsamine Website'
         ],
-        'Aster Home Page' => [
+        'Balsamine Home Page' => [
             'title' => 'Page d\'accueil',
             'rule' => 'page_rule',
             'operation' => '=',
-            'reference' => 'society-aster-home',
-            'website' => 'Aster Website'
+            'reference' => 'society-balsamine-home',
+            'website' => 'Balsamine Website'
         ]
     ];
 
@@ -50,8 +50,8 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
     function getDependencies()
     {
         return [
-            'Jet\Themes\Aster\Fixtures\LoadWebsite',
-            'Jet\Themes\Aster\Fixtures\LoadPage',
+            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
+            'Jet\Themes\Balsamine\Fixtures\LoadPage',
             'Jet\DataFixtures\LoadCustomFieldRule',
         ];
     }

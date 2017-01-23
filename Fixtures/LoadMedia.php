@@ -28,8 +28,112 @@ class LoadMedia extends AbstractFixture
             'alt' => 'Logo aster'
         ],
         [
+            'title' => 'Slider 7',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/images-slider/wide7.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Slider image'
+        ],
+        [
+            'title' => 'Slider 8',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/images-slider/wide8.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Slider image'
+        ],
+        [
+            'title' => 'Background 1',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-1.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 2',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-2.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 3',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-3.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 4',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-4.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 5',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-5.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 6',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-6.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 7',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 8',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-8.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 9',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-9.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 10',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-10.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
+            'title' => 'Background 11',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-11.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background image'
+        ],
+        [
             'title' => 'Balsamine service 1',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service_1.jpg',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-1.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
@@ -37,7 +141,7 @@ class LoadMedia extends AbstractFixture
         ],
         [
             'title' => 'Balsamine service 2',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service_2.jpg',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-2.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
@@ -45,14 +149,14 @@ class LoadMedia extends AbstractFixture
         ],
         [
             'title' => 'Balsamine service 3',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service_3.jpg',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-3.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
             'alt' => 'Balsamine service'
         ], [
             'title' => 'Balsamine service 4',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service_4.jpg',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-4.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
@@ -60,7 +164,7 @@ class LoadMedia extends AbstractFixture
         ],
         [
             'title' => 'Balsamine service 5',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service_5.jpg',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-5.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
@@ -68,7 +172,7 @@ class LoadMedia extends AbstractFixture
         ],
         [
             'title' => 'Balsamine service 6',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service_6.jpg',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-6.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,

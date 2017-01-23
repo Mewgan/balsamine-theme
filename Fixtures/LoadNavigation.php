@@ -12,9 +12,9 @@ class LoadNavigation extends AbstractFixture implements DependentFixtureInterfac
     use LoadNavigationFixture;
     
     protected $data = [
-        'aster-menu' => [
+        'balsamine-menu' => [
             'name' => 'Menu',
-            'website' => 'aster-society'
+            'website' => 'balsamine-society'
         ]
     ];
 
@@ -32,7 +32,7 @@ class LoadNavigation extends AbstractFixture implements DependentFixtureInterfac
     function getDependencies()
     {
         return [
-            'Jet\Themes\Aster\Fixtures\LoadWebsite',
+            'Jet\Themes\Balsamine\Fixtures\LoadWebsite',
         ];
     }
 }
