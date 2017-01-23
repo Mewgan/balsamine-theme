@@ -47,7 +47,6 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'layout' => 'balsamine_team_layout',
             'stylesheets' => [],
             'libraries' => [],
-            'published' => false,
             'type' => 'static',
         ],
         'society-balsamine-gallery' =>  [
@@ -57,7 +56,6 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'layout' => 'balsamine_gallery_layout',
             'stylesheets' => [],
             'libraries' => [],
-            'published' => false,
             'type' => 'static',
         ],
         'society-balsamine-contact' =>  [
@@ -67,7 +65,6 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'layout' => 'balsamine_contact_layout',
             'stylesheets' => [],
             'libraries' => [],
-            'published' => false,
             'type' => 'static',
         ],
     ];

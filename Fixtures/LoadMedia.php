@@ -28,6 +28,54 @@ class LoadMedia extends AbstractFixture
             'alt' => 'Logo aster'
         ],
         [
+            'title' => 'Subheader 1',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-1.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Subheader'
+        ],
+        [
+            'title' => 'Subheader 2',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Subheader'
+        ],
+        [
+            'title' => 'Subheader 3',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-3.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Subheader'
+        ],
+        [
+            'title' => 'Subheader 4',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-4.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Subheader'
+        ],
+        [
+            'title' => 'Subheader 5',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-5.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Subheader'
+        ],
+        [
+            'title' => 'Subheader 6',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-6.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Subheader'
+        ],
+        [
             'title' => 'Slider 7',
             'path' => '/src/Themes/Balsamine/Resources/public/img/images-slider/wide7.jpg',
             'type' => 'image/jpg',
@@ -52,14 +100,6 @@ class LoadMedia extends AbstractFixture
             'alt' => 'Background image'
         ],
         [
-            'title' => 'Background 2',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-2.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Background image'
-        ],
-        [
             'title' => 'Background 3',
             'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-3.jpg',
             'type' => 'image/jpg',
@@ -78,14 +118,6 @@ class LoadMedia extends AbstractFixture
         [
             'title' => 'Background 5',
             'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-5.jpg',
-            'type' => 'image/jpg',
-            'size' => 404299,
-            'access_level' => 2,
-            'alt' => 'Background image'
-        ],
-        [
-            'title' => 'Background 6',
-            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-6.jpg',
             'type' => 'image/jpg',
             'size' => 404299,
             'access_level' => 2,
@@ -209,6 +241,102 @@ class LoadMedia extends AbstractFixture
             'size' => 404299,
             'access_level' => 2,
             'alt' => 'Balsamine actu'
+        ],
+        [
+            'title' => 'Balsamine team 1',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/team/team_pic_1.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine equipe'
+        ],
+        [
+            'title' => 'Balsamine team 2',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/team/team_pic_2.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine equipe'
+        ],
+        [
+            'title' => 'Balsamine team 3',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/team/team_pic_3.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine equipe'
+        ],
+        [
+            'title' => 'Balsamine team 4',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/team/team_pic_4.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine equipe'
+        ],
+        [
+            'title' => 'Balsamine gallery 1',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_1.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine gallery'
+        ],
+        [
+            'title' => 'Balsamine gallery 2',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_2.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine gallery'
+        ],
+        [
+            'title' => 'Balsamine gallery 3',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_3.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine gallery'
+        ],
+        [
+            'title' => 'Balsamine gallery 4',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_4.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine gallery'
+        ],
+        [
+            'title' => 'Balsamine gallery 5',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_5.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine gallery'
+        ],
+        [
+            'title' => 'Balsamine gallery 6',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_6.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine gallery'
+        ],
+        [
+            'title' => 'Balsamine gallery 7',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_7.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine gallery'
+        ],
+        [
+            'title' => 'Balsamine gallery 8',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/gallery/gal_8.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Balsamine gallery'
         ],
     ];
     

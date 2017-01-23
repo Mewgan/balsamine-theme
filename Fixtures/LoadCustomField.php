@@ -32,7 +32,28 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'operation' => '=',
             'reference' => 'society-balsamine-home',
             'website' => 'Balsamine Website'
-        ]
+        ],
+        'Balsamine Team Page' => [
+            'title' => 'Equipe',
+            'rule' => 'page_rule',
+            'operation' => '=',
+            'reference' => 'society-balsamine-team',
+            'website' => 'Balsamine Website'
+        ],
+        'Balsamine Gallery Page' => [
+            'title' => 'Galerie',
+            'rule' => 'page_rule',
+            'operation' => '=',
+            'reference' => 'society-balsamine-gallery',
+            'website' => 'Balsamine Website'
+        ],
+        'Balsamine Page' => [
+            'title' => 'Page',
+            'rule' => 'publication_type_rule',
+            'operation' => '=',
+            'value' => 'page',
+            'website' => 'Balsamine Website'
+        ],
     ];
 
     public function load(ObjectManager $manager)

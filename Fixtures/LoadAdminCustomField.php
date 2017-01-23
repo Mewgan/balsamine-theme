@@ -125,7 +125,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                     ['key' => 'orange','value' => 'Orange'],
                     ['key' => 'red','value' => 'Rouge'],
                     ['key' => 'blue','value' => 'Bleu'],
-                    ['key' => 'pink','value' => 'Route'],
+                    ['key' => 'pink','value' => 'Rose'],
                     ['key' => 'yellow','value' => 'Jaune'],
                     ['key' => 'purple','value' => 'Violet'],
                     ['key' => 'brown','value' => 'Marron'],
@@ -324,6 +324,195 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => ['value' =>
                 ['#'],
+            ]
+        ],
+        /* Page */
+        'balsamine_page' => [
+            'scope' => 'specified',
+            'title' => 'Image du header',
+            'name' => 'subheader',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Balsamine Page',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => [
+                'page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-1.jpg',
+                'page@society-balsamine-list-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
+                'page@society-balsamine-single-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-3.jpg',
+                'page@society-balsamine-team' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-4.jpg',
+                'page@society-balsamine-gallery' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-5.jpg',
+                'page@society-balsamine-contact' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-6.jpg',
+            ]
+        ],
+        /* Homepage */
+        'balsamine_homepage_left_bloc' => [
+            'scope' => 'specified',
+            'title' => 'Bloc de gauche',
+            'name' => 'left_top_bloc',
+            'type' => 'wysiwyg',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-home' => '<h4>Special Promo</h4>
+                                    <p>Our commitment to quality and services ensure our clients happy. With years of
+                                        experiences and continuing education, our dedicated staff is ready to serve your
+                                        beauty needs. We\'re happy to help you decide the best look.</p>'
+            ]
+        ],
+        'balsamine_homepage_right_bloc' => [
+            'scope' => 'specified',
+            'title' => 'Bloc de droite',
+            'name' => 'right_top_bloc',
+            'type' => 'wysiwyg',
+            'position' => 1,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-home' => '<h4>Get Discount 50%</h4>
+                                    <p>Our commitment to quality and services ensure our clients happy. With years of
+                                        experiences and continuing education, our dedicated staff is ready to serve your
+                                        beauty needs. We\'re happy to help you decide the best look.</p>'
+            ]
+        ],
+        'balsamine_homepage_about_us' => [
+            'scope' => 'specified',
+            'title' => 'A propos de nous',
+            'name' => 'about_us',
+            'type' => 'wysiwyg',
+            'position' => 2,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-home' => '<p>They were so friendly and it was pleasure to get my hair done there. I\'m very happy with
+                            services their provided. I will recommend this salon to my family and friends. Their
+                            pricing was competitive and their staff is professional.
+                            <span>Lynda, Customer</span>
+                        </p>'
+            ]
+        ],
+        /* Team Page */
+        'balsamine_team' => [
+            'scope' => 'specified',
+            'title' => 'Equipes',
+            'name' => 'teams',
+            'type' => 'repeater',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Balsamine Team Page',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-balsamine-team' => [0,1,2,3]
+            ]
+        ],
+        'balsamine_team_image' => [
+            'scope' => 'specified',
+            'title' => 'Image',
+            'name' => 'image',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => 'balsamine_team',
+            'cf' => 'Balsamine Team Page',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-balsamine-team' =>
+                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_1.jpg',
+                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_2.jpg',
+                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_3.jpg',
+                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_4.jpg',
+            ]
+        ],
+        'balsamine_team_name' => [
+            'scope' => 'specified',
+            'title' => 'Nom',
+            'name' => 'name',
+            'type' => 'string',
+            'position' => 1,
+            'parent' => 'balsamine_team',
+            'cf' => 'Balsamine Team Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-team' =>
+                'Briana',
+                'Jessica',
+                'Rachel',
+                'Emma',
+            ]
+        ],
+        'balsamine_team_description' => [
+            'scope' => 'specified',
+            'title' => 'Description',
+            'name' => 'description',
+            'type' => 'textarea',
+            'position' => 2,
+            'parent' => 'balsamine_team',
+            'cf' => 'Balsamine Team Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-team' =>
+                'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+                'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+                'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+                'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+            ]
+        ],
+        /* Gallery Page */
+        'balsamine_gallery_disposition' => [
+            'scope' => 'specified',
+            'title' => 'Disposition de la galerie',
+            'name' => 'gallery_column',
+            'type' => 'select',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Balsamine Gallery Page',
+            'data' => [
+                'multiple' => false,
+                'contents' => [
+                    ['key' => '4', 'value' => '4 colonnes'],
+                    ['key' => '3', 'value' => '3 colonnes'],
+                    ['key' => '2', 'value' => '2 colonnes']
+                ]
+            ],
+            'content' => ['page@society-balsamine-gallery' => '4',]
+        ],
+        'balsamine_gallery' => [
+            'scope' => 'specified',
+            'title' => 'Galerie',
+            'name' => 'galleries',
+            'type' => 'repeater',
+            'position' => 1,
+            'parent' => null,
+            'cf' => 'Balsamine Gallery Page',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-balsamine-gallery' => [0,1,2,3,4,5,6,7]
+            ]
+        ],
+        'balsamine_gallery_image' => [
+            'scope' => 'specified',
+            'title' => 'Image',
+            'name' => 'image',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => 'balsamine_gallery',
+            'cf' => 'Balsamine Gallery Page',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-balsamine-gallery' => [
+                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_1.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_2.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_3.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_4.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_5.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_6.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_7.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/gallery/gal_8.jpg',
+                ]
             ]
         ]
     ];

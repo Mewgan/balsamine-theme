@@ -45,7 +45,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
-                'total_row' => 100,
+                'total_row' => 6,
                 'db' => [
                     [
                         'alias' => 'c',
@@ -79,7 +79,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'data' => [
                 'class' => '',
                 'route_name' => 'module:post.type:dynamic.action:read',
-                'total_row' => 100,
+                'total_row' => 6,
                 'db' => [
                     [
                         'alias' => 'c',
@@ -161,6 +161,8 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
 
     public function load(ObjectManager $manager)
     {
+        $this->addContentCallback('post', 'getPostContent');
+        $this->addContentCallback('navigation', 'getNavigationContent');
         $this->loadContent($manager);
     }
 

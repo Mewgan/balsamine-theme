@@ -19,7 +19,91 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'title' => 'Hair',
             'slug' => 'hair',
             'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
-            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>
+                            <div class="padding40">
+                                <div class="sub-item-service">
+                                    <div class="c1">Braids &amp; Twist</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$35</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Clipper Cut</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$5</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Color Rinse</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$5</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Corrective Color</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$15</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Extension Per Track</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$10</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1"><span class="disc">10% Off</span>Full Foil</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$38</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Haircolor</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$15</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Haircut</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$9</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1"><span class="disc">5% Off</span>Hair Extension</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$45</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Kids Haircut</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$5</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Partial Foil</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$25</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Thermal Add On</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$20</div>
+                                </div>
+                            </div>',
             'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-1.jpg',
             'categories' => [
                 'service'
@@ -30,7 +114,24 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'title' => 'Make Up',
             'slug' => 'make-up',
             'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
-            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>
+                            <div class="padding40">
+                                <div class="sub-item-service">
+                                    <div class="c1">Braids &amp; Twist</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$35</div>
+                                </div>
+                                <div class="sub-item-service">
+                                    <div class="c1">Clipper Cut</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$5</div>
+                                </div>
+                                <div class="sub-item-service">
+                                    <div class="c1">Color Rinse</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$5</div>
+                                </div>
+                            </div>',
             'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-2.jpg',
             'categories' => [
                 'service'
@@ -41,7 +142,21 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'title' => 'Facial',
             'slug' => 'facial',
             'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
-            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>
+                            <div class="padding40">
+                                <div class="sub-item-service">
+                                    <div class="c1">Braids &amp; Twist</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$35</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Clipper Cut</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$5</div>
+                                </div>
+                            </div>',
             'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-3.jpg',
             'categories' => [
                 'service'
@@ -63,7 +178,28 @@ class LoadPost extends AbstractFixture implements DependentFixtureInterface
             'title' => 'Nail',
             'slug' => 'nail',
             'short_description' => 'Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.',
-            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>',
+            'content' => '<p>Our commitment to quality and services ensure our clients happy. With years of experiences, our dedicated staff is ready to serve your beauty needs.</p>
+                            <div class="padding40">
+                                <div class="sub-item-service">
+                                    <div class="c1">Braids &amp; Twist</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$35</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Clipper Cut</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$5</div>
+                                </div>
+
+
+                                <div class="sub-item-service">
+                                    <div class="c1">Color Rinse</div>
+                                    <div class="c2"></div>
+                                    <div class="c3">$5</div>
+                                </div>
+                            </div>',
             'thumbnail' => '/src/Themes/Balsamine/Resources/public/img/services/service-big-5.jpg',
             'categories' => [
                 'service'
