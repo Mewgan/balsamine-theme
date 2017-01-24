@@ -28,6 +28,22 @@ class LoadMedia extends AbstractFixture
             'alt' => 'Logo aster'
         ],
         [
+            'title' => 'Logo light theme balsamine',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/logo_light.png',
+            'type' => 'image/png',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Logo aster'
+        ],
+        [
+            'title' => 'Background video image',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/video-poster.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'Background video image'
+        ],
+        [
             'title' => 'Subheader 1',
             'path' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-1.jpg',
             'type' => 'image/jpg',
@@ -162,6 +178,14 @@ class LoadMedia extends AbstractFixture
             'size' => 404299,
             'access_level' => 2,
             'alt' => 'Background image'
+        ],
+        [
+            'title' => 'About us',
+            'path' => '/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg',
+            'type' => 'image/jpg',
+            'size' => 404299,
+            'access_level' => 2,
+            'alt' => 'About us'
         ],
         [
             'title' => 'Balsamine service 1',

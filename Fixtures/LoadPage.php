@@ -26,7 +26,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'title' => 'Liste d\'articles',
             'route' => 'module:post.type:dynamic.action:all',
             'website' => 'Balsamine Website',
-            'layout' => 'default_page_layout',
+            'layout' => 'balsamine_page_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'dynamic'
@@ -35,7 +35,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'title' => 'Article',
             'route' => 'module:post.type:dynamic.action:read',
             'website' => 'Balsamine Website',
-            'layout' => 'default_page_layout',
+            'layout' => 'balsamine_page_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'dynamic'

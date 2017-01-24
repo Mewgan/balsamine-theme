@@ -11,7 +11,7 @@ background-size: 100% !important;
 #section-coming-soon{ background:none; position:absolute; min-height:100%; width:100%;z-index:1;}
 #section-gallery{background:#fff; width:101%;}
 #section-intro{background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-4.jpg); overflow:hidden;}
-#section-intro-2{background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg); overflow:hidden;}
+/*#section-intro-2{background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg); overflow:hidden;}*/
 #section-welcome{background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-9.jpg); overflow:hidden;}
 #section-why-choose-us{background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-8.jpg) top fixed;}
 #section-testimonial{ background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-3.jpg); background-size:cover;}
@@ -19,7 +19,7 @@ background-size: 100% !important;
 #section-services{ background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-1.jpg) top fixed;}
 #view-all-projects, #call-to-action{padding:60px 0 60px 0;}
 #section-offer{background:#eee;}
-#section-hero-2{background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-10.jpg); overflow:hidden;}
+/*#section-hero-2{background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-10.jpg); overflow:hidden;}*/
 #section-hero-3{background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-11.jpg); overflow:hidden;}
 
 /* section with side background image */
@@ -29,7 +29,7 @@ background-size: 100% !important;
 #explore-3.side-bg .background-image {background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-side-1.jpg) top;}
 #explore-4.side-bg .background-image {background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-side-4.jpg) top;}
 #explore-5{background:#50094d;}
-#explore-5.side-bg .background-image {background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg) top;}
+/*#explore-5.side-bg .background-image {background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg) top;}*/
 #explore-6.side-bg .background-image {background:url(/src/Themes/Balsamine/Resources/public/img/background/bg-side-10.jpg) top;}
 
 

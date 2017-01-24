@@ -28,6 +28,14 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
+        'balsamine_page_layout' => [
+            'name' => 'ThemeBalsaminePageFileLayout',
+            'title' => 'Theme Balsamine Page Template',
+            'content' => 'Balsamine/Views/page',
+            'category' => 'layout',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
         'balsamine_navigation_partial' => [
             'name' => 'ThemeBalsamineNavigationFilePartial',
             'title' => 'Theme Balsamine Navigation Template',

@@ -27,6 +27,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             ],
             'templates' => [
                 'balsamine_layout',
+                'balsamine_page_layout',
                 'balsamine_simple_home_page_layout',
                 'balsamine_home_list_service_partial',
                 'balsamine_home_list_news_partial',
@@ -40,6 +41,8 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'medias' => [
                 '/public/media/thumbnail/theme-balsamine-thumbnail.png',
                 '/src/Themes/Balsamine/Resources/public/img/logo.png',
+                '/src/Themes/Balsamine/Resources/public/img/logo_light.png',
+                '/src/Themes/Balsamine/Resources/public/img/video-poster.jpg',
                 '/src/Themes/Balsamine/Resources/public/img/background/subheader-1.jpg',
                 '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
                 '/src/Themes/Balsamine/Resources/public/img/background/subheader-3.jpg',
@@ -57,6 +60,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 '/src/Themes/Balsamine/Resources/public/img/background/bg-9.jpg',
                 '/src/Themes/Balsamine/Resources/public/img/background/bg-10.jpg',
                 '/src/Themes/Balsamine/Resources/public/img/background/bg-11.jpg',
+                '/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg',
                 '/src/Themes/Balsamine/Resources/public/img/services/service-big-1.jpg',
                 '/src/Themes/Balsamine/Resources/public/img/services/service-big-2.jpg',
                 '/src/Themes/Balsamine/Resources/public/img/services/service-big-3.jpg',

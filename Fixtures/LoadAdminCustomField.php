@@ -25,15 +25,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Default Global',
             'data' => [],
-            'content' => ['value' => '<p><strong>Monday - Wednesday</strong><br/>
-                09 AM - 6 PM
-            </p>
-            <p><strong>Thursday - Saturday</strong><br/>
-                09 AM - 7 PM
-            </p>
-            <p><strong>Sunday</strong><br/>
-                closed
-            </p>']
+            'content' => ['value' => 'Monday - Friday: 09:00 - 22:00']
         ],
         'balsamine_social' => [
             'scope' => 'global',
@@ -93,12 +85,25 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'content' => ['value' => '#']
         ],
         /* Theme specific */
+        'balsamine_sub_logo' => [
+            'scope' => 'global',
+            'title' => 'Logo réduit',
+            'name' => 'logo_light',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Balsamine Specific Global',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/logo_light.png']
+        ],
         'balsamine_homepage_layout' => [
             'scope' => 'global',
             'title' => 'Modèle de thème pour la page d\'accueil',
             'name' => 'homepage_model',
             'type' => 'select',
-            'position' => 0,
+            'position' => 1,
             'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [
@@ -116,7 +121,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Couleur du thème',
             'name' => 'theme_color',
             'type' => 'select',
-            'position' => 1,
+            'position' => 2,
             'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [
@@ -140,7 +145,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Position du menu',
             'name' => 'navigation_position',
             'type' => 'select',
-            'position' => 2,
+            'position' => 3,
             'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [
@@ -152,50 +157,31 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             ],
             'content' => ['value' => 'center']
         ],
-        'balsamine_homepage_1' => [
-            'scope' => 'global',
-            'title' => 'Configuration pour le modèle "Statique"',
-            'name' => 'homepage_1',
-            'type' => 'repeater',
-            'position' => 3,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [
-                'min_row' => 1,
-                'max_row' => 1,
-            ],
-            'content' => [
-                'type' => 'repeater',
-                'rows' => [0]
-            ]
-        ],
         'balsamine_homepage_1_background' => [
             'scope' => 'global',
-            'title' => 'Image du background',
-            'name' => 'background_image',
+            'title' => 'Image du background pour le modèle "Statique"',
+            'name' => 'homepage_1_background_image',
             'type' => 'media',
-            'position' => 0,
-            'parent' => 'balsamine_homepage_1',
+            'position' => 4,
+            'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [
                 'media_render_type' => 'object'
             ],
-            'content' => ['value' =>
-                ['/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg']
-            ]
+            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg']
         ],
         'balsamine_homepage_1_activities' => [
             'scope' => 'global',
             'title' => 'Activités',
-            'name' => 'activities',
+            'name' => 'homepage_1_activities',
             'type' => 'repeater',
-            'position' => 1,
-            'parent' => 'balsamine_homepage_1',
+            'position' => 5,
+            'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [],
             'content' => [
                 'type' => 'repeater',
-                'rows' => [ 0 => [0,1,2,3,4,5]]
+                'rows' => [0,1,2,3,4,5]
             ]
         ],
         'balsamine_homepage_1_activity_title' => [
@@ -208,7 +194,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Balsamine Specific Global',
             'data' => [],
             'content' => [
-                'value' => [0 => ['Hair Care', 'Make Up', 'Facial', 'Massage', 'Nail Care', 'Waxing']]
+                'value' => ['Hair Care', 'Make Up', 'Facial', 'Massage', 'Nail Care', 'Waxing']
             ]
         ],
         'balsamine_homepage_2' => [
@@ -216,7 +202,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Configuration pour le modèle "Slider"',
             'name' => 'homepage_2',
             'type' => 'repeater',
-            'position' => 4,
+            'position' => 6,
             'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [],
@@ -270,61 +256,38 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 ['#',''],
             ]
         ],
-        'balsamine_homepage_3' => [
-            'scope' => 'global',
-            'title' => 'Configuration pour le modèle "Vidéo"',
-            'name' => 'homepage_3',
-            'type' => 'repeater',
-            'position' => 5,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [
-                'min_row' => 1,
-                'max_row' => 1,
-            ],
-            'content' => [
-                'type' => 'repeater',
-                'rows' => [0]
-            ]
-        ],
         'balsamine_homepage_3_background' => [
             'scope' => 'global',
-            'title' => 'Lien du vidéo de background',
-            'name' => 'background_video',
+            'title' => 'Lien du vidéo de background pour le modèle "Vidéo"',
+            'name' => 'homepage_3_background_video',
             'type' => 'string',
-            'position' => 0,
-            'parent' => 'balsamine_homepage_3',
+            'position' => 7,
+            'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [],
-            'content' => ['value' =>
-                ['/src/Themes/Balsamine/Resources/public/video/salon_1.mp4']
-            ]
+            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/video/salon_1.mp4']
         ],
         'balsamine_homepage_3_background_title' => [
             'scope' => 'global',
-            'title' => 'Titre',
-            'name' => 'title',
+            'title' => 'Titre pour le modèle "Vidéo"',
+            'name' => 'homepage_3_title',
             'type' => 'string',
-            'position' => 1,
-            'parent' => 'balsamine_homepage_3',
+            'position' => 8,
+            'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [],
-            'content' => ['value' =>
-                ['QUALITY & SERVICES']
-            ]
+            'content' => ['value' =>'QUALITY & SERVICES']
         ],
         'balsamine_homepage_3_background_link' => [
             'scope' => 'global',
-            'title' => 'Lien',
-            'name' => 'link',
+            'title' => 'Lien pour le modèle "Vidéo"',
+            'name' => 'homepage_3_link',
             'type' => 'string',
-            'position' => 2,
-            'parent' => 'balsamine_homepage_3',
+            'position' => 9,
+            'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [],
-            'content' => ['value' =>
-                ['#'],
-            ]
+            'content' => ['value' =>'#']
         ],
         /* Page */
         'balsamine_page' => [
@@ -378,12 +341,25 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                                         beauty needs. We\'re happy to help you decide the best look.</p>'
             ]
         ],
+        'balsamine_homepage_about_us_image' => [
+            'scope' => 'specified',
+            'title' => 'Image pour de gauche',
+            'name' => 'about_us_image',
+            'type' => 'media',
+            'position' => 2,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg']
+        ],
         'balsamine_homepage_about_us' => [
             'scope' => 'specified',
             'title' => 'A propos de nous',
             'name' => 'about_us',
             'type' => 'wysiwyg',
-            'position' => 2,
+            'position' => 3,
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [],
@@ -393,6 +369,19 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                             <span>Lynda, Customer</span>
                         </p>'
             ]
+        ],
+        'balsamine_homepage_actu_background' => [
+            'scope' => 'specified',
+            'title' => 'Image pour les actualités',
+            'name' => 'news_background',
+            'type' => 'media',
+            'position' => 4,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-10.jpg']
         ],
         /* Team Page */
         'balsamine_team' => [
