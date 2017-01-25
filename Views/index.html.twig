@@ -2,22 +2,22 @@
 
 {% block css %}
     <style>
-        #section-intro-2{background:url({{ img(field_render('homepage_1_background_image').path) }}); overflow:hidden;}
+        #section-intro-2{background:url({{ img(field_render('homepage_1_background_image', 'page@'~data.page.id).path) }}); overflow:hidden;}
         #explore-5.side-bg .background-image {background:url({{ img(field_render('about_us_image', 'page@'~data.page.id).path) }}) top;}
         #section-hero-2{background:url({{ img(field_render('news_background', 'page@'~data.page.id).path) }}); overflow:hidden;}
     </style>
 {% endblock %}
 
-{% block body %}
+{% block page %}
     <!-- content begin -->
     <div id="content" class="no-bottom no-top">
 
-        {% set theme_model = field_render('homepage_model') %}
+        {% set theme_model = field_render('homepage_model', 'page@'~data.page.id) %}
         {% if theme_model == 'static' %}
             <!-- section begin -->
             <section id="section-intro-2" aria-label="section-intro-2" class="full-height" data-stellar-background-ratio=".2">
             <div class="center-y text-center">
-                {% set activities = field_render('homepage_1_activities') %}
+                {% set activities = field_render('homepage_1_activities', 'page@'~data.page.id) %}
                 <div class="spacer-single"></div>
                 <div class="type-wrap big-font">
                     We do
@@ -35,7 +35,7 @@
         </section>
             <!-- section close -->
         {% elseif theme_model == 'slider' %}
-            {% set slider = field_render('homepage_2') %}
+            {% set slider = field_render('homepage_2', 'page@'~data.page.id) %}
             <section id="section-slider" aria-label="section-slider" class="fullwidthbanner-container">
                 <div id="revolution-slider">
                     <ul>
@@ -77,9 +77,9 @@
                     <div class="de-video-content">
                         <div class="text-center">
                             <div class="spacer-single"></div>
-                            <h1 class="big-font">{{ field_render('homepage_3_title') }}</h1>
+                            <h1 class="big-font">{{ field_render('homepage_3_title', 'page@'~data.page.id) }}</h1>
                             <div class="spacer-single"></div>
-                            {% set model_3_link = field_render('homepage_3_link') %}
+                            {% set model_3_link = field_render('homepage_3_link', 'page@'~data.page.id) %}
                             {% if model_3_link != '' %}
                                 <a href="{{ model_3_link }}" class="btn-slider">Voir plus</a>
                             {% endif %}
@@ -88,8 +88,8 @@
 
                     <div class="de-video-overlay"></div>
 
-                    {% set video_link = field_render('homepage_3_link') %}
-                    {% if 'youtube' in video_link %}
+                    {% set video_link = field_render('homepage_3_link', 'page@'~data.page.id) %}
+                    {% if youtube in video_link %}
                         <iframe width="100%" height="100%" src="{{ video_link }}?autoplay=1&loop=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
                     {% else %}
                         <!-- load your video here -->

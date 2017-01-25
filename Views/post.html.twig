@@ -1,11 +1,22 @@
-<section id="post" data-panel="post" class="col-3 pic-hl-text">
-    <article>
-        <div class="pic">
-            <img src="{{ asset(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}">
-        </div><div class="hlblock">
-            <h1>{{ post.title }}</h1>
-        </div><div class="content">
-            {{ post.content|raw }}
+{% block css %}
+    <style>
+        .side-bg .background-image{
+            background: url({{ img(post.thumbnail.path) }}) top;
+        }
+    </style>
+{% endblock %}
+
+<section aria-label="services-hair" class="side-bg">
+    <div class="col-md-6 image-container">
+        <div class="background-image"></div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-7">
+                <h2>{{ post.title }}</h2>
+                {{ post.content|raw }}
+            </div>
         </div>
-    </article>
+    </div>
 </section>

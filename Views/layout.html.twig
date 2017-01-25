@@ -97,8 +97,9 @@
                         <!-- logo begin -->
                         <div id="logo">
                             <a href="{{ path('') }}">
+                                {% set logo_list = field_render('logo_light') %}
                                 <img class="logo logo_dark_bg" src="{{ img(data.website.logo.path) }}" alt="{{ data.website.logo.alt }}">
-                                <img class="logo logo_light_bg" src="{{ img(data.website.logo_light.path) }}" alt="{{ data.website.logo_light.alt }}">
+                                <img class="logo logo_light_bg" src="{{ img(logo_list.path) }}" alt="{{ logo_list.alt }}">
                             </a>
                         </div>
                         <!-- logo close -->
@@ -116,7 +117,7 @@
             </div>
         </header>
 
-        {% block body %}
+        {% block page %}
         {% endblock %}
 
         <!-- section begin -->
@@ -192,24 +193,28 @@
 
     <!-- Javascript Files
     ================================================== -->
+    <script>
+        var logo_dir_1 = "{{ img(data.website.logo.path) }}"; // change with your logo path
+        var logo_dir_2 = "{{ img(logo_list.path) }}"; // change with your logo path (for light background)
+    </script>
     <script src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('libs/owl/owl.carousel.min.js') }}"></script>
-    <script src="{{ theme_asset('jpreLoader.js') }}"></script>
-    <script src="{{ theme_asset('jquery.isotope.min.js') }}"></script>
-    <script src="{{ theme_asset('easing.js') }}"></script>
-    <script src="{{ theme_asset('jquery.flexslider-min.js') }}"></script>
-    <script src="{{ theme_asset('jquery.scrollto.js') }}"></script>
-    <script src="{{ theme_asset('jquery.countTo.js') }}"></script>
-    <script src="{{ theme_asset('classie.js') }}"></script>
-    <script src="{{ theme_asset('video.resize.js') }}"></script>
-    <script src="{{ theme_asset('validation.js') }}"></script>
-    <script src="{{ theme_asset('wow.min.js') }}"></script>
-    <script src="{{ theme_asset('jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ theme_asset('enquire.min.js') }}"></script>
-    <script src="{{ theme_asset('jquery.stellar.min.js') }}"></script>
-    <script src="{{ theme_asset('designesia.js') }}"></script>
-    <script src="{{ theme_asset('demo.js') }}"></script>
+    <script defer src="{{ theme_asset('jpreLoader.js') }}"></script>
+    <script defer src="{{ theme_asset('jquery.isotope.min.js') }}"></script>
+    <script defer src="{{ theme_asset('easing.js') }}"></script>
+    <script defer src="{{ theme_asset('jquery.flexslider-min.js') }}"></script>
+    <script defer src="{{ theme_asset('jquery.scrollto.js') }}"></script>
+    <script defer src="{{ theme_asset('jquery.countTo.js') }}"></script>
+    <script defer src="{{ theme_asset('classie.js') }}"></script>
+    <script defer src="{{ theme_asset('video.resize.js') }}"></script>
+    <script defer src="{{ theme_asset('validation.js') }}"></script>
+    <script defer src="{{ theme_asset('wow.min.js') }}"></script>
+    <script defer src="{{ theme_asset('jquery.magnific-popup.min.js') }}"></script>
+    <script defer src="{{ theme_asset('enquire.min.js') }}"></script>
+    <script defer src="{{ theme_asset('jquery.stellar.min.js') }}"></script>
+    <script defer src="{{ theme_asset('designesia.js') }}"></script>
+    <script defer src="{{ theme_asset('demo.js') }}"></script>
 
     <!-- SLIDER REVOLUTION SCRIPTS  -->
     <script type="text/javascript" src="{{ theme_asset('rs-plugin/js/jquery.themepunch.plugins.min.js') }}"></script>

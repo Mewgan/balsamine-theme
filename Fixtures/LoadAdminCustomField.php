@@ -98,30 +98,12 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             ],
             'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/logo_light.png']
         ],
-        'balsamine_homepage_layout' => [
-            'scope' => 'global',
-            'title' => 'Modèle de thème pour la page d\'accueil',
-            'name' => 'homepage_model',
-            'type' => 'select',
-            'position' => 1,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [
-                'contents' => [
-                    ['key' => 'static','value' => 'Statique'],
-                    ['key' => 'slider','value' => 'Slider'],
-                    ['key' => 'video','value' => 'Vidéo'],
-                ],
-                'multiple' => false
-            ],
-            'content' => ['value' => 'static']
-        ],
         'balsamine_theme_color' => [
             'scope' => 'global',
             'title' => 'Couleur du thème',
             'name' => 'theme_color',
             'type' => 'select',
-            'position' => 2,
+            'position' => 1,
             'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [
@@ -145,7 +127,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Position du menu',
             'name' => 'navigation_position',
             'type' => 'select',
-            'position' => 3,
+            'position' => 2,
             'parent' => null,
             'cf' => 'Balsamine Specific Global',
             'data' => [
@@ -156,138 +138,6 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 'multiple' => false
             ],
             'content' => ['value' => 'center']
-        ],
-        'balsamine_homepage_1_background' => [
-            'scope' => 'global',
-            'title' => 'Image du background pour le modèle "Statique"',
-            'name' => 'homepage_1_background_image',
-            'type' => 'media',
-            'position' => 4,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg']
-        ],
-        'balsamine_homepage_1_activities' => [
-            'scope' => 'global',
-            'title' => 'Activités',
-            'name' => 'homepage_1_activities',
-            'type' => 'repeater',
-            'position' => 5,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows' => [0,1,2,3,4,5]
-            ]
-        ],
-        'balsamine_homepage_1_activity_title' => [
-            'scope' => 'global',
-            'title' => 'Titre',
-            'name' => 'title',
-            'type' => 'string',
-            'position' => 0,
-            'parent' => 'balsamine_homepage_1_activities',
-            'cf' => 'Balsamine Specific Global',
-            'data' => [],
-            'content' => [
-                'value' => ['Hair Care', 'Make Up', 'Facial', 'Massage', 'Nail Care', 'Waxing']
-            ]
-        ],
-        'balsamine_homepage_2' => [
-            'scope' => 'global',
-            'title' => 'Configuration pour le modèle "Slider"',
-            'name' => 'homepage_2',
-            'type' => 'repeater',
-            'position' => 6,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [],
-            'content' => [
-                'type' => 'repeater',
-                'rows' => [0,1]
-            ]
-        ],
-        'balsamine_homepage_2_slider_image' => [
-            'scope' => 'global',
-            'title' => 'Images du slider',
-            'name' => 'image',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => 'balsamine_homepage_2',
-            'cf' => 'Balsamine Specific Global',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['value' => [
-                    '/src/Themes/Balsamine/Resources/public/img/images-slider/wide7.jpg',
-                    '/src/Themes/Balsamine/Resources/public/img/images-slider/wide8.jpg'
-                ],
-            ]
-        ],
-        'balsamine_homepage_2_slider_title' => [
-            'scope' => 'global',
-            'title' => 'Titre du slider',
-            'name' => 'title',
-            'type' => 'string',
-            'position' => 1,
-            'parent' => 'balsamine_homepage_2',
-            'cf' => 'Balsamine Specific Global',
-            'data' => [],
-            'content' => ['value' => [
-                    'BEAUTY SALON',
-                    'FROM HEAD TO TOE'
-                ],
-            ]
-        ],
-        'balsamine_homepage_2_slider_link' => [
-            'scope' => 'global',
-            'title' => 'Lien du slider',
-            'name' => 'link',
-            'type' => 'string',
-            'position' => 2,
-            'parent' => 'balsamine_homepage_2',
-            'cf' => 'Balsamine Specific Global',
-            'data' => [],
-            'content' => ['value' =>
-                ['#',''],
-            ]
-        ],
-        'balsamine_homepage_3_background' => [
-            'scope' => 'global',
-            'title' => 'Lien du vidéo de background pour le modèle "Vidéo"',
-            'name' => 'homepage_3_background_video',
-            'type' => 'string',
-            'position' => 7,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [],
-            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/video/salon_1.mp4']
-        ],
-        'balsamine_homepage_3_background_title' => [
-            'scope' => 'global',
-            'title' => 'Titre pour le modèle "Vidéo"',
-            'name' => 'homepage_3_title',
-            'type' => 'string',
-            'position' => 8,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [],
-            'content' => ['value' =>'QUALITY & SERVICES']
-        ],
-        'balsamine_homepage_3_background_link' => [
-            'scope' => 'global',
-            'title' => 'Lien pour le modèle "Vidéo"',
-            'name' => 'homepage_3_link',
-            'type' => 'string',
-            'position' => 9,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [],
-            'content' => ['value' =>'#']
         ],
         /* Page */
         'balsamine_page' => [
@@ -311,12 +161,162 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             ]
         ],
         /* Homepage */
+        'balsamine_homepage_layout' => [
+            'scope' => 'specified',
+            'title' => 'Modèle de thème pour la page d\'accueil',
+            'name' => 'homepage_model',
+            'type' => 'select',
+            'position' => 1,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [
+                'contents' => [
+                    ['key' => 'static','value' => 'Statique'],
+                    ['key' => 'slider','value' => 'Slider'],
+                    ['key' => 'video','value' => 'Vidéo'],
+                ],
+                'multiple' => false
+            ],
+            'content' => ['page@society-balsamine-home' => 'static']
+        ],
+        'balsamine_homepage_1_background' => [
+            'scope' => 'specified',
+            'title' => 'Image du background pour le modèle "Statique"',
+            'name' => 'homepage_1_background_image',
+            'type' => 'media',
+            'position' => 2,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg']
+        ],
+        'balsamine_homepage_1_activities' => [
+            'scope' => 'specified',
+            'title' => 'Activités',
+            'name' => 'homepage_1_activities',
+            'type' => 'repeater',
+            'position' => 3,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-balsamine-home' => [0,1,2,3,4,5]
+            ]
+        ],
+        'balsamine_homepage_1_activity_title' => [
+            'scope' => 'specified',
+            'title' => 'Titre',
+            'name' => 'title',
+            'type' => 'string',
+            'position' => 0,
+            'parent' => 'balsamine_homepage_1_activities',
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => [
+                'page@society-balsamine-home' => ['Hair Care', 'Make Up', 'Facial', 'Massage', 'Nail Care', 'Waxing']
+            ]
+        ],
+        'balsamine_homepage_2' => [
+            'scope' => 'specified',
+            'title' => 'Configuration pour le modèle "Slider"',
+            'name' => 'homepage_2',
+            'type' => 'repeater',
+            'position' => 4,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => [
+                'type' => 'repeater',
+                'rows@page@society-balsamine-home' => [0,1]
+            ]
+        ],
+        'balsamine_homepage_2_slider_image' => [
+            'scope' => 'specified',
+            'title' => 'Images du slider',
+            'name' => 'image',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => 'balsamine_homepage_2',
+            'cf' => 'Balsamine Home Page',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['page@society-balsamine-home' => [
+                '/src/Themes/Balsamine/Resources/public/img/images-slider/wide7.jpg',
+                '/src/Themes/Balsamine/Resources/public/img/images-slider/wide8.jpg'
+            ],
+            ]
+        ],
+        'balsamine_homepage_2_slider_title' => [
+            'scope' => 'specified',
+            'title' => 'Titre du slider',
+            'name' => 'title',
+            'type' => 'string',
+            'position' => 1,
+            'parent' => 'balsamine_homepage_2',
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-home' => [
+                'BEAUTY SALON',
+                'FROM HEAD TO TOE'
+            ],
+            ]
+        ],
+        'balsamine_homepage_2_slider_link' => [
+            'scope' => 'specified',
+            'title' => 'Lien du slider',
+            'name' => 'link',
+            'type' => 'string',
+            'position' => 2,
+            'parent' => 'balsamine_homepage_2',
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-home' =>
+                ['#',''],
+            ]
+        ],
+        'balsamine_homepage_3_background' => [
+            'scope' => 'specified',
+            'title' => 'Lien du vidéo de background pour le modèle "Vidéo"',
+            'name' => 'homepage_3_background_video',
+            'type' => 'string',
+            'position' => 5,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/video/salon_1.mp4']
+        ],
+        'balsamine_homepage_3_background_title' => [
+            'scope' => 'specified',
+            'title' => 'Titre pour le modèle "Vidéo"',
+            'name' => 'homepage_3_title',
+            'type' => 'string',
+            'position' => 6,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-home' =>'QUALITY & SERVICES']
+        ],
+        'balsamine_homepage_3_background_link' => [
+            'scope' => 'specified',
+            'title' => 'Lien pour le modèle "Vidéo"',
+            'name' => 'homepage_3_link',
+            'type' => 'string',
+            'position' => 7,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-home' =>'#']
+        ],
         'balsamine_homepage_left_bloc' => [
             'scope' => 'specified',
             'title' => 'Bloc de gauche',
             'name' => 'left_top_bloc',
             'type' => 'wysiwyg',
-            'position' => 0,
+            'position' => 8,
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [],
@@ -331,7 +331,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Bloc de droite',
             'name' => 'right_top_bloc',
             'type' => 'wysiwyg',
-            'position' => 1,
+            'position' => 9,
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [],
@@ -346,7 +346,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Image pour de gauche',
             'name' => 'about_us_image',
             'type' => 'media',
-            'position' => 2,
+            'position' => 10,
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [
@@ -359,7 +359,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'A propos de nous',
             'name' => 'about_us',
             'type' => 'wysiwyg',
-            'position' => 3,
+            'position' => 11,
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [],
@@ -375,13 +375,24 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Image pour les actualités',
             'name' => 'news_background',
             'type' => 'media',
-            'position' => 4,
+            'position' => 12,
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [
                 'media_render_type' => 'object'
             ],
             'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-10.jpg']
+        ],
+        'balsamine_homepage_actu_text' => [
+            'scope' => 'specified',
+            'title' => 'Texte pour les actualités',
+            'name' => 'news_title',
+            'type' => 'string',
+            'position' => 13,
+            'parent' => null,
+            'cf' => 'Balsamine Home Page',
+            'data' => [],
+            'content' => ['page@society-balsamine-home' => 'Découvrez nos actualités']
         ],
         /* Team Page */
         'balsamine_team' => [
@@ -409,11 +420,12 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [
                 'media_render_type' => 'object'
             ],
-            'content' => ['page@society-balsamine-team' =>
-                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_1.jpg',
-                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_2.jpg',
-                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_3.jpg',
-                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_4.jpg',
+            'content' => ['page@society-balsamine-team' => [
+                    '/src/Themes/Balsamine/Resources/public/img/team/team_pic_1.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/team/team_pic_2.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/team/team_pic_3.jpg',
+                    '/src/Themes/Balsamine/Resources/public/img/team/team_pic_4.jpg',
+                ]
             ]
         ],
         'balsamine_team_name' => [
@@ -425,11 +437,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => 'balsamine_team',
             'cf' => 'Balsamine Team Page',
             'data' => [],
-            'content' => ['page@society-balsamine-team' =>
-                'Briana',
-                'Jessica',
-                'Rachel',
-                'Emma',
+            'content' => ['page@society-balsamine-team' =>  ['Briana', 'Jessica', 'Rachel', 'Emma'],
             ]
         ],
         'balsamine_team_description' => [
@@ -441,11 +449,12 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => 'balsamine_team',
             'cf' => 'Balsamine Team Page',
             'data' => [],
-            'content' => ['page@society-balsamine-team' =>
-                'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+            'content' => ['page@society-balsamine-team' => [
+                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+                ]
             ]
         ],
         /* Gallery Page */
