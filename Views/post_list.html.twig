@@ -25,7 +25,7 @@
                             </span>
                         </a>
 
-                        <img src="{{ img(post.thumbnail.path) }}" class="{% if data.route_params.slug != 'actualite' %}img-circle{% endif %}" alt="{{ post.thumbnail.alt }}" />
+                        <img data-src="{{ img(post.thumbnail.path) }}" class="lazyload {% if data.route_params.slug != 'actualite' %}img-circle{% endif %}" alt="{{ post.thumbnail.alt }}" />
                     </div>
 
                     <div class="spacer-single"></div>

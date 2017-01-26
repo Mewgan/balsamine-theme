@@ -13,38 +13,11 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
 
     protected $data = [
         /* Aster pages */
-        'society-balsamine-home' =>  [
-            'title' => 'Accueil',
-            'route' => 'home',
+        'society-balsamine-contact' =>  [
+            'title' => 'Contact',
+            'route' => 'module:contact.type:static.action:show',
             'website' => 'Balsamine Website',
-            'layout' => 'balsamine_simple_home_page_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'static',
-        ],
-        'society-balsamine-list-post' =>  [
-            'title' => 'Liste d\'articles',
-            'route' => 'module:post.type:dynamic.action:all',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_page_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'dynamic'
-        ],
-        'society-balsamine-single-post' =>  [
-            'title' => 'Article',
-            'route' => 'module:post.type:dynamic.action:read',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_page_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'dynamic'
-        ],
-        'society-balsamine-team' =>  [
-            'title' => 'Equipe',
-            'route' => 'module:team.type:static.action:all',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_team_layout',
+            'layout' => 'balsamine_contact_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',
@@ -58,11 +31,38 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'libraries' => [],
             'type' => 'static',
         ],
-        'society-balsamine-contact' =>  [
-            'title' => 'Contact',
-            'route' => 'module:contact.type:static.action:show',
+        'society-balsamine-team' =>  [
+            'title' => 'Equipe',
+            'route' => 'module:team.type:static.action:all',
             'website' => 'Balsamine Website',
-            'layout' => 'balsamine_contact_layout',
+            'layout' => 'balsamine_team_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static',
+        ],
+        'society-balsamine-single-post' =>  [
+            'title' => 'Article',
+            'route' => 'module:post.type:dynamic.action:read',
+            'website' => 'Balsamine Website',
+            'layout' => 'balsamine_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'dynamic'
+        ],
+        'society-balsamine-list-post' =>  [
+            'title' => 'Liste d\'articles',
+            'route' => 'module:post.type:dynamic.action:all',
+            'website' => 'Balsamine Website',
+            'layout' => 'balsamine_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'dynamic'
+        ],
+        'society-balsamine-home' =>  [
+            'title' => 'Accueil',
+            'route' => 'home',
+            'website' => 'Balsamine Website',
+            'layout' => 'balsamine_simple_home_page_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',

@@ -26,7 +26,7 @@
                     <div class="service-item">
 
                         <a href="{{ link(route,params) }}">
-                            <img src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}" class="pic-grey wow zoomIn" data-wow-delay="1.1s" />
+                            <img data-src="{{ img(post.thumbnail.path) }}" alt="{{ post.thumbnail.alt }}" class="lazyload pic-grey wow zoomIn" data-wow-delay="1.1s" />
                             <h3>{{ post.title }}</h3>
                         </a>
 
