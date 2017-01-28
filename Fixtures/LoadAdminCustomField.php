@@ -16,12 +16,38 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
 
     protected $data = [
         /* Balsamine fields */
+        'balsamine_logo' => [
+            'scope' => 'global',
+            'title' => 'Logo',
+            'name' => 'logo',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Balsamine Default Global',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/logo.png']
+        ],
+        'balsamine_sub_logo' => [
+            'scope' => 'global',
+            'title' => 'Logo réduit',
+            'name' => 'logo_light',
+            'type' => 'media',
+            'position' => 1,
+            'parent' => null,
+            'cf' => 'Balsamine Default Global',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/logo_light.png']
+        ],
         'balsamine_opening_hours' => [
             'scope' => 'global',
             'title' => 'Horaires d\'ouverture',
             'name' => 'opening_hours',
             'type' => 'wysiwyg',
-            'position' => 0,
+            'position' => 2,
             'parent' => null,
             'cf' => 'Balsamine Default Global',
             'data' => [],
@@ -32,7 +58,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Réseaux sociaux',
             'name' => 'social_networks',
             'type' => 'repeater',
-            'position' => 1,
+            'position' => 3,
             'parent' => null,
             'cf' => 'Balsamine Default Global',
             'data' => [],
@@ -78,26 +104,13 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Lien du rendez-vous en ligne',
             'name' => 'booking_link',
             'type' => 'string',
-            'position' => 2,
+            'position' => 4,
             'parent' => null,
             'cf' => 'Balsamine Default Global',
             'data' => [],
             'content' => ['value' => '#']
         ],
         /* Theme specific */
-        'balsamine_sub_logo' => [
-            'scope' => 'global',
-            'title' => 'Logo réduit',
-            'name' => 'logo_light',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => null,
-            'cf' => 'Balsamine Specific Global',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['value' => '/src/Themes/Balsamine/Resources/public/img/logo_light.png']
-        ],
         'balsamine_theme_color' => [
             'scope' => 'global',
             'title' => 'Couleur du thème',

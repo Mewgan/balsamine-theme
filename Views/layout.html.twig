@@ -97,8 +97,9 @@
                         <!-- logo begin -->
                         <div id="logo">
                             <a href="{{ path('') }}">
+                                {% set logo = field_render('logo') %}
                                 {% set logo_list = field_render('logo_light') %}
-                                <img class="logo logo_dark_bg" src="{{ img(data.website.logo.path) }}" alt="{{ data.website.logo.alt }}">
+                                <img class="logo logo_dark_bg" src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
                                 <img class="logo logo_light_bg" src="{{ img(logo_list.path) }}" alt="{{ logo_list.alt }}">
                             </a>
                         </div>

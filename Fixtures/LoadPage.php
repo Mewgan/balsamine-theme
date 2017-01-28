@@ -41,7 +41,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'type' => 'static',
         ],
         'society-balsamine-single-post' =>  [
-            'title' => 'Article',
+            'title' => 'Page d\'un article',
             'route' => 'module:post.type:dynamic.action:read',
             'website' => 'Balsamine Website',
             'layout' => 'balsamine_page_layout',
@@ -50,7 +50,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'type' => 'dynamic'
         ],
         'society-balsamine-list-post' =>  [
-            'title' => 'Liste d\'articles',
+            'title' => 'Actualités / Services',
             'route' => 'module:post.type:dynamic.action:all',
             'website' => 'Balsamine Website',
             'layout' => 'balsamine_page_layout',

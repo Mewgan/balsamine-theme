@@ -18,7 +18,6 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'theme' =>  'Balsamine',
             'layout' => 'balsamine_layout',
             'render_system' => 'php',
-            'logo' => '/src/Themes/Balsamine/Resources/public/img/logo.png',
             'modules' => [
                 'navigation',
                 'list-post',
@@ -93,7 +92,6 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'society' => 'Zoro Society',
             'domain' => 'zoro-society',
             'theme' =>  'Balsamine',
-            'logo' => '/src/Themes/Balsamine/Resources/public/img/logo.png',
             'layout' => 'balsamine_layout',
             'render_system' => 'php',
             'modules' => [
