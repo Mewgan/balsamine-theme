@@ -7,7 +7,7 @@
         <title>{% block title %}{% endblock %}</title>
         <meta name="description" content="{% block description %}{% endblock %}">
         {# debugbar #}
-        {{ debug_bar_header()|raw }}
+        {#{{ debug_bar_header()|raw }}#}
         {# End debugbar #}
 
 
@@ -98,9 +98,9 @@
                         <div id="logo">
                             <a href="{{ path('') }}">
                                 {% set logo = field_render('logo') %}
-                                {% set logo_list = field_render('logo_light') %}
+                                {% set logo_light = field_render('logo_light') %}
                                 <img class="logo logo_dark_bg" src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
-                                <img class="logo logo_light_bg" src="{{ img(logo_list.path) }}" alt="{{ logo_list.alt }}">
+                                <img class="logo logo_light_bg" src="{{ img(logo_light.path) }}" alt="{{ logo_light.alt }}">
                             </a>
                         </div>
                         <!-- logo close -->
@@ -238,7 +238,7 @@
     {% block js %}{% endblock %}
 
     {# debugbar #}
-    {{ debug_bar_footer()|raw }}
+    {#{{ debug_bar_footer()|raw }}#}
     {# End debugbar#}
 </body>
 </html>
