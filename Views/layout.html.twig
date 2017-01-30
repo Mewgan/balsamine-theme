@@ -87,6 +87,8 @@
     {% set booking_link = field_render('booking_link') %}
     {% set opening_hours = field_render('opening_hours') %}
     {% set socials = field_render('social_networks') %}
+    {% set logo = field_render('logo') %}
+    {% set logo_light = field_render('logo_light') %}
 
     <div id="wrapper">
         <!-- header begin -->
@@ -97,8 +99,6 @@
                         <!-- logo begin -->
                         <div id="logo">
                             <a href="{{ path('') }}">
-                                {% set logo = field_render('logo') %}
-                                {% set logo_light = field_render('logo_light') %}
                                 <img class="logo logo_dark_bg" src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
                                 <img class="logo logo_light_bg" src="{{ img(logo_light.path) }}" alt="{{ logo_light.alt }}">
                             </a>
@@ -195,8 +195,8 @@
     <!-- Javascript Files
     ================================================== -->
     <script>
-        var logo_dir_1 = "{{ img(data.website.logo.path) }}"; // change with your logo path
-        var logo_dir_2 = "{{ img(logo_list.path) }}"; // change with your logo path (for light background)
+        var logo_dir_1 = "{{ img(logo.path) }}"; // change with your logo path
+        var logo_dir_2 = "{{ img(logo_light.path) }}"; // change with your logo path (for light background)
     </script>
     <script src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
