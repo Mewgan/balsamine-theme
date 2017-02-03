@@ -200,7 +200,7 @@
                         <h2 class="wow-fadeIn">A propos de nous</h2>
                         <div class="small-border left wow zoomIn" data-wow-delay=".3s" data-wow-duration=".3s"></div>
 
-                        {{ field_render('about_us', 'page@'~data.page.id) }}
+                        {{ field_render('about_us', 'page@'~data.page.id) | raw }}
                     </div>
                 </div>
             </div>

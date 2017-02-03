@@ -13,14 +13,14 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
 
     protected $data = [
         /* Aster pages */
-        'society-balsamine-contact' =>  [
-            'title' => 'Contact',
-            'route' => 'module:contact.type:static.action:show',
+        'society-balsamine-single-post' =>  [
+            'title' => 'Page d\'un article',
+            'route' => 'module:post.type:dynamic.action:read',
             'website' => 'Balsamine Website',
-            'layout' => 'balsamine_contact_layout',
+            'layout' => 'balsamine_page_layout',
             'stylesheets' => [],
             'libraries' => [],
-            'type' => 'static',
+            'type' => 'dynamic'
         ],
         'society-balsamine-gallery' =>  [
             'title' => 'Galerie',
@@ -40,14 +40,14 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'libraries' => [],
             'type' => 'static',
         ],
-        'society-balsamine-single-post' =>  [
-            'title' => 'Page d\'un article',
-            'route' => 'module:post.type:dynamic.action:read',
+        'society-balsamine-contact' =>  [
+            'title' => 'Contact',
+            'route' => 'module:contact.type:static.action:show',
             'website' => 'Balsamine Website',
-            'layout' => 'balsamine_page_layout',
+            'layout' => 'balsamine_contact_layout',
             'stylesheets' => [],
             'libraries' => [],
-            'type' => 'dynamic'
+            'type' => 'static',
         ],
         'society-balsamine-list-post' =>  [
             'title' => 'Actualités / Services',
