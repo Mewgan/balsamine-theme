@@ -17,7 +17,7 @@ class LoadMedia extends AbstractFixture
             'type' => 'image/png',
             'size' => 137577,
             'access_level' => 2,
-            'alt' => 'Theme aster thumbnail'
+            'alt' => 'Theme balsamine thumbnail'
         ],
         [
             'title' => 'Logo theme balsamine',
@@ -25,7 +25,7 @@ class LoadMedia extends AbstractFixture
             'type' => 'image/png',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Logo aster'
+            'alt' => 'Logo balsamine'
         ],
         [
             'title' => 'Logo light theme balsamine',
@@ -33,7 +33,7 @@ class LoadMedia extends AbstractFixture
             'type' => 'image/png',
             'size' => 404299,
             'access_level' => 2,
-            'alt' => 'Logo aster'
+            'alt' => 'Logo balsamine'
         ],
         [
             'title' => 'Background video image',
