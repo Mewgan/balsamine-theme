@@ -19,6 +19,13 @@ class LoadAddress extends AbstractFixture implements DependentFixtureInterface
             'postal_code' => '75003',
             'society' => 'Balsamine Society',
             'country' => 'FRANCE',
+        ],
+        'zoro-address' => [
+            'address' => '45 Rue Alexandre Fourny',
+            'city' => 'Champigny Sur Marne',
+            'postal_code' => '94500',
+            'society' => 'Zoro Society',
+            'country' => 'FRANCE',
         ]
     ];
 

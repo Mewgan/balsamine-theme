@@ -165,7 +165,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 'media_render_type' => 'object'
             ],
             'content' => [
-                'page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-1.jpg',
+                'page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg',
                 'page@society-balsamine-list-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
                 'page@society-balsamine-single-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-3.jpg',
                 'page@society-balsamine-team' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-4.jpg',
@@ -191,19 +191,6 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 'multiple' => false
             ],
             'content' => ['page@society-balsamine-home' => 'static']
-        ],
-        'balsamine_homepage_1_background' => [
-            'scope' => 'specified',
-            'title' => 'Image du background pour le modèle "Statique"',
-            'name' => 'homepage_1_background_image',
-            'type' => 'media',
-            'position' => 2,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg']
         ],
         'balsamine_homepage_1_activities' => [
             'scope' => 'specified',

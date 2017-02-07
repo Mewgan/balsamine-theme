@@ -2,7 +2,7 @@
 
 {% block css %}
     <style>
-        #section-intro-2{background:url({{ img(field_render('homepage_1_background_image', 'page@'~data.page.id).path) }}); overflow:hidden;}
+        #section-intro-2{background:url({{ img(field_render('subheader', 'page@'~data.page.id).path) }}); overflow:hidden;}
         #explore-5.side-bg .background-image {background:url({{ img(field_render('about_us_image', 'page@'~data.page.id).path) }}) top;}
         #section-hero-2{background:url({{ img(field_render('news_background', 'page@'~data.page.id).path) }}); overflow:hidden;}
     </style>
