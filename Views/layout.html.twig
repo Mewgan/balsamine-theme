@@ -81,9 +81,8 @@
 
 <body id="homepage">
 
-    {% set salon = data_render('Jet\\Models\\Society', ['s.name']) %}
+    {% set salon = data_render('Jet\\Models\\Society', ['s.name','s.email','s.phone']) %}
     {% set address = data_render('Jet\\Models\\Address', ['a.address','a.city','a.postal_code','a.country','a.latitude','a.longitude']) %}
-    {% set account = data_render('Jet\\Models\\Account', ['a.phone','a.email']) %}
     {% set booking_link = field_render('booking_link') %}
     {% set opening_hours = field_render('opening_hours') %}
     {% set socials = field_render('social_networks') %}
@@ -160,8 +159,8 @@
                                 <span>{{ address.address }}</span>
                                 <span>{{ address.postal_code }} {{ address.city }}</span>
                                 <span>{{ address.country }}</span>
-                                <span><strong>Tél:</strong>{{ account.phone }}</span>
-                                <span><strong>E-mail:</strong><a href="mailto:{{ account.email }}">{{ account.email }}</a></span>
+                                <span><strong>Tél:</strong>{{ salon.phone }}</span>
+                                <span><strong>E-mail:</strong><a href="mailto:{{ salon.email }}">{{ salon.email }}</a></span>
                             </address>
                         </div>
                     </div>

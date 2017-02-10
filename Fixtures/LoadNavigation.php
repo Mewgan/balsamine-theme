@@ -13,7 +13,7 @@ class LoadNavigation extends AbstractFixture implements DependentFixtureInterfac
     
     protected $data = [
         'balsamine-menu' => [
-            'name' => 'Menu',
+            'name' => 'Menu du haut',
             'website' => 'balsamine-society'
         ]
     ];
