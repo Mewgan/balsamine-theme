@@ -49,8 +49,26 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'libraries' => [],
             'type' => 'static',
         ],
+        'society-balsamine-service' =>  [
+            'title' => 'Service',
+            'route' => 'module:post.type:static.action:list.name:service',
+            'website' => 'Balsamine Website',
+            'layout' => 'balsamine_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static'
+        ],
+        'society-balsamine-actualite' =>  [
+            'title' => 'Actualité',
+            'route' => 'module:post.type:static.action:list.name:actualite',
+            'website' => 'Balsamine Website',
+            'layout' => 'balsamine_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static'
+        ],
         'society-balsamine-list-post' =>  [
-            'title' => 'Actualités / Services',
+            'title' => 'Liste d\'articles',
             'route' => 'module:post.type:dynamic.action:all',
             'website' => 'Balsamine Website',
             'layout' => 'balsamine_page_layout',

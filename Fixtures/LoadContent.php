@@ -101,6 +101,74 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ],
             ]
         ],
+        'balsamine_list_service_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Services',
+            'block' => 'list_post',
+            'website' => 'balsamine-society',
+            'module' => 'module_post_list',
+            'template' => 'balsamine_post_list_partial',
+            'section' => null,
+            'page' => 'society-balsamine-service',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 100,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['service'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
+        'balsamine_list_actualite_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Actualités',
+            'block' => 'list_post',
+            'website' => 'balsamine-society',
+            'module' => 'module_post_list',
+            'template' => 'balsamine_post_list_partial',
+            'section' => null,
+            'page' => 'society-balsamine-actualite',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 100,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['actualite'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
         'balsamine_list_post_content' => [
             'cat_mod' => 'post',
             'name' => 'Liste d\'articles',

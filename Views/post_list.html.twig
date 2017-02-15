@@ -15,18 +15,33 @@
                         {% endif %}
                     {% endif %}
                 {% endfor %}
+
                 <div class="col-md-4 col-sm-6 col-xs-6 text-center">
-                    <div class="picframe">
-                        <a href="{{ link(route,params) }}">
-                            <span class="overlay {% if data.route_params.slug != 'actualite' %}img-circle{% endif %}">
+                    {% if data.page.title == 'Service' %}
+                        <div class="picframe">
+                            <a href="{{ link(route,params) }}">
+                                <span class="overlay img-circle">
+                                    <span class="pf_text">
+                                        <span class="project-name">Voir plus</span>
+                                    </span>
+                                </span>
+                            </a>
+
+                            <img data-src="{{ img(post.thumbnail.path) }}" class="lazyload img-circle" alt="{{ post.thumbnail.alt }}" />
+                        </div>
+                    {% else %}
+                        <div class="picframe">
+                            <a href="{{ link(route,params) }}">
+                            <span class="overlay">
                                 <span class="pf_text">
                                     <span class="project-name">Voir plus</span>
                                 </span>
                             </span>
-                        </a>
+                            </a>
 
-                        <img data-src="{{ img(post.thumbnail.path) }}" class="lazyload {% if data.route_params.slug != 'actualite' %}img-circle{% endif %}" alt="{{ post.thumbnail.alt }}" />
-                    </div>
+                            <img data-src="{{ img(post.thumbnail.path) }}" class="lazyload" alt="{{ post.thumbnail.alt }}" />
+                        </div>
+                    {% endif %}
 
                     <div class="spacer-single"></div>
                     <h3>{{ post.title }}</h3>

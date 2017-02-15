@@ -155,7 +155,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         /* Page */
         'balsamine_page' => [
             'scope' => 'specified',
-            'title' => 'Image du header',
+            'title' => 'Image du bandeau du haut (Header)',
             'name' => 'subheader',
             'type' => 'media',
             'position' => 0,
@@ -167,6 +167,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'content' => [
                 'page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg',
                 'page@society-balsamine-list-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
+                'page@society-balsamine-service' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
+                'page@society-balsamine-actualite' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
                 'page@society-balsamine-single-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-3.jpg',
                 'page@society-balsamine-team' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-4.jpg',
                 'page@society-balsamine-gallery' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-5.jpg',
@@ -235,7 +237,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'balsamine_homepage_2_slider_image' => [
             'scope' => 'specified',
-            'title' => 'Images du slider',
+            'title' => 'Image',
             'name' => 'image',
             'type' => 'media',
             'position' => 0,
@@ -252,7 +254,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'balsamine_homepage_2_slider_title' => [
             'scope' => 'specified',
-            'title' => 'Titre du slider',
+            'title' => 'Titre',
             'name' => 'title',
             'type' => 'string',
             'position' => 1,
@@ -267,7 +269,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'balsamine_homepage_2_slider_link' => [
             'scope' => 'specified',
-            'title' => 'Lien du slider',
+            'title' => 'Lien',
             'name' => 'link',
             'type' => 'string',
             'position' => 2,
@@ -280,7 +282,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'balsamine_homepage_3_background' => [
             'scope' => 'specified',
-            'title' => 'Lien du vidéo de background pour le modèle "Vidéo"',
+            'title' => 'Lien du vidéo de fond pour le modèle "Vidéo"',
             'name' => 'homepage_3_background_video',
             'type' => 'string',
             'position' => 5,
@@ -320,10 +322,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [],
-            'content' => ['page@society-balsamine-home' => '<h4>Special Promo</h4>
-                                    <p>Our commitment to quality and services ensure our clients happy. With years of
-                                        experiences and continuing education, our dedicated staff is ready to serve your
-                                        beauty needs. We\'re happy to help you decide the best look.</p>'
+            'content' => ['page@society-balsamine-home' => '<h4>Promo Spécial</h4>
+                                    <p>Rédigez ici un descriptif de présentation de votre activité</p>'
             ]
         ],
         'balsamine_homepage_right_bloc' => [
@@ -343,7 +343,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'balsamine_homepage_about_us_image' => [
             'scope' => 'specified',
-            'title' => 'Image pour de gauche',
+            'title' => 'Image de gauche',
             'name' => 'about_us_image',
             'type' => 'media',
             'position' => 10,
@@ -363,16 +363,12 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [],
-            'content' => ['page@society-balsamine-home' => '<p>They were so friendly and it was pleasure to get my hair done there. I\'m very happy with
-                            services their provided. I will recommend this salon to my family and friends. Their
-                            pricing was competitive and their staff is professional.
-                            <span>Lynda, Customer</span>
-                        </p>'
+            'content' => ['page@society-balsamine-home' => '<p>Rédigez ici un descriptif de présentation de votre activité</p>'
             ]
         ],
         'balsamine_homepage_actu_background' => [
             'scope' => 'specified',
-            'title' => 'Image pour les actualités',
+            'title' => 'Image de fond pour les Actualités',
             'name' => 'news_background',
             'type' => 'media',
             'position' => 12,
@@ -385,7 +381,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         ],
         'balsamine_homepage_actu_text' => [
             'scope' => 'specified',
-            'title' => 'Texte pour les actualités',
+            'title' => 'Texte pour les Actualités',
             'name' => 'news_title',
             'type' => 'string',
             'position' => 13,
@@ -397,7 +393,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         /* Team Page */
         'balsamine_team' => [
             'scope' => 'specified',
-            'title' => 'Equipes',
+            'title' => 'Equipe',
             'name' => 'teams',
             'type' => 'repeater',
             'position' => 0,
@@ -450,10 +446,10 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Balsamine Team Page',
             'data' => [],
             'content' => ['page@society-balsamine-team' => [
-                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
-                    'She is our Lead Hair Designer and the creative inspiration. She\'s happy to help you decide the best hair style.',
+                    'Notre styliste coloriste se fera un plaisir de répondre à toutes vos envies !',
+                    'Notre styliste coloriste se fera un plaisir de répondre à toutes vos envies !',
+                    'Notre styliste coloriste se fera un plaisir de répondre à toutes vos envies !',
+                    'Notre styliste coloriste se fera un plaisir de répondre à toutes vos envies !',
                 ]
             ]
         ],
