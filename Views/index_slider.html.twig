@@ -1,0 +1,159 @@
+{% extends template_from_string(data.website_layout) %}
+
+{% block css %}
+    <style>
+        #explore-5.side-bg .background-image {background:url({{ img(field_render('about_us_image', 'page@'~data.page.id).path) }}) top;}
+        #section-hero-2{background:url({{ img(field_render('news_background', 'page@'~data.page.id).path) }}); overflow:hidden;}
+    </style>
+{% endblock %}
+
+{% block page %}
+    <!-- content begin -->
+    <div id="content" class="no-bottom no-top">
+
+        {% set slider = field_render('homepage_2', 'page') %}
+        <section id="section-slider" aria-label="section-slider" class="fullwidthbanner-container">
+            <div id="revolution-slider">
+                <ul>
+                    {% for slide in slider %}
+                        <li data-transition="parallaxtoright" data-slotamount="10" data-masterspeed="1200" data-thumb="">
+                        <!--  BACKGROUND IMAGE -->
+                        <img src="{{ img(slide.image.path) }}" alt="{{ slide.image.alt }}" />
+
+                        <div class="tp-caption ultra-big-white sfb"
+                             data-x="center"
+                             data-y="190"
+                             data-speed="1200"
+                             data-start="600"
+                             data-easing="easeInOutExpo"
+                             data-endspeed="400">
+                            {{ slide.title }}
+                        </div>
+
+                        {% if slide.link != '' %}
+                            <div class="tp-caption sfb"
+                                 data-x="center"
+                                 data-y="320"
+                                 data-speed="1000"
+                                 data-start="1100"
+                                 data-easing="easeInOutExpo">
+                                <a href="{{ slide.link }}" class="btn-slider">Voir plus
+                                </a>
+                            </div>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+
+        <div class="no-padding mt-130 height90px mobile-hide absolute z-index500 width100 text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="overlay10">
+
+                            <div class="row-fluid">
+                                <div class="col-md-4">
+                                    <div class="info-box padding20">
+                                        <i class="icon_clock_alt id-color"></i>
+                                        <div class="info-box_text">
+                                            <div class="info-box_title">Horaires d'ouvertures</div>
+                                            <div class="info-box_subtite">{{ opening_hours | raw }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="info-box padding20">
+                                        <i class="icon_house_alt id-color"></i>
+                                        <div class="info-box_text">
+                                            <div class="info-box_title">Lieu</div>
+                                            <div class="info-box_subtite">{{ address.address }}, {{ address.postal_code }} {{ address.city }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="info-box padding20">
+                                        <i class="icon_calendar id-color"></i>
+                                        <div class="info-box_text">
+                                            <div class="info-box_title">Contact</div>
+                                            <div class="info-box_subtite">{{ salon.phone }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section begin -->
+        <section id="section-top-reason" class="no-top no-bottom">
+            <div class="container-fluid">
+                <div class="row-fluid display-table">
+
+                    <div class="col-md-4 text-middle" data-bgcolor="#e2e2e2">
+                        <div class="padding40">
+                            <div class="box-icon">
+                                <i class="fa fa-tags wow zoomIn" data-wow-delay=".25s"></i>
+                                <div class="text">
+                                    {{ field_render('left_top_bloc','page@'~data.page.id) | raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-middle text-light" data-bgimage="url(/src/Themes/Balsamine/Resources/public/img/background/bg-div-1.jpg)">
+                        <div class="padding40 hoverdark30">
+                            <div class="box-icon">
+                                <i class="fa fa-tags wow zoomIn" data-wow-delay=".25s"></i>
+                                <div class="text">
+                                    {{ field_render('right_top_bloc','page@'~data.page.id) | raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-middle text-center" data-bgcolor="#50094d">
+                        <div class="padding40">
+                            <a href="{{ booking_link }}" class="btn btn-line-white btn-big wow fadeInUp" data-wow-delay=".3s">Réserver</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        {{ content_render('list_home_service') }}
+
+        <!-- section begin -->
+        <section id="explore-5" class="side-bg text-light">
+            <div class="col-md-6 image-container">
+                <div class="background-image"></div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-7">
+                        <h2 class="wow-fadeIn">A propos de nous</h2>
+                        <div class="small-border left wow zoomIn" data-wow-delay=".3s" data-wow-duration=".3s"></div>
+
+                        {{ field_render('about_us', 'page@'~data.page.id) | raw }}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        {{ content_render('list_home_news') }}
+
+    </div>
+
+{% endblock %}

@@ -12,7 +12,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
     use LoadFixture;
 
     protected $data = [
-        /* Aster pages */
+        /* Balsamine pages */
         'society-balsamine-single-post' =>  [
             'title' => 'Page d\'un article',
             'route' => 'module:post.type:dynamic.action:read',
@@ -81,6 +81,26 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'route' => 'home',
             'website' => 'Balsamine Website',
             'layout' => 'balsamine_simple_home_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static',
+        ],
+        /* Balsamine slider */
+        'society-balsamine-slider-home' =>  [
+            'title' => 'Accueil',
+            'route' => 'home',
+            'website' => 'Balsamine Slider Website',
+            'layout' => 'balsamine_slider_home_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static',
+        ],
+        /* Balsamine Video */
+        'society-balsamine-video-home' =>  [
+            'title' => 'Accueil',
+            'route' => 'home',
+            'website' => 'Balsamine Video Website',
+            'layout' => 'balsamine_video_home_page_layout',
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static',

@@ -13,11 +13,25 @@ class LoadAddress extends AbstractFixture implements DependentFixtureInterface
     use LoadFixture;
 
     protected $data = [
-        'balsamine' => [
-            'address' => '17 Rue Portefoin',
+        'balsamine-address' => [
+            'address' => '19 Rue Portefoin',
             'city' => 'Paris 3',
             'postal_code' => '75003',
             'society' => 'Balsamine Society',
+            'country' => 'FRANCE',
+        ],
+        'balsamine-slider-address' => [
+            'address' => '20 Rue Portefoin',
+            'city' => 'Paris 3',
+            'postal_code' => '75003',
+            'society' => 'Balsamine Slider Society',
+            'country' => 'FRANCE',
+        ],
+        'balsamine-video-address' => [
+            'address' => '30 Rue Portefoin',
+            'city' => 'Paris 3',
+            'postal_code' => '75003',
+            'society' => 'Balsamine Video Society',
             'country' => 'FRANCE',
         ],
         'zoro-address' => [

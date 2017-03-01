@@ -12,26 +12,48 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
     use LoadFixture;
 
     protected $data = [
-        'Balsamine Seo' => [
-            'title' => 'SEO',
-            'rule' => 'everywhere_rule',
-            'operation' => '=',
-            'value' => null,
-            'website' => 'Balsamine Website',
-        ],
-        'Balsamine Specific Global' => [
-            'title' => 'Données spécifique au thème',
-            'rule' => 'global_rule',
-            'operation' => '=',
-            'value' => null,
-            'website' => 'Balsamine Website'
-        ],
         'Balsamine Default Global' => [
             'title' => 'Données globales',
             'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
             'website' => 'Balsamine Website'
+        ],
+        'Balsamine Specific Global' => [
+            'title' => 'Apparence',
+            'rule' => 'global_rule',
+            'operation' => '=',
+            'value' => null,
+            'website' => 'Balsamine Website'
+        ],
+        'Balsamine Global Seo' => [
+            'title' => 'SEO',
+            'rule' => 'global_rule',
+            'operation' => '=',
+            'value' => null,
+            'website' => 'Balsamine Website'
+        ],
+        'Balsamine Social Network' => [
+            'title' => 'Réseaux sociaux',
+            'rule' => 'global_rule',
+            'operation' => '=',
+            'value' => null,
+            'website' => 'Balsamine Website'
+        ],
+        'Balsamine Custom Css & Js' => [
+            'title' => 'Css & Js',
+            'rule' => 'global_rule',
+            'operation' => '=',
+            'value' => null,
+            'access_level' => 2,
+            'website' => 'Balsamine Website',
+        ],
+        'Balsamine Seo' => [
+            'title' => 'SEO',
+            'rule' => 'everywhere_rule',
+            'operation' => '=',
+            'value' => null,
+            'website' => 'Balsamine Website',
         ],
         'Balsamine Page' => [
             'title' => 'Header',
@@ -60,7 +82,23 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'operation' => '=',
             'reference' => 'society-balsamine-gallery',
             'website' => 'Balsamine Website'
-        ]
+        ],
+        /* Slider Fields */
+        'Balsamine Slider Home Page' => [
+            'title' => 'Page d\'accueil',
+            'rule' => 'page_rule',
+            'operation' => '=',
+            'reference' => 'society-balsamine-slider-home',
+            'website' => 'Balsamine Slider Website'
+        ],
+        /* Video Fields */
+        'Balsamine Video Home Page' => [
+            'title' => 'Page d\'accueil',
+            'rule' => 'page_rule',
+            'operation' => '=',
+            'reference' => 'society-balsamine-video-home',
+            'website' => 'Balsamine Video Website'
+        ],
     ];
 
     public function load(ObjectManager $manager)

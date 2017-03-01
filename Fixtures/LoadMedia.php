@@ -20,6 +20,22 @@ class LoadMedia extends AbstractFixture
             'alt' => 'Theme balsamine thumbnail'
         ],
         [
+            'title' => 'Theme balsamine slider thumbnail',
+            'path' => '/public/media/thumbnail/theme-balsamine-slider-thumbnail.png',
+            'type' => 'image/png',
+            'size' => 137577,
+            'access_level' => 2,
+            'alt' => 'Theme balsamine slider thumbnail'
+        ],
+        [
+            'title' => 'Theme balsamine video thumbnail',
+            'path' => '/public/media/thumbnail/theme-balsamine-video-thumbnail.png',
+            'type' => 'image/png',
+            'size' => 137577,
+            'access_level' => 2,
+            'alt' => 'Theme balsamine video thumbnail'
+        ],
+        [
             'title' => 'Logo theme balsamine',
             'path' => '/src/Themes/Balsamine/Resources/public/img/logo.png',
             'type' => 'image/png',

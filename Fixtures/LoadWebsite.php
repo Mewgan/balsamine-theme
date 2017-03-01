@@ -88,10 +88,56 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'parent_replace' => [],
             ]
         ],
+        'Balsamine Slider Website' => [
+            'society' => 'Balsamine Slider Society',
+            'domain' => 'balsamine-slider-society',
+            'theme' =>  'Balsamine',
+            'layout' => 'balsamine_layout',
+            'render_system' => 'php',
+            'modules' => [
+                'navigation',
+                'list-post',
+                'single-post',
+                'grid-editor',
+            ],
+            'templates' => [
+                'balsamine_slider_home_page_layout',
+            ],
+            'medias' => [
+                '/public/media/thumbnail/theme-balsamine-slider-thumbnail.png',
+            ],
+            'data' => [
+                'parent_exclude' => [],
+                'parent_replace' => [],
+            ]
+        ],
+        'Balsamine Video Website' => [
+            'society' => 'Balsamine Video Society',
+            'domain' => 'balsamine-video-society',
+            'theme' =>  'Balsamine',
+            'layout' => 'balsamine_layout',
+            'render_system' => 'php',
+            'modules' => [
+                'navigation',
+                'list-post',
+                'single-post',
+                'grid-editor',
+            ],
+            'templates' => [
+                'balsamine_video_home_page_layout',
+            ],
+            'medias' => [
+                '/public/media/thumbnail/theme-balsamine-video-thumbnail.png',
+            ],
+            'data' => [
+                'parent_exclude' => [],
+                'parent_replace' => [],
+            ]
+        ],
         'Zoro Website' => [
             'society' => 'Zoro Society',
             'domain' => 'zoro-society',
-            'theme' =>  'Balsamine',
+            'theme' =>  'Balsamine Slider',
             'layout' => 'balsamine_layout',
             'render_system' => 'php',
             'modules' => [
@@ -111,7 +157,10 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
 
     public function load(ObjectManager $manager)
     {
-        $this->loadWebsite($manager, 'Balsamine Website');
+        $this->loadWebsite($manager);
+        $this->setThemeWebsite($manager, 'Balsamine', 'Balsamine Website');
+        $this->setThemeWebsite($manager, 'Balsamine Slider', 'Balsamine Slider Website');
+        $this->setThemeWebsite($manager, 'Balsamine Video', 'Balsamine Video Website');
     }
 
     /**

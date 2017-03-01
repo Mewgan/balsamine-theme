@@ -19,6 +19,18 @@ class LoadSociety extends AbstractFixture implements DependentFixtureInterface
             'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         [
+            'name' => 'Balsamine Slider Society',
+            'email' => 'contact@balsamine-slider.com',
+            'phone' => '0123456789',
+            'account' => 'sumugan.sinnarasa@desico.fr'
+        ],
+        [
+            'name' => 'Balsamine Video Society',
+            'email' => 'contact@balsamine-video.com',
+            'phone' => '0123456789',
+            'account' => 'sumugan.sinnarasa@desico.fr'
+        ],
+        [
             'name' => 'Zoro Society',
             'email' => 'contact@zoro.com',
             'phone' => '0123456789',

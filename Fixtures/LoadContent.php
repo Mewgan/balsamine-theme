@@ -101,6 +101,144 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ],
             ]
         ],
+        /* Slider home page */
+        'balsamine_slider_list_home_service_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Liste de services',
+            'block' => 'list_home_service',
+            'website' => 'balsamine-slider-society',
+            'module' => 'module_post_list',
+            'template' => 'balsamine_home_list_service_partial',
+            'section' => null,
+            'page' => 'society-balsamine-slider-home',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 6,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['service'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
+        'balsamine_slider_list_home_news_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Liste d\'actualités',
+            'block' => 'list_home_news',
+            'website' => 'balsamine-slider-society',
+            'module' => 'module_post_list',
+            'template' => 'balsamine_home_list_news_partial',
+            'section' => null,
+            'page' => 'society-balsamine-slider-home',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 6,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['actualite'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
+        /* Video home page */
+        'balsamine_video_list_home_service_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Liste de services',
+            'block' => 'list_home_service',
+            'website' => 'balsamine-video-society',
+            'module' => 'module_post_list',
+            'template' => 'balsamine_home_list_service_partial',
+            'section' => null,
+            'page' => 'society-balsamine-video-home',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 6,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['service'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
+        'balsamine_video_list_home_news_content' => [
+            'cat_mod' => 'post',
+            'name' => 'Liste d\'actualités',
+            'block' => 'list_home_news',
+            'website' => 'balsamine-video-society',
+            'module' => 'module_post_list',
+            'template' => 'balsamine_home_list_news_partial',
+            'section' => null,
+            'page' => 'society-balsamine-video-home',
+            'data' => [
+                'class' => '',
+                'route_name' => 'module:post.type:dynamic.action:read',
+                'total_row' => 6,
+                'db' => [
+                    [
+                        'alias' => 'c',
+                        'type' => 'static',
+                        'column' => '',
+                        'route' => '',
+                        'value' => ['actualite'],
+                    ]
+                ],
+                'link' => [
+                    [
+                        'alias' => 'p',
+                        'type' => 'dynamic',
+                        'route' => 'slug',
+                        'column' => 'slug',
+                        'value' => '',
+                        'value_id' => ''
+                    ]
+                ],
+            ]
+        ],
         'balsamine_list_service_content' => [
             'cat_mod' => 'post',
             'name' => 'Services',

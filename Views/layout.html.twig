@@ -4,8 +4,9 @@
     {% block head %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}{% endblock %}</title>
-        <meta name="description" content="{% block description %}{% endblock %}">
+        <title>{% block title %}{{ field_render('meta_title','page') }}{% endblock %}</title>
+        <meta name="description" content="{% block description %}{{ field_render('meta_description','page') }}{% endblock %}">
+        <meta name="keywords" content="{% block keywords %}{{ field_render('meta_keywords','page') }}{% endblock %}" />
         {# debugbar #}
         {#{{ debug_bar_header()|raw }}#}
         {# End debugbar #}
@@ -26,26 +27,26 @@
         <link rel="stylesheet" href="{{ asset('libs/owl/owl.carousel.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('libs/owl/owl.theme.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ asset('libs/owl/owl.transitions.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('jpreloader.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('plugin.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('magnific-popup.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('style.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('demo.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('jpreloader.css', 'Balsamine') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('plugin.css', 'Balsamine') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('magnific-popup.css', 'Balsamine') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('style.css', 'Balsamine') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('demo.css', 'Balsamine') }}" type="text/css">
 
         <!-- custom background -->
-        <link rel="stylesheet" href="{{ theme_asset('bg.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('bg.css', 'Balsamine') }}" type="text/css">
 
         <!-- color scheme -->
-        <link rel="stylesheet" href="{{ theme_asset('colors/'~field_render('theme_color')~'.css') }}" type="text/css" id="colors">
+        <link rel="stylesheet" href="{{ theme_asset('colors/'~field_render('theme_color')~'.css', 'Balsamine') }}" type="text/css" id="colors">
 
         <!-- load fonts -->
         <link rel="stylesheet" href="{{ asset('libs/font-awesome/font-awesome.min.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('fonts/elegant_font/HTML_CSS/style.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('fonts/et-line-font/style.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('fonts/elegant_font/HTML_CSS/style.css', 'Balsamine') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('fonts/et-line-font/style.css', 'Balsamine') }}" type="text/css">
 
         <!-- revolution slider -->
-        <link rel="stylesheet" href="{{ theme_asset('rs-plugin/css/settings.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('rev-settings.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('rs-plugin/css/settings.css', 'Balsamine') }}" type="text/css">
+        <link rel="stylesheet" href="{{ theme_asset('rev-settings.css', 'Balsamine') }}" type="text/css">
 
         {% for stylesheet in data.stylesheets %}
             {% if stylesheet.type == 'file' %}
@@ -201,29 +202,29 @@
     <script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
     <script defer src="{{ asset('libs/owl/owl.carousel.min.js') }}"></script>
     <script defer src="{{ asset('libs/lazysizes/lazysizes.min.js') }}"></script>
-    <script defer src="{{ theme_asset('jpreLoader.js') }}"></script>
-    <script defer src="{{ theme_asset('jquery.isotope.min.js') }}"></script>
-    <script defer src="{{ theme_asset('easing.js') }}"></script>
-    <script defer src="{{ theme_asset('jquery.flexslider-min.js') }}"></script>
-    <script defer src="{{ theme_asset('jquery.scrollto.js') }}"></script>
-    <script defer src="{{ theme_asset('jquery.countTo.js') }}"></script>
-    <script defer src="{{ theme_asset('classie.js') }}"></script>
-    <script defer src="{{ theme_asset('video.resize.js') }}"></script>
-    <script defer src="{{ theme_asset('validation.js') }}"></script>
-    <script defer src="{{ theme_asset('wow.min.js') }}"></script>
-    <script defer src="{{ theme_asset('jquery.magnific-popup.min.js') }}"></script>
-    <script defer src="{{ theme_asset('enquire.min.js') }}"></script>
-    <script defer src="{{ theme_asset('jquery.stellar.min.js') }}"></script>
-    <script defer src="{{ theme_asset('designesia.js') }}"></script>
-    <script defer src="{{ theme_asset('demo.js') }}"></script>
+    <script defer src="{{ theme_asset('jpreLoader.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('jquery.isotope.min.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('easing.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('jquery.flexslider-min.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('jquery.scrollto.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('jquery.countTo.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('classie.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('video.resize.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('validation.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('wow.min.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('jquery.magnific-popup.min.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('enquire.min.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('jquery.stellar.min.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('designesia.js', 'Balsamine') }}"></script>
+    <script defer src="{{ theme_asset('demo.js', 'Balsamine') }}"></script>
 
     <!-- SLIDER REVOLUTION SCRIPTS  -->
-    <script type="text/javascript" src="{{ theme_asset('rs-plugin/js/jquery.themepunch.plugins.min.js') }}"></script>
-    <script type="text/javascript" src="{{ theme_asset('rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <script type="text/javascript" src="{{ theme_asset('rs-plugin/js/jquery.themepunch.plugins.min.js', 'Balsamine') }}"></script>
+    <script type="text/javascript" src="{{ theme_asset('rs-plugin/js/jquery.themepunch.revolution.min.js', 'Balsamine') }}"></script>
 
     <!-- current page only scripts -->
-    <script src="{{ theme_asset('typed.js') }}"></script>
-    <script src="{{ theme_asset('typed-custom.js') }}"></script>
+    <script src="{{ theme_asset('typed.js', 'Balsamine') }}"></script>
+    <script src="{{ theme_asset('typed-custom.js', 'Balsamine') }}"></script>
 
     {% for library in data.libraries %}
         {% if library.category == 'js' %}

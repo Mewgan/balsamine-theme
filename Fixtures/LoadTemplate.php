@@ -28,6 +28,22 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
+        'balsamine_slider_home_page_layout' => [
+            'name' => 'ThemeBalsamineSliderHomePageFileLayout',
+            'title' => 'Theme Balsamine Slider Home Page Template',
+            'content' => 'Balsamine/Views/index_slider',
+            'category' => 'layout',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
+        'balsamine_video_home_page_layout' => [
+            'name' => 'ThemeBalsamineVideoHomePageFileLayout',
+            'title' => 'Theme Balsamine Video Home Page Template',
+            'content' => 'Balsamine/Views/index_video',
+            'category' => 'layout',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
         'balsamine_page_layout' => [
             'name' => 'ThemeBalsaminePageFileLayout',
             'title' => 'Theme Balsamine Page Template',
