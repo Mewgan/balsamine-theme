@@ -68,14 +68,15 @@
             {% endif %}
         {% endfor %}
 
+        {% block css %}{% endblock %}
         <style>
             @media screen and (min-width: 993px) {
                 header.header_left #logo img {
                     margin-top: 30px
                 }
             }
+            {{ field_render('css_block') }}
         </style>
-        {% block css %}{% endblock %}
 
     {% endblock %}
 </head>
@@ -236,6 +237,9 @@
         {% endif %}
     {% endfor %}
     {% block js %}{% endblock %}
+    <script>
+        {{ field_render('js_block') | raw }}
+    </script>
 
     {# debugbar #}
     {#{{ debug_bar_footer()|raw }}#}

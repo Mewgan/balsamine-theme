@@ -27,7 +27,7 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'website' => 'Balsamine Website'
         ],
         'Balsamine Global Seo' => [
-            'title' => 'SEO',
+            'title' => 'SEO Global',
             'rule' => 'global_rule',
             'operation' => '=',
             'value' => null,
@@ -46,13 +46,6 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'operation' => '=',
             'value' => null,
             'access_level' => 2,
-            'website' => 'Balsamine Website',
-        ],
-        'Balsamine Seo' => [
-            'title' => 'SEO',
-            'rule' => 'everywhere_rule',
-            'operation' => '=',
-            'value' => null,
             'website' => 'Balsamine Website',
         ],
         'Balsamine Page' => [
@@ -98,6 +91,13 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'operation' => '=',
             'reference' => 'society-balsamine-video-home',
             'website' => 'Balsamine Video Website'
+        ],
+        'Balsamine Seo' => [
+            'title' => 'SEO',
+            'rule' => 'everywhere_rule',
+            'operation' => '=',
+            'value' => null,
+            'website' => 'Balsamine Website',
         ],
     ];
 

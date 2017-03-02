@@ -21,7 +21,7 @@ class LoadTheme extends AbstractFixture implements DependentFixtureInterface
         ],
         [
             'name' => 'Balsamine Slider',
-            'profession' => 'barber',
+            'profession' => 'spa',
             'thumbnail' => '/public/media/thumbnail/theme-balsamine-slider-thumbnail.png',
             'state' => 1
         ],

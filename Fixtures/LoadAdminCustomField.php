@@ -259,7 +259,9 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'position' => 0,
             'parent' => null,
             'cf' => 'Balsamine Slider Home Page',
-            'data' => [],
+            'data' => [
+                'disposition' => 'col'
+            ],
             'content' => [
                 'type' => 'repeater',
                 'rows@page@society-balsamine-slider-home' => [0, 1]
@@ -612,7 +614,9 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'position' => 0,
             'parent' => null,
             'cf' => 'Balsamine Team Page',
-            'data' => [],
+            'data' => [
+                'disposition' => 'col'
+            ],
             'content' => [
                 'type' => 'repeater',
                 'rows@page@society-balsamine-team' => [0, 1, 2, 3]
