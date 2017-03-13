@@ -62,13 +62,6 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'reference' => 'society-balsamine-home',
             'website' => 'Balsamine Website'
         ],
-        'Balsamine Team Page' => [
-            'title' => 'Equipe',
-            'rule' => 'page_rule',
-            'operation' => '=',
-            'reference' => 'society-balsamine-team',
-            'website' => 'Balsamine Website'
-        ],
         'Balsamine Gallery Page' => [
             'title' => 'Galerie',
             'rule' => 'page_rule',

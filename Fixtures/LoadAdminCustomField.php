@@ -245,7 +245,6 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
                 'page@society-balsamine-service' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
                 'page@society-balsamine-actualite' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
                 'page@society-balsamine-single-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-3.jpg',
-                'page@society-balsamine-team' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-4.jpg',
                 'page@society-balsamine-gallery' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-5.jpg',
                 'page@society-balsamine-contact' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-6.jpg',
             ]
@@ -604,71 +603,6 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Balsamine Home Page',
             'data' => [],
             'content' => ['page@society-balsamine-home' => 'Découvrez nos actualités']
-        ],
-        /* Team Page */
-        'balsamine_team' => [
-            'scope' => 'specified',
-            'title' => 'Equipe',
-            'name' => 'teams',
-            'type' => 'repeater',
-            'position' => 0,
-            'parent' => null,
-            'cf' => 'Balsamine Team Page',
-            'data' => [
-                'disposition' => 'col'
-            ],
-            'content' => [
-                'type' => 'repeater',
-                'rows@page@society-balsamine-team' => [0, 1, 2, 3]
-            ]
-        ],
-        'balsamine_team_image' => [
-            'scope' => 'specified',
-            'title' => 'Image',
-            'name' => 'image',
-            'type' => 'media',
-            'position' => 0,
-            'parent' => 'balsamine_team',
-            'cf' => 'Balsamine Team Page',
-            'data' => [
-                'media_render_type' => 'object'
-            ],
-            'content' => ['page@society-balsamine-team' => [
-                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_1.jpg',
-                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_2.jpg',
-                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_3.jpg',
-                '/src/Themes/Balsamine/Resources/public/img/team/team_pic_4.jpg',
-            ]
-            ]
-        ],
-        'balsamine_team_name' => [
-            'scope' => 'specified',
-            'title' => 'Nom',
-            'name' => 'name',
-            'type' => 'string',
-            'position' => 1,
-            'parent' => 'balsamine_team',
-            'cf' => 'Balsamine Team Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-team' => ['Briana', 'Jessica', 'Rachel', 'Emma'],
-            ]
-        ],
-        'balsamine_team_description' => [
-            'scope' => 'specified',
-            'title' => 'Description',
-            'name' => 'description',
-            'type' => 'textarea',
-            'position' => 2,
-            'parent' => 'balsamine_team',
-            'cf' => 'Balsamine Team Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-team' => [
-                'Notre styliste coloriste se fera un plaisir de répondre à toutes vos envies !',
-                'Notre styliste coloriste se fera un plaisir de répondre à toutes vos envies !',
-                'Notre styliste coloriste se fera un plaisir de répondre à toutes vos envies !',
-                'Notre styliste coloriste se fera un plaisir de répondre à toutes vos envies !',
-            ]
-            ]
         ],
         /* Gallery Page */
         'balsamine_gallery_disposition' => [

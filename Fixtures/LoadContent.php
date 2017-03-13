@@ -363,6 +363,21 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 ]
             ]
         ],
+        /* Team */
+        'balsamine_team_content' => [
+            'cat_mod' => 'team',
+            'name' => 'Équipe',
+            'block' => 'team',
+            'website' => 'balsamine-society',
+            'module' => 'module_team',
+            'template' => 'balsamine_team_partial',
+            'section' => null,
+            'page' => 'society-balsamine-team',
+            'data' => [
+                'class' => '',
+                'roles' => []
+            ]
+        ],
     ];
 
     public function load(ObjectManager $manager)
@@ -389,6 +404,7 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
             'Jet\Themes\Balsamine\Fixtures\LoadTemplate',
             'Jet\Modules\Post\Fixtures\LoadPostModule',
             'Jet\Modules\Navigation\Fixtures\LoadNavigationModule',
+            'Jet\Modules\Team\Fixtures\LoadTeamModule',
         ];
     }
 }

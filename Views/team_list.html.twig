@@ -26,18 +26,7 @@
     <div id="content">
         <div class="container">
             <div class="row">
-
-                {% set teams = field_render('teams', 'page@'~data.page.id) %}
-                {% for team in teams %}
-                    <div class="col-md-3 col-sm-3 col-xs-6 wow fadeInLeft" data-wow-delay=".8s">
-                        <div class="team-member">
-                            <img src="{{ img(team.image.path) }}" class="img-circle pic-grey" alt="{{ team.image.alt }}" />
-                            <h3>{{ team.name }}</h3>
-                            <p>{{ team.description }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
-
+                {{ content_render('team') }}
             </div>
         </div>
     </div>

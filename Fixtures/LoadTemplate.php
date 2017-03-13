@@ -116,6 +116,14 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
+        'balsamine_team_partial' => [
+            'name' => 'ThemeBalsamineTeamFilePartial',
+            'title' => 'Theme Balsamine Team Partial',
+            'content' => 'Balsamine/Views/team',
+            'category' => 'partial',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
     ];
 
     public function load(ObjectManager $manager)

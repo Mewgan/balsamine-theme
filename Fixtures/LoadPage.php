@@ -22,6 +22,24 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'libraries' => [],
             'type' => 'dynamic'
         ],
+        'society-balsamine-list-post' =>  [
+            'title' => 'Liste d\'articles',
+            'route' => 'module:post.type:dynamic.action:all',
+            'website' => 'Balsamine Website',
+            'layout' => 'balsamine_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'dynamic'
+        ],
+        'society-balsamine-service' =>  [
+            'title' => 'Service',
+            'route' => 'module:post.type:static.action:list.name:service',
+            'website' => 'Balsamine Website',
+            'layout' => 'balsamine_page_layout',
+            'stylesheets' => [],
+            'libraries' => [],
+            'type' => 'static'
+        ],
         'society-balsamine-gallery' =>  [
             'title' => 'Galerie',
             'route' => 'module:gallery.type:static.action:all',
@@ -49,15 +67,6 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'libraries' => [],
             'type' => 'static',
         ],
-        'society-balsamine-service' =>  [
-            'title' => 'Service',
-            'route' => 'module:post.type:static.action:list.name:service',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_page_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'static'
-        ],
         'society-balsamine-actualite' =>  [
             'title' => 'Actualité',
             'route' => 'module:post.type:static.action:list.name:actualite',
@@ -66,15 +75,6 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'stylesheets' => [],
             'libraries' => [],
             'type' => 'static'
-        ],
-        'society-balsamine-list-post' =>  [
-            'title' => 'Liste d\'articles',
-            'route' => 'module:post.type:dynamic.action:all',
-            'website' => 'Balsamine Website',
-            'layout' => 'balsamine_page_layout',
-            'stylesheets' => [],
-            'libraries' => [],
-            'type' => 'dynamic'
         ],
         'society-balsamine-home' =>  [
             'title' => 'Accueil',
