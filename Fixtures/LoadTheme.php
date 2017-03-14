@@ -16,19 +16,19 @@ class LoadTheme extends AbstractFixture implements DependentFixtureInterface
         [
             'name' => 'Balsamine',
             'profession' => 'barber',
-            'thumbnail' => '/public/media/thumbnail/theme-balsamine-thumbnail.png',
+            'thumbnail' => '/public/media/default/thumbnail/theme-balsamine-thumbnail.png',
             'state' => 1,
         ],
         [
             'name' => 'Balsamine Slider',
             'profession' => 'spa',
-            'thumbnail' => '/public/media/thumbnail/theme-balsamine-slider-thumbnail.png',
+            'thumbnail' => '/public/media/default/thumbnail/theme-balsamine-slider-thumbnail.png',
             'state' => 1
         ],
         [
             'name' => 'Balsamine Video',
             'profession' => 'barber',
-            'thumbnail' => '/public/media/thumbnail/theme-balsamine-video-thumbnail.png',
+            'thumbnail' => '/public/media/default/thumbnail/theme-balsamine-video-thumbnail.png',
             'state' => 1
         ]
     ];

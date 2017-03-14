@@ -13,7 +13,7 @@ class LoadMedia extends AbstractFixture
     protected $data = [
         [
             'title' => 'Theme balsamine thumbnail',
-            'path' => '/public/media/thumbnail/theme-balsamine-thumbnail.png',
+            'path' => '/public/media/default/thumbnail/theme-balsamine-thumbnail.png',
             'type' => 'image/png',
             'size' => 137577,
             'access_level' => 2,
@@ -21,7 +21,7 @@ class LoadMedia extends AbstractFixture
         ],
         [
             'title' => 'Theme balsamine slider thumbnail',
-            'path' => '/public/media/thumbnail/theme-balsamine-slider-thumbnail.png',
+            'path' => '/public/media/default/thumbnail/theme-balsamine-slider-thumbnail.png',
             'type' => 'image/png',
             'size' => 137577,
             'access_level' => 2,
@@ -29,7 +29,7 @@ class LoadMedia extends AbstractFixture
         ],
         [
             'title' => 'Theme balsamine video thumbnail',
-            'path' => '/public/media/thumbnail/theme-balsamine-video-thumbnail.png',
+            'path' => '/public/media/default/thumbnail/theme-balsamine-video-thumbnail.png',
             'type' => 'image/png',
             'size' => 137577,
             'access_level' => 2,

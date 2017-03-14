@@ -40,7 +40,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'balsamine_team_partial'
             ],
             'medias' => [
-                '/public/media/thumbnail/theme-balsamine-thumbnail.png',
+                '/public/media/default/thumbnail/theme-balsamine-thumbnail.png',
                 '/src/Themes/Balsamine/Resources/public/img/logo.png',
                 '/src/Themes/Balsamine/Resources/public/img/logo_light.png',
                 '/src/Themes/Balsamine/Resources/public/img/video-poster.jpg',
@@ -107,7 +107,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'balsamine_slider_home_page_layout',
             ],
             'medias' => [
-                '/public/media/thumbnail/theme-balsamine-slider-thumbnail.png',
+                '/public/media/default/thumbnail/theme-balsamine-slider-thumbnail.png',
             ],
             'data' => [
                 'parent_exclude' => [],
@@ -131,7 +131,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'balsamine_video_home_page_layout',
             ],
             'medias' => [
-                '/public/media/thumbnail/theme-balsamine-video-thumbnail.png',
+                '/public/media/default/thumbnail/theme-balsamine-video-thumbnail.png',
             ],
             'data' => [
                 'parent_exclude' => [],
