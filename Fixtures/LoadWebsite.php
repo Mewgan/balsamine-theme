@@ -24,6 +24,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'single-post',
                 'grid-editor',
                 'team',
+                'price',
             ],
             'templates' => [
                 'balsamine_layout',
@@ -102,6 +103,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'single-post',
                 'grid-editor',
                 'team',
+                'price',
             ],
             'templates' => [
                 'balsamine_slider_home_page_layout',
@@ -126,6 +128,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'single-post',
                 'grid-editor',
                 'team',
+                'price',
             ],
             'templates' => [
                 'balsamine_video_home_page_layout',
@@ -150,6 +153,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'single-post',
                 'grid-editor',
                 'team',
+                'price',
             ],
             'templates' => [],
             'medias' => [],
