@@ -27,7 +27,7 @@
 
                 <div class="de-video-overlay"></div>
 
-                {% set video_link = field_render('homepage_3_link', 'page@'~data.page.id) %}
+                {% set video_link = field_render('homepage_3_background_video', 'page@'~data.page.id) %}
                 {% if youtube in video_link %}
                     <iframe width="100%" height="100%" src="{{ video_link }}?autoplay=1&loop=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
                 {% else %}
@@ -52,7 +52,7 @@
                                         <i class="icon_clock_alt id-color"></i>
                                         <div class="info-box_text">
                                             <div class="info-box_title">Horaires d'ouvertures</div>
-                                            <div class="info-box_subtite">{{ opening_hours | raw }}</div>
+                                            <div class="info-box_subtite">{{ opening_hours | truncate(45, true) | raw }}</div>
                                         </div>
                                     </div>
                                 </div>

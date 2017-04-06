@@ -59,7 +59,7 @@
                                         <i class="icon_clock_alt id-color"></i>
                                         <div class="info-box_text">
                                             <div class="info-box_title">Horaires d'ouvertures</div>
-                                            <div class="info-box_subtite">{{ opening_hours | raw }}</div>
+                                            <div class="info-box_subtite">{{ opening_hours | truncate(45, true) | raw }}</div>
                                         </div>
                                     </div>
                                 </div>
