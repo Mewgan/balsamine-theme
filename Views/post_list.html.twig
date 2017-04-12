@@ -1,4 +1,4 @@
-<section>
+<section class="no-bottom no-top">
     <div class="container">
         <div class="row">
 
@@ -17,7 +17,7 @@
                 {% endfor %}
 
                 <div class="col-md-4 col-sm-6 col-xs-6 text-center">
-                    {% if data.page.title == 'Service' %}
+                    {% if post.categories[0].slug == 'service' %}
                         <div class="picframe">
                             <a href="{{ link(route,params) }}">
                                 <span class="overlay img-circle">

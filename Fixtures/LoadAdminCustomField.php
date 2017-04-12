@@ -118,8 +118,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'data' => [],
             'content' => [
                 'value' => [
-                    '#',
-                    '#',
+                    '',
+                    '',
                 ]
             ]
         ],
@@ -172,7 +172,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Default Global',
             'data' => [],
-            'content' => ['value' => 'Monday - Friday: 09:00 - 22:00']
+            'content' => ['value' => 'Lundi - Vendredi: 09:00 - 22:00']
         ],
         'balsamine_booking' => [
             'scope' => 'global',
@@ -183,7 +183,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Default Global',
             'data' => [],
-            'content' => ['value' => '#']
+            'content' => ['value' => '']
         ],
         /* Theme specific */
         'balsamine_theme_color' => [
@@ -242,7 +242,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'content' => [
                 'page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-7.jpg',
                 'page@society-balsamine-list-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
-                'page@society-balsamine-service' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
+                'page@society-balsamine-price' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
                 'page@society-balsamine-actualite' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-2.jpg',
                 'page@society-balsamine-single-post' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-3.jpg',
                 'page@society-balsamine-gallery' => '/src/Themes/Balsamine/Resources/public/img/background/subheader-5.jpg',
@@ -293,8 +293,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Balsamine Slider Home Page',
             'data' => [],
             'content' => ['page@society-balsamine-slider-home' => [
-                'BEAUTY SALON',
-                'FROM HEAD TO TOE'
+                'SALON DE BEAUTÉ',
+                'DE LA TÊTE AUX PIEDS'
             ],
             ]
         ],
@@ -308,7 +308,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Balsamine Slider Home Page',
             'data' => [],
             'content' => ['page@society-balsamine-slider-home' =>
-                ['#', ''],
+                ['', ''],
             ]
         ],
         'balsamine_slider_homepage_left_bloc' => [
@@ -321,7 +321,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Balsamine Slider Home Page',
             'data' => [],
             'content' => ['page@society-balsamine-slider-home' => '<h4>Promo Spécial</h4>
-                                    <p>Rédigez ici un descriptif de présentation de votre activité</p>'
+                                    <p>Notre engagement envers la qualité et les services assurent nos clients heureux. Avec des années d\'expériences et formation continue, notre personnel dévoué est prêt à servir vos
+                                        besoins de beauté. Nous sommes heureux de vous aider à choisir le meilleur look.</p>'
             ]
         ],
         'balsamine_slider_homepage_right_bloc' => [
@@ -333,43 +334,30 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Slider Home Page',
             'data' => [],
-            'content' => ['page@society-balsamine-slider-home' => '<h4>Get Discount 50%</h4>
-                                    <p>Our commitment to quality and services ensure our clients happy. With years of
-                                        experiences and continuing education, our dedicated staff is ready to serve your
-                                        beauty needs. We\'re happy to help you decide the best look.</p>'
+            'content' => ['page@society-balsamine-slider-home' => '<h4>Obtenez une réduction de 50%</h4>
+                                    <p>Notre engagement envers la qualité et les services assurent nos clients heureux. Avec des années d\'expériences et formation continue, notre personnel dévoué est prêt à servir vos
+                                        besoins de beauté. Nous sommes heureux de vous aider à choisir le meilleur look.</p>'
             ]
         ],
-        'balsamine_slider_homepage_about_us_image' => [
+        'balsamine_slider_homepage_about_us' => [
             'scope' => 'specified',
-            'title' => 'Image de gauche',
-            'name' => 'about_us_image',
-            'type' => 'media',
+            'title' => 'Article',
+            'name' => 'homepage_about_us',
+            'type' => 'post',
             'position' => 5,
             'parent' => null,
             'cf' => 'Balsamine Slider Home Page',
             'data' => [
-                'media_render_type' => 'object'
+                'categories' => []
             ],
-            'content' => ['page@society-balsamine-slider-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg']
-        ],
-        'balsamine_slider_homepage_about_us' => [
-            'scope' => 'specified',
-            'title' => 'A propos de nous',
-            'name' => 'about_us',
-            'type' => 'wysiwyg',
-            'position' => 6,
-            'parent' => null,
-            'cf' => 'Balsamine Slider Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-slider-home' => '<p>Rédigez ici un descriptif de présentation de votre activité</p>'
-            ]
+            'content' => ['page@society-balsamine-slider-home' => 'balsamine-about-us']
         ],
         'balsamine_slider_homepage_actu_background' => [
             'scope' => 'specified',
             'title' => 'Image de fond pour les Actualités',
             'name' => 'news_background',
             'type' => 'media',
-            'position' => 7,
+            'position' => 6,
             'parent' => null,
             'cf' => 'Balsamine Slider Home Page',
             'data' => [
@@ -382,7 +370,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Texte pour les Actualités',
             'name' => 'news_title',
             'type' => 'string',
-            'position' => 8,
+            'position' => 7,
             'parent' => null,
             'cf' => 'Balsamine Slider Home Page',
             'data' => [],
@@ -409,7 +397,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Video Home Page',
             'data' => [],
-            'content' => ['page@society-balsamine-video-home' => 'QUALITY & SERVICES']
+            'content' => ['page@society-balsamine-video-home' => 'QUALITÉ & SERVICES']
         ],
         'balsamine_video_homepage_background_link' => [
             'scope' => 'specified',
@@ -420,7 +408,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Video Home Page',
             'data' => [],
-            'content' => ['page@society-balsamine-video-home' => '#']
+            'content' => ['page@society-balsamine-video-home' => '']
         ],
         'balsamine_video_homepage_left_bloc' => [
             'scope' => 'specified',
@@ -432,7 +420,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Balsamine Video Home Page',
             'data' => [],
             'content' => ['page@society-balsamine-video-home' => '<h4>Promo Spécial</h4>
-                                    <p>Rédigez ici un descriptif de présentation de votre activité</p>'
+                                    <p>Notre engagement envers la qualité et les services assurent nos clients heureux. Avec des années d\'expériences et formation continue, notre personnel dévoué est prêt à servir vos
+                                        besoins de beauté. Nous sommes heureux de vous aider à choisir le meilleur look.</p>'
             ]
         ],
         'balsamine_video_homepage_right_bloc' => [
@@ -444,43 +433,30 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Video Home Page',
             'data' => [],
-            'content' => ['page@society-balsamine-video-home' => '<h4>Get Discount 50%</h4>
-                                    <p>Our commitment to quality and services ensure our clients happy. With years of
-                                        experiences and continuing education, our dedicated staff is ready to serve your
-                                        beauty needs. We\'re happy to help you decide the best look.</p>'
+            'content' => ['page@society-balsamine-video-home' => '<h4>Obtenez une réduction de 50%</h4>
+                                    <p>Notre engagement envers la qualité et les services assurent nos clients heureux. Avec des années d\'expériences et formation continue, notre personnel dévoué est prêt à servir vos
+                                        besoins de beauté. Nous sommes heureux de vous aider à choisir le meilleur look.</p>'
             ]
         ],
-        'balsamine_video_homepage_about_us_image' => [
+        'balsamine_video_homepage_about_us' => [
             'scope' => 'specified',
-            'title' => 'Image de gauche',
-            'name' => 'about_us_image',
-            'type' => 'media',
+            'title' => 'Article',
+            'name' => 'homepage_about_us',
+            'type' => 'post',
             'position' => 5,
             'parent' => null,
             'cf' => 'Balsamine Video Home Page',
             'data' => [
-                'media_render_type' => 'object'
+                'categories' => []
             ],
-            'content' => ['page@society-balsamine-video-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg']
-        ],
-        'balsamine_video_homepage_about_us' => [
-            'scope' => 'specified',
-            'title' => 'A propos de nous',
-            'name' => 'about_us',
-            'type' => 'wysiwyg',
-            'position' => 6,
-            'parent' => null,
-            'cf' => 'Balsamine Video Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-video-home' => '<p>Rédigez ici un descriptif de présentation de votre activité</p>'
-            ]
+            'content' => ['page@society-balsamine-video-home' => 'balsamine-about-us']
         ],
         'balsamine_video_homepage_actu_background' => [
             'scope' => 'specified',
             'title' => 'Image de fond pour les Actualités',
             'name' => 'news_background',
             'type' => 'media',
-            'position' => 7,
+            'position' => 6,
             'parent' => null,
             'cf' => 'Balsamine Video Home Page',
             'data' => [
@@ -493,7 +469,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Texte pour les Actualités',
             'name' => 'news_title',
             'type' => 'string',
-            'position' => 8,
+            'position' => 7,
             'parent' => null,
             'cf' => 'Balsamine Video Home Page',
             'data' => [],
@@ -524,7 +500,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Balsamine Home Page',
             'data' => [],
             'content' => [
-                'page@society-balsamine-home' => ['Hair Care', 'Make Up', 'Facial', 'Massage', 'Nail Care', 'Waxing']
+                'page@society-balsamine-home' => ['Soin des cheveux', 'Maquillage', 'Soin du visage', 'Massage', 'Manucure', 'Épilation']
             ]
         ],
         'balsamine_homepage_left_bloc' => [
@@ -537,7 +513,8 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'cf' => 'Balsamine Home Page',
             'data' => [],
             'content' => ['page@society-balsamine-home' => '<h4>Promo Spécial</h4>
-                                    <p>Rédigez ici un descriptif de présentation de votre activité</p>'
+                                    <p>Notre engagement envers la qualité et les services assurent nos clients heureux. Avec des années d\'expériences et formation continue, notre personnel dévoué est prêt à servir vos
+                                        besoins de beauté. Nous sommes heureux de vous aider à choisir le meilleur look.</p>'
             ]
         ],
         'balsamine_homepage_right_bloc' => [
@@ -549,43 +526,30 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [],
-            'content' => ['page@society-balsamine-home' => '<h4>Get Discount 50%</h4>
-                                    <p>Our commitment to quality and services ensure our clients happy. With years of
-                                        experiences and continuing education, our dedicated staff is ready to serve your
-                                        beauty needs. We\'re happy to help you decide the best look.</p>'
+            'content' => ['page@society-balsamine-home' => '<h4>Obtenez une réduction de 50%</h4>
+                                    <p>Notre engagement envers la qualité et les services assurent nos clients heureux. Avec des années d\'expériences et formation continue, notre personnel dévoué est prêt à servir vos
+                                        besoins de beauté. Nous sommes heureux de vous aider à choisir le meilleur look.</p>'
             ]
         ],
-        'balsamine_homepage_about_us_image' => [
+        'balsamine_homepage_about_us' => [
             'scope' => 'specified',
-            'title' => 'Image de gauche',
-            'name' => 'about_us_image',
-            'type' => 'media',
+            'title' => 'Article',
+            'name' => 'homepage_about_us',
+            'type' => 'post',
             'position' => 3,
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [
-                'media_render_type' => 'object'
+                'categories' => []
             ],
-            'content' => ['page@society-balsamine-home' => '/src/Themes/Balsamine/Resources/public/img/background/bg-side-9.jpg']
-        ],
-        'balsamine_homepage_about_us' => [
-            'scope' => 'specified',
-            'title' => 'A propos de nous',
-            'name' => 'about_us',
-            'type' => 'wysiwyg',
-            'position' => 4,
-            'parent' => null,
-            'cf' => 'Balsamine Home Page',
-            'data' => [],
-            'content' => ['page@society-balsamine-home' => '<p>Rédigez ici un descriptif de présentation de votre activité</p>'
-            ]
+            'content' => ['page@society-balsamine-home' => 'balsamine-about-us']
         ],
         'balsamine_homepage_actu_background' => [
             'scope' => 'specified',
             'title' => 'Image de fond pour les Actualités',
             'name' => 'news_background',
             'type' => 'media',
-            'position' => 5,
+            'position' => 4,
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [
@@ -598,7 +562,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'title' => 'Texte pour les Actualités',
             'name' => 'news_title',
             'type' => 'string',
-            'position' => 6,
+            'position' => 5,
             'parent' => null,
             'cf' => 'Balsamine Home Page',
             'data' => [],

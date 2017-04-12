@@ -99,7 +99,7 @@
                     <div class="col-md-12">
                         <!-- logo begin -->
                         <div id="logo">
-                            <a href="{{ path('') }}">
+                            <a href="{{ link('home') }}">
                                 <img class="logo logo_dark_bg" src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
                                 <img class="logo logo_light_bg" src="{{ img(logo_light.path) }}" alt="{{ logo_light.alt }}">
                             </a>
@@ -131,7 +131,11 @@
                     </div>
 
                     <div class="col-md-3 text-right">
-                        <a href="{{ booking_link }}" class="btn btn-line-white btn-big">Réservez maintenant</a>
+                        {% if booking_link != '' %}
+                            <a href="{{ booking_link }}" class="btn btn-line-white btn-big">Réservez maintenant</a>
+                        {% else %}
+                            <a href="{{ link('module:contact.type:static.action:show') }}" class="btn btn-line-white btn-big" data-wow-delay=".3s">Contact</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

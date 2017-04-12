@@ -92,14 +92,6 @@ class LoadTemplate extends AbstractFixture
             'scope' => 'specified',
             'type' => 'file'
         ],
-        'balsamine_team_layout' => [
-            'name' => 'ThemeBalsamineTeamFileLayout',
-            'title' => 'Theme Balsamine Team Template',
-            'content' => 'Balsamine/Views/team_list',
-            'category' => 'layout',
-            'scope' => 'specified',
-            'type' => 'file'
-        ],
         'balsamine_gallery_layout' => [
             'name' => 'ThemeBalsamineGalleryFileLayout',
             'title' => 'Theme Balsamine Gallery Template',
@@ -120,6 +112,14 @@ class LoadTemplate extends AbstractFixture
             'name' => 'ThemeBalsamineTeamFilePartial',
             'title' => 'Theme Balsamine Team Partial',
             'content' => 'Balsamine/Views/team',
+            'category' => 'partial',
+            'scope' => 'specified',
+            'type' => 'file'
+        ],
+        'balsamine_price_partial' => [
+            'name' => 'ThemeBalsaminePriceFilePartial',
+            'title' => 'Theme Balsamine Price Partial',
+            'content' => 'Balsamine/Views/price',
             'category' => 'partial',
             'scope' => 'specified',
             'type' => 'file'

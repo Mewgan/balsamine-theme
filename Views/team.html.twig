@@ -1,10 +1,14 @@
-{% for member in team %}
-    <div class="col-md-3 col-sm-3 col-xs-6 wow fadeInLeft" data-wow-delay=".8s">
-        <div class="team-member">
-            <img src="{{ img(member.photo.path) }}" class="img-circle pic-grey" alt="{{ member.photo.alt }}" />
-            <h3>{{ member.full_name }}</h3>
-            <p>{{ member.description }}</p>
+<div class="container">
+    <div class="row">
+    {% for member in team %}
+        <div class="col-md-3 col-sm-3 col-xs-6 wow fadeInLeft" data-wow-delay=".8s">
+            <div class="team-member">
+                <img src="{{ img(member.photo.path) }}" class="img-circle pic-grey" alt="{{ member.photo.alt }}" />
+                <h3>{{ member.full_name }}</h3>
+                <p>{{ member.description }}</p>
+            </div>
         </div>
+    {% endfor %}
     </div>
-{% endfor %}
+</div>
 

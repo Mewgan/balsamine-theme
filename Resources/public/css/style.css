@@ -55,6 +55,7 @@ html,body{
 height:100%;
 }
 
+.center-align{text-align: center;}
 
 body {
 	font-family: "Open Sans",Arial, Helvetica, sans-serif;

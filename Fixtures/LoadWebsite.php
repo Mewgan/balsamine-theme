@@ -32,13 +32,13 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
                 'balsamine_simple_home_page_layout',
                 'balsamine_home_list_service_partial',
                 'balsamine_home_list_news_partial',
-                'balsamine_team_layout',
                 'balsamine_gallery_layout',
                 'balsamine_contact_layout',
                 'balsamine_post_list_partial',
                 'balsamine_single_post_partial',
                 'balsamine_navigation_partial',
-                'balsamine_team_partial'
+                'balsamine_team_partial',
+                'balsamine_price_partial'
             ],
             'medias' => [
                 '/public/media/default/thumbnail/theme-balsamine-thumbnail.png',

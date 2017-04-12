@@ -1,0 +1,27 @@
+{% for category in service_categories %}
+    {% if category.services|length > 0 %}
+    <section class="no-bottom no-top">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h1>{{ category.name }}</h1>
+                    <div class="spacer-double"></div>
+                </div>
+
+                {% for service in category.services %}
+                <div class="col-md-6">
+                    <div class="sub-item-service desc">
+                        <div class="c1">{{ service.title }}</div>
+                        <div class="c2"></div>
+                        <div class="c3">{{ service.price }}</div>
+                    </div>
+                    <div class="service-text">{{ service.description }}</div>
+                </div>
+                {% endfor %}
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+{% endfor %}

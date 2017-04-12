@@ -1,8 +1,10 @@
 {% extends template_from_string(data.website_layout) %}
 
+{% set about_us = field_render('homepage_about_us', 'page') %}
+
 {% block css %}
     <style>
-        #explore-5.side-bg .background-image {background:url({{ img(field_render('about_us_image', 'page@'~data.page.id).path) }}) top;}
+        #explore-5.side-bg .background-image {background:url({{ img(about_us.thumbnail.path) }}) top;}
         #section-hero-2{background:url({{ img(field_render('news_background', 'page@'~data.page.id).path) }}); overflow:hidden;}
     </style>
 {% endblock %}
@@ -122,7 +124,11 @@
 
                     <div class="col-md-4 text-middle text-center" data-bgcolor="#50094d">
                         <div class="padding40">
-                            <a href="{{ booking_link }}" class="btn btn-line-white btn-big wow fadeInUp" data-wow-delay=".3s">Réserver</a>
+                            {% if booking_link != '' %}
+                                <a href="{{ booking_link }}" class="btn btn-line-white btn-big wow fadeInUp" data-wow-delay=".3s">Réserver</a>
+                            {% else %}
+                                <a href="{{ link('module:contact.type:static.action:show') }}" class="btn btn-line-white btn-big wow fadeInUp" data-wow-delay=".3s">Contact</a>
+                            {% endif %}
                         </div>
                     </div>
 
@@ -142,10 +148,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 col-md-offset-7">
-                        <h2 class="wow-fadeIn">A propos de nous</h2>
-                        <div class="small-border left wow zoomIn" data-wow-delay=".3s" data-wow-duration=".3s"></div>
-
-                        {{ field_render('about_us', 'page@'~data.page.id) | raw }}
+                        {% if about_us.title != '' %}
+                            <h2 class="wow-fadeIn mt0">{{ about_us.title }}</h2>
+                            <div class="small-border left wow zoomIn" data-wow-delay=".3s" data-wow-duration=".3s"></div>
+                            {{ about_us.description }}<br>
+                            <a href="{{ link('module:post.type:dynamic.action:read',{'slug': about_us.slug}) }}" class="btn btn-line-white mt10 btn-big wow fadeInUp animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">En savoir plus</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

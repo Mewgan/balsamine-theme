@@ -378,6 +378,24 @@ class LoadContent extends AbstractFixture implements DependentFixtureInterface
                 'roles' => []
             ]
         ],
+        /* Price */
+        'balsamine_price_content' => [
+            'cat_mod' => 'price',
+            'name' => 'Tarif',
+            'block' => 'price',
+            'website' => 'balsamine-society',
+            'module' => 'module_price',
+            'template' => 'balsamine_price_partial',
+            'section' => null,
+            'page' => 'society-balsamine-price',
+            'data' => [
+                'class' => '',
+                'service_in_category' => true,
+                'service' => false,
+                'category' => true,
+                'categories' => []
+            ]
+        ]
     ];
 
     public function load(ObjectManager $manager)
