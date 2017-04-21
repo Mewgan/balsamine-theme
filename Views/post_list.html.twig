@@ -48,6 +48,10 @@
                     <p>{{ post.description }}</p>
                     <div class="spacer-half"></div>
                 </div>
+
+                {% if loop.index is divisible by(3) %}
+                    <div class="clearfix"></div>
+                {% endif %}
             {% endfor %}
 
             <div class="clearfix"></div>
