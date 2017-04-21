@@ -41,7 +41,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
             'type' => 'static',
         ],
         'society-balsamine-actualite' =>  [
-            'title' => 'Actualité',
+            'title' => 'Actualités',
             'route' => 'module:post.type:static.action:list.name:actualite',
             'website' => 'Balsamine Website',
             'layout' => 'balsamine_page_layout',

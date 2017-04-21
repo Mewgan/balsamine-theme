@@ -69,11 +69,11 @@ class LoadNavigationItem extends AbstractFixture implements DependentFixtureInte
             'website' => 'balsamine-society',
         ],
         [
-            'title' => 'Actualité',
+            'title' => 'Actualités',
             'navigation' => 'balsamine-menu',
             'parent' => null,
             'children' => [],
-            'url' => '/actualite',
+            'url' => '/actualites',
             'route' => 'module:post.type:static.action:list.name:actualite',
             'type' => 'page',
             'type_id' => 'society-balsamine-actualite',
