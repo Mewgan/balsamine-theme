@@ -15,7 +15,7 @@
                         <div class="c2"></div>
                         <div class="c3">{{ service.price }}</div>
                     </div>
-                    <div class="service-text">{{ service.description }}</div>
+                    <div class="service-text">{{ service.description | raw }}</div>
                 </div>
                 {% endfor %}
 

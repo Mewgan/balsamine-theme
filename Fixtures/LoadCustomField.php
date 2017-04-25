@@ -86,7 +86,7 @@ class LoadCustomField extends AbstractFixture implements DependentFixtureInterfa
             'website' => 'Balsamine Video Website'
         ],
         'Balsamine Seo' => [
-            'title' => 'SEO',
+            'title' => 'SEO Référencement naturel',
             'rule' => 'everywhere_rule',
             'operation' => '=',
             'value' => null,
