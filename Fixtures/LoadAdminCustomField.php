@@ -137,6 +137,19 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
             'content' => []
         ],
         /* Global */
+        'balsamine_favicon' => [
+            'scope' => 'global',
+            'title' => 'Favicon',
+            'name' => 'favicon',
+            'type' => 'media',
+            'position' => 0,
+            'parent' => null,
+            'cf' => 'Balsamine Default Global',
+            'data' => [
+                'media_render_type' => 'object'
+            ],
+            'content' => ['value' => '/public/media/default/favicon.ico']
+        ],
         'balsamine_logo' => [
             'scope' => 'global',
             'title' => 'Logo',
