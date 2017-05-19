@@ -18,6 +18,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'theme' =>  'Balsamine',
             'layout' => 'balsamine_layout',
             'render_system' => 'php',
+            'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
                 'list-post',
@@ -97,6 +98,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'theme' =>  'Balsamine',
             'layout' => 'balsamine_layout',
             'render_system' => 'php',
+            'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
                 'list-post',
@@ -122,6 +124,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'theme' =>  'Balsamine',
             'layout' => 'balsamine_layout',
             'render_system' => 'php',
+            'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
                 'list-post',
@@ -147,6 +150,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'theme' =>  'Balsamine Slider',
             'layout' => 'balsamine_layout',
             'render_system' => 'php',
+            'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
                 'list-post',
