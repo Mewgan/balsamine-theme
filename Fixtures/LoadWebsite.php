@@ -21,8 +21,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
-                'list-post',
-                'single-post',
+                'post',
                 'grid-editor',
                 'team',
                 'price',
@@ -101,8 +100,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
-                'list-post',
-                'single-post',
+                'post',
                 'grid-editor',
                 'team',
                 'price',
@@ -127,8 +125,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
-                'list-post',
-                'single-post',
+                'post',
                 'grid-editor',
                 'team',
                 'price',
@@ -153,8 +150,7 @@ class LoadWebsite extends AbstractFixture implements DependentFixtureInterface
             'expiration_date' => '2017-12-20 10:00:00',
             'modules' => [
                 'navigation',
-                'list-post',
-                'single-post',
+                'post',
                 'grid-editor',
                 'team',
                 'price',
