@@ -243,7 +243,7 @@ class LoadAdminCustomField extends AbstractFixture implements DependentFixtureIn
         /* Page */
         'balsamine_page' => [
             'scope' => 'specified',
-            'title' => 'Image du bandeau du haut (Header)',
+            'title' => 'Image du bandeau du haut',
             'name' => 'subheader',
             'type' => 'media',
             'position' => 0,
