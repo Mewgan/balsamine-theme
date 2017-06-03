@@ -1,11 +1,8 @@
-{% block css %}
-    <style>
-        .side-bg .background-image{
-            background: url({{ img(post.thumbnail.path) }}) top;
-        }
-    </style>
-{% endblock %}
-
+<style>
+    .side-bg .background-image{
+        background: url({{ img(post.thumbnail.path) }}) top;
+    }
+</style>
 <section aria-label="services-hair" class="side-bg">
     <div class="col-md-6 image-container">
         <div class="background-image"></div>
@@ -20,3 +17,8 @@
         </div>
     </div>
 </section>
+<script>
+    document.title = "{{ field_render('meta_title', 'post@' ~ post.id) }}";
+    $('meta[name=description]').attr('content', "{{ field_render('meta_description', 'post@' ~ post.id) }}");
+    $('meta[name=keywords]').attr('content', "{{ field_render('meta_keywords', 'post@' ~ post.id) }}");
+</script>

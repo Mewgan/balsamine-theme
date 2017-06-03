@@ -58,3 +58,9 @@
         </div>
     </div>
 </section>
+
+{% if data.page.type == 'dynamic' and posts[0] is defined and posts[0].categories[0] is defined %}
+    <script>
+        document.title = "{{ posts[0].categories[0].name }}";
+    </script>
+{% endif %}

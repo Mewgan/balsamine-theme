@@ -14,7 +14,7 @@ class LoadPage extends AbstractFixture implements DependentFixtureInterface
     protected $data = [
         /* Balsamine pages */
         'society-balsamine-single-post' =>  [
-            'title' => 'Page d\'un article',
+            'title' => 'Article',
             'route' => 'module:post.type:dynamic.action:read',
             'website' => 'Balsamine Website',
             'layout' => 'balsamine_page_layout',

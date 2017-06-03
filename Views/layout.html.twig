@@ -8,18 +8,14 @@
         <meta name="description" content="{% block description %}{{ field_render('meta_description','page') }}{% endblock %}">
         <meta name="keywords" content="{% block keywords %}{{ field_render('meta_keywords','page') }}{% endblock %}" />
         <link rel="icon" href="{{ img(field_render('favicon').path) }}" />
-        {# debugbar #}
         {#{{ debug_bar_header()|raw }}#}
-        {# End debugbar #}
-
-
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-
+        <script async src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
 
         <!-- CSS Files
         ================================================== -->
@@ -186,7 +182,7 @@
                         <div class="col-md-6 text-right">
                             <div class="social-icons">
                                 {% for social in socials %}
-                                    <a href="{{ social.link }}"><i class="fa fa-{{ social.name | lower }} fa-lg"></i></a>
+                                    <a href="{{ social.link }}"><i class="fa fa-{{ social.name | replace({' ': '-'}) | lower }} fa-lg"></i></a>
                                 {% endfor %}
                             </div>
                         </div>
@@ -204,7 +200,6 @@
         var logo_dir_1 = "{{ img(logo.path) }}"; // change with your logo path
         var logo_dir_2 = "{{ img(logo_light.path) }}"; // change with your logo path (for light background)
     </script>
-    <script src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
     <script defer src="{{ asset('libs/owl/owl.carousel.min.js') }}"></script>
     <script defer src="{{ asset('libs/lazysizes/lazysizes.min.js') }}"></script>
@@ -244,9 +239,6 @@
     <script>
         {{ field_render('js_block') | raw }}
     </script>
-
-    {# debugbar #}
     {#{{ debug_bar_footer()|raw }}#}
-    {# End debugbar#}
 </body>
 </html>
