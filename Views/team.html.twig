@@ -5,7 +5,7 @@
             <div class="team-member">
                 <img src="{{ img(member.photo.path) }}" class="img-circle pic-grey" alt="{{ member.photo.alt }}" />
                 <h3>{{ member.full_name }}</h3>
-                <p>{{ member.description }}</p>
+                <p>{{ member.description | raw }}</p>
             </div>
         </div>
     {% endfor %}
