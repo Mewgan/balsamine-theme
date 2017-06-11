@@ -9,7 +9,6 @@
 {% endblock %}
 
 {% block page %}
-
 <!-- subheader -->
 <section id="subheader" class="subh-center" data-stellar-background-ratio=".2">
     <div class="container">
@@ -24,7 +23,7 @@
 
 <!-- content begin -->
 <div id="content">
-   {{ page_render('', 'page') }}
+   {{ include(template_from_string(page_render('', 'page'))) }}
 </div>
 
 {% endblock %}

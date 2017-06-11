@@ -2,11 +2,16 @@
 <html lang="fr">
 <head>
     {% block head %}
+
+        {{ _seo.offsetSet('title', field_render('meta_title', 'page')) }}
+        {{ _seo.offsetSet('description', field_render('meta_description', 'page')) }}
+        {{ _seo.offsetSet('keywords', field_render('meta_keywords', 'page')) }}
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}{{ field_render('meta_title','page') }}{% endblock %}</title>
-        <meta name="description" content="{% block description %}{{ field_render('meta_description','page') }}{% endblock %}">
-        <meta name="keywords" content="{% block keywords %}{{ field_render('meta_keywords','page') }}{% endblock %}" />
+        <title>{% block title deferred %}{{ _seo.title }}{% endblock %}</title>
+        <meta name="description" content="{% block description deferred %}{{ _seo.description }}{% endblock %}">
+        <meta name="keywords" content="{% block keywords deferred %}{{ _seo.keywords }}{% endblock %}" />
         <link rel="icon" href="{{ img(field_render('favicon').path) }}" />
         {#{{ debug_bar_header()|raw }}#}
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -15,8 +20,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-        <script async src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
-
+        <script src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
         <!-- CSS Files
         ================================================== -->
         <link rel="stylesheet" href="{{ asset('libs/bootstrap/bootstrap.css') }}" type="text/css">
@@ -107,7 +111,7 @@
                         <span id="menu-btn"></span>
                         <!-- small button close -->
 
-                        {{ content_render('navigation') }}
+                        {{ content_render('navigation') | raw }}
 
                     </div>
                     <!-- mainmenu close -->
