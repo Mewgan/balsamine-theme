@@ -1,248 +1,248 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     {% block head %}
 
-        {{ _seo.offsetSet('title', field_render('meta_title', 'page')) }}
-        {{ _seo.offsetSet('description', field_render('meta_description', 'page')) }}
-        {{ _seo.offsetSet('keywords', field_render('meta_keywords', 'page')) }}
+    {{ _seo.offsetSet('title', field_render('meta_title', 'page')) }}
+    {{ _seo.offsetSet('description', field_render('meta_description', 'page')) }}
+    {{ _seo.offsetSet('keywords', field_render('meta_keywords', 'page')) }}
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title deferred %}{{ _seo.title }}{% endblock %}</title>
-        <meta name="description" content="{% block description deferred %}{{ _seo.description }}{% endblock %}">
-        <meta name="keywords" content="{% block keywords deferred %}{{ _seo.keywords }}{% endblock %}" />
-        <link rel="icon" href="{{ img(field_render('favicon').path) }}" />
-        {#{{ debug_bar_header()|raw }}#}
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        <script src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
-        <!-- CSS Files
-        ================================================== -->
-        <link rel="stylesheet" href="{{ asset('libs/bootstrap/bootstrap.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ asset('libs/animate/animate.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ asset('libs/owl/owl.carousel.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ asset('libs/owl/owl.theme.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ asset('libs/owl/owl.transitions.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('jpreloader.css', 'Balsamine') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('plugin.css', 'Balsamine') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('magnific-popup.css', 'Balsamine') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('style.css', 'Balsamine') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('demo.css', 'Balsamine') }}" type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title deferred %}{{ _seo.title }}{% endblock %}</title>
+    <meta name="description" content="{% block description deferred %}{{ _seo.description }}{% endblock %}">
+    <meta name="keywords" content="{% block keywords deferred %}{{ _seo.keywords }}{% endblock %}" />
+    <link rel="icon" href="{{ img(field_render('favicon').path) }}" />
+    {#{{ debug_bar_header()|raw }}#}
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
+    <!-- CSS Files
+    ================================================== -->
+    <link rel="stylesheet" href="{{ asset('libs/bootstrap/bootstrap.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('libs/animate/animate.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('libs/owl/owl.carousel.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('libs/owl/owl.theme.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('libs/owl/owl.transitions.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ theme_asset('jpreloader.css', 'Balsamine') }}" type="text/css">
+    <link rel="stylesheet" href="{{ theme_asset('plugin.css', 'Balsamine') }}" type="text/css">
+    <link rel="stylesheet" href="{{ theme_asset('magnific-popup.css', 'Balsamine') }}" type="text/css">
+    <link rel="stylesheet" href="{{ theme_asset('style.css', 'Balsamine') }}" type="text/css">
+    <link rel="stylesheet" href="{{ theme_asset('demo.css', 'Balsamine') }}" type="text/css">
 
-        <!-- custom background -->
-        <link rel="stylesheet" href="{{ theme_asset('bg.css', 'Balsamine') }}" type="text/css">
+    <!-- custom background -->
+    <link rel="stylesheet" href="{{ theme_asset('bg.css', 'Balsamine') }}" type="text/css">
 
-        <!-- color scheme -->
-        <link rel="stylesheet" href="{{ theme_asset('colors/'~field_render('theme_color')~'.css', 'Balsamine') }}" type="text/css" id="colors">
+    <!-- color scheme -->
+    <link rel="stylesheet" href="{{ theme_asset('colors/'~field_render('theme_color')~'.css', 'Balsamine') }}" type="text/css" id="colors">
 
-        <!-- load fonts -->
-        <link rel="stylesheet" href="{{ asset('libs/font-awesome/font-awesome.min.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('fonts/elegant_font/HTML_CSS/style.css', 'Balsamine') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('fonts/et-line-font/style.css', 'Balsamine') }}" type="text/css">
+    <!-- load fonts -->
+    <link rel="stylesheet" href="{{ asset('libs/font-awesome/font-awesome.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ theme_asset('fonts/elegant_font/HTML_CSS/style.css', 'Balsamine') }}" type="text/css">
+    <link rel="stylesheet" href="{{ theme_asset('fonts/et-line-font/style.css', 'Balsamine') }}" type="text/css">
 
-        <!-- revolution slider -->
-        <link rel="stylesheet" href="{{ theme_asset('rs-plugin/css/settings.css', 'Balsamine') }}" type="text/css">
-        <link rel="stylesheet" href="{{ theme_asset('rev-settings.css', 'Balsamine') }}" type="text/css">
+    <!-- revolution slider -->
+    <link rel="stylesheet" href="{{ theme_asset('rs-plugin/css/settings.css', 'Balsamine') }}" type="text/css">
+    <link rel="stylesheet" href="{{ theme_asset('rev-settings.css', 'Balsamine') }}" type="text/css">
 
-        {% for stylesheet in data.stylesheets %}
-            {% if stylesheet.type == 'file' %}
-                <link rel="stylesheet" href="{{ asset(stylesheet.content) }}">
+    {% for stylesheet in data.stylesheets %}
+        {% if stylesheet.type == 'file' %}
+            <link rel="stylesheet" href="{{ asset(stylesheet.content) }}">
+        {% else %}
+            <style>
+                {{ stylesheet.content }}
+            </style>
+        {% endif %}
+    {% endfor %}
+
+    {% for library in data.libraries %}
+        {% if library.category == 'css' %}
+            {% if library.type == 'file' %}
+                <link rel="stylesheet" href="{{ asset(library.path) }}">
             {% else %}
-                <style>
-                    {{ stylesheet.content }}
-                </style>
+                <link rel="stylesheet" href="{{ library.path }}">
             {% endif %}
-        {% endfor %}
+        {% endif %}
+    {% endfor %}
 
-        {% for library in data.libraries %}
-            {% if library.category == 'css' %}
-                {% if library.type == 'file' %}
-                    <link rel="stylesheet" href="{{ asset(library.path) }}">
-                {% else %}
-                    <link rel="stylesheet" href="{{ library.path }}">
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-
-        {% block css %}{% endblock %}
-        <style>
-            @media screen and (min-width: 993px) {
-                header.header_left #logo img {
-                    margin-top: 30px
-                }
+    {% block css %}{% endblock %}
+    <style>
+        @media screen and (min-width: 993px) {
+            header.header_left #logo img {
+                margin-top: 30px
             }
-            {{ field_render('css_block') }}
-        </style>
+        }
+        {{ field_render('css_block') }}
+    </style>
 
     {% endblock %}
 </head>
 
 <body id="homepage">
 
-    {% set salon = data_render('Jet\\Models\\Society', ['s.name','s.email','s.phone']) %}
-    {% set address = data_render('Jet\\Models\\Address', ['a.address','a.city','a.postal_code','a.country','a.latitude','a.longitude']) %}
-    {% set booking_link = field_render('booking_link') %}
-    {% set opening_hours = field_render('opening_hours') %}
-    {% set socials = field_render('social_networks') %}
-    {% set logo = field_render('logo') %}
-    {% set logo_light = field_render('logo_light') %}
+{% set salon = data_render('Jet\\Models\\Society', ['s.name','s.email','s.phone']) %}
+{% set address = data_render('Jet\\Models\\Address', ['a.address','a.city','a.postal_code','a.country','a.latitude','a.longitude']) %}
+{% set booking_link = field_render('booking_link') %}
+{% set opening_hours = field_render('opening_hours') %}
+{% set socials = field_render('social_networks') %}
+{% set logo = field_render('logo') %}
+{% set logo_light = field_render('logo_light') %}
 
-    <div id="wrapper">
-        <!-- header begin -->
-        <header class="header_{{ field_render('navigation_position')}}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- logo begin -->
-                        <div id="logo">
-                            <a href="{{ link('home') }}">
-                                <img class="logo logo_dark_bg" src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
-                                <img class="logo logo_light_bg" src="{{ img(logo_light.path) }}" alt="{{ logo_light.alt }}">
-                            </a>
+<div id="wrapper">
+    <!-- header begin -->
+    <header class="header_{{ field_render('navigation_position')}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- logo begin -->
+                    <div id="logo">
+                        <a href="{{ link('home') }}">
+                            <img class="logo logo_dark_bg" src="{{ img(logo.path) }}" alt="{{ logo.alt }}">
+                            <img class="logo logo_light_bg" src="{{ img(logo_light.path) }}" alt="{{ logo_light.alt }}">
+                        </a>
+                    </div>
+                    <!-- logo close -->
+
+                    <!-- small button begin -->
+                    <span id="menu-btn"></span>
+                    <!-- small button close -->
+
+                    {{ content_render('navigation') | raw }}
+
+                </div>
+                <!-- mainmenu close -->
+
+            </div>
+        </div>
+    </header>
+
+    {% block page %}
+    {% endblock %}
+
+    <!-- section begin -->
+    <section id="cta" aria-label="cta" class="call-to-action bg-color-2 wow fadeInLeftBig text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 mt10">
+                    <h3><i class="fa fa-phone mr10"></i>Contactez-nous !</h3>
+                </div>
+
+                <div class="col-md-3 text-right">
+                    {% if booking_link != '' %}
+                        <a href="{{ booking_link }}" class="btn btn-line-white btn-big">Réservez maintenant</a>
+                    {% else %}
+                        <a href="{{ link('module:contact.type:static.action:show') }}" class="btn btn-line-white btn-big" data-wow-delay=".3s">Contact</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section close -->
+
+
+    <!-- footer begin -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="widget">
+                        <h3>Nous sommes ouverts</h3>
+                        <div class="box-border double">
+                            {{ opening_hours | raw }}
                         </div>
-                        <!-- logo close -->
-
-                        <!-- small button begin -->
-                        <span id="menu-btn"></span>
-                        <!-- small button close -->
-
-                        {{ content_render('navigation') | raw }}
-
-                    </div>
-                    <!-- mainmenu close -->
-
-                </div>
-            </div>
-        </header>
-
-        {% block page %}
-        {% endblock %}
-
-        <!-- section begin -->
-        <section id="cta" aria-label="cta" class="call-to-action bg-color-2 wow fadeInLeftBig text-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9 mt10">
-                        <h3><i class="fa fa-phone mr10"></i>Contactez-nous !</h3>
-                    </div>
-
-                    <div class="col-md-3 text-right">
-                        {% if booking_link != '' %}
-                            <a href="{{ booking_link }}" class="btn btn-line-white btn-big">Réservez maintenant</a>
-                        {% else %}
-                            <a href="{{ link('module:contact.type:static.action:show') }}" class="btn btn-line-white btn-big" data-wow-delay=".3s">Contact</a>
-                        {% endif %}
                     </div>
                 </div>
+
+                <div class="col-md-6">
+                    <div class="widget widget-address">
+                        <h3>Contactez-Nous</h3>
+
+                        <address>
+                            <span>{{ address.address }}</span>
+                            <span>{{ address.postal_code }} {{ address.city }}</span>
+                            <span>{{ address.country }}</span>
+                            <span><strong>Tél:</strong>{{ salon.phone }}</span>
+                            <span><strong>E-mail:</strong><a href="mailto:{{ salon.email }}">{{ salon.email }}</a></span>
+                        </address>
+                    </div>
+                </div>
+
+
             </div>
-        </section>
-        <!-- section close -->
+        </div>
 
-
-        <!-- footer begin -->
-        <footer>
+        <div class="subfooter">
             <div class="container">
                 <div class="row">
-
                     <div class="col-md-6">
-                        <div class="widget">
-                            <h3>Nous sommes ouverts</h3>
-                            <div class="box-border double">
-                                {{ opening_hours | raw }}
-                            </div>
-                        </div>
+                        &copy; Copyright {{ "now" | date("Y") }} - {{ salon.name }}
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="widget widget-address">
-                            <h3>Contactez-Nous</h3>
-
-                            <address>
-                                <span>{{ address.address }}</span>
-                                <span>{{ address.postal_code }} {{ address.city }}</span>
-                                <span>{{ address.country }}</span>
-                                <span><strong>Tél:</strong>{{ salon.phone }}</span>
-                                <span><strong>E-mail:</strong><a href="mailto:{{ salon.email }}">{{ salon.email }}</a></span>
-                            </address>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div class="subfooter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            &copy; Copyright {{ "now" | date("Y") }} - {{ salon.name }}
-                        </div>
-
-                        <div class="col-md-6 text-right">
-                            <div class="social-icons">
-                                {% for social in socials %}
-                                    <a href="{{ social.link }}"><i class="fa fa-{{ social.name | replace({' ': '-'}) | lower }} fa-lg"></i></a>
-                                {% endfor %}
-                            </div>
+                    <div class="col-md-6 text-right">
+                        <div class="social-icons">
+                            {% for social in socials %}
+                                <a href="{{ social.link }}"><i class="fa fa-{{ social.name | replace({' ': '-'}) | lower }} fa-lg"></i></a>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-        </footer>
-        <!-- footer close -->
-    </div>
+    </footer>
+    <!-- footer close -->
+</div>
 
-    <!-- Javascript Files
-    ================================================== -->
-    <script>
-        var logo_dir_1 = "{{ img(logo.path) }}"; // change with your logo path
-        var logo_dir_2 = "{{ img(logo_light.path) }}"; // change with your logo path (for light background)
-    </script>
-    <script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script defer src="{{ asset('libs/owl/owl.carousel.min.js') }}"></script>
-    <script defer src="{{ asset('libs/lazysizes/lazysizes.min.js') }}"></script>
-    <script defer src="{{ theme_asset('jpreLoader.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('jquery.isotope.min.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('easing.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('jquery.flexslider-min.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('jquery.scrollto.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('jquery.countTo.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('classie.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('video.resize.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('wow.min.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('jquery.magnific-popup.min.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('enquire.min.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('jquery.stellar.min.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('designesia.js', 'Balsamine') }}"></script>
-    <script defer src="{{ theme_asset('demo.js', 'Balsamine') }}"></script>
+<!-- Javascript Files
+================================================== -->
+<script>
+    var logo_dir_1 = "{{ img(logo.path) }}"; // change with your logo path
+    var logo_dir_2 = "{{ img(logo_light.path) }}"; // change with your logo path (for light background)
+</script>
+<script src="{{ asset('libs/bootstrap/js/bootstrap.min.js') }}"></script>
+<script defer src="{{ asset('libs/owl/owl.carousel.min.js') }}"></script>
+<script defer src="{{ asset('libs/lazysizes/lazysizes.min.js') }}"></script>
+<script defer src="{{ theme_asset('jpreLoader.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('jquery.isotope.min.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('easing.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('jquery.flexslider-min.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('jquery.scrollto.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('jquery.countTo.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('classie.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('video.resize.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('wow.min.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('jquery.magnific-popup.min.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('enquire.min.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('jquery.stellar.min.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('designesia.js', 'Balsamine') }}"></script>
+<script defer src="{{ theme_asset('demo.js', 'Balsamine') }}"></script>
 
-    <!-- SLIDER REVOLUTION SCRIPTS  -->
-    <script type="text/javascript" src="{{ theme_asset('rs-plugin/js/jquery.themepunch.plugins.min.js', 'Balsamine') }}"></script>
-    <script type="text/javascript" src="{{ theme_asset('rs-plugin/js/jquery.themepunch.revolution.min.js', 'Balsamine') }}"></script>
+<!-- SLIDER REVOLUTION SCRIPTS  -->
+<script type="text/javascript" src="{{ theme_asset('rs-plugin/js/jquery.themepunch.plugins.min.js', 'Balsamine') }}"></script>
+<script type="text/javascript" src="{{ theme_asset('rs-plugin/js/jquery.themepunch.revolution.min.js', 'Balsamine') }}"></script>
 
-    <!-- current page only scripts -->
-    <script src="{{ theme_asset('typed.js', 'Balsamine') }}"></script>
-    <script src="{{ theme_asset('typed-custom.js', 'Balsamine') }}"></script>
+<!-- current page only scripts -->
+<script src="{{ theme_asset('typed.js', 'Balsamine') }}"></script>
+<script src="{{ theme_asset('typed-custom.js', 'Balsamine') }}"></script>
 
-    {% for library in data.libraries %}
-        {% if library.category == 'js' %}
-            {% if library.type == 'file' %}
-                <script type="text/javascript" src="{{ asset(library.path) }}"></script>
-            {% else %}
-                <script type="text/javascript" src="{{ library.path }}"></script>
-            {% endif %}
+{% for library in data.libraries %}
+    {% if library.category == 'js' %}
+        {% if library.type == 'file' %}
+            <script type="text/javascript" src="{{ asset(library.path) }}"></script>
+        {% else %}
+            <script type="text/javascript" src="{{ library.path }}"></script>
         {% endif %}
-    {% endfor %}
-    {% block js %}{% endblock %}
-    <script>
-        {{ field_render('js_block') | raw }}
-    </script>
-    {#{{ debug_bar_footer()|raw }}#}
+    {% endif %}
+{% endfor %}
+{% block js %}{% endblock %}
+<script>
+    {{ field_render('js_block') | raw }}
+</script>
+{#{{ debug_bar_footer()|raw }}#}
 </body>
 </html>
