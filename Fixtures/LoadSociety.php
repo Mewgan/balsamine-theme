@@ -16,24 +16,28 @@ class LoadSociety extends AbstractFixture implements DependentFixtureInterface
             'name' => 'Balsamine Society',
             'email' => 'contact@balsamine.com',
             'phone' => '0123456789',
+            'address' => 'balsamine-address',
             'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         [
             'name' => 'Balsamine Slider Society',
             'email' => 'contact@balsamine-slider.com',
             'phone' => '0123456789',
+            'address' => 'balsamine-slider-address',
             'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         [
             'name' => 'Balsamine Video Society',
             'email' => 'contact@balsamine-video.com',
             'phone' => '0123456789',
+            'address' => 'balsamine-video-address',
             'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         [
             'name' => 'Zoro Society',
             'email' => 'contact@zoro.com',
             'phone' => '0123456789',
+            'address' => 'zoro-address',
             'account' => 'zoro@onepiece.com'
         ]
     ];
@@ -52,7 +56,8 @@ class LoadSociety extends AbstractFixture implements DependentFixtureInterface
     function getDependencies()
     {
         return [
-            'Jet\DataFixtures\LoadAccount'
+            'Jet\DataFixtures\LoadAccount',
+            'Jet\Themes\Balsamine\Fixtures\LoadAddress'
         ];
     }
 }

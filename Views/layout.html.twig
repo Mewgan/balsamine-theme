@@ -84,7 +84,7 @@
 
 <body id="homepage">
 
-{% set salon = data_render('Jet\\Models\\Society', ['s.name','s.email','s.phone']) %}
+{% set society = data_render('Jet\\Models\\Society', ['s.name','s.email','s.phone']) %}
 {% set address = data_render('Jet\\Models\\Address', ['a.address','a.city','a.postal_code','a.country','a.latitude','a.longitude']) %}
 {% set booking_link = field_render('booking_link') %}
 {% set opening_hours = field_render('opening_hours') %}
@@ -166,8 +166,8 @@
                             <span>{{ address.address }}</span>
                             <span>{{ address.postal_code }} {{ address.city }}</span>
                             <span>{{ address.country }}</span>
-                            <span><strong>Tél:</strong>{{ salon.phone }}</span>
-                            <span><strong>E-mail:</strong><a href="mailto:{{ salon.email }}">{{ salon.email }}</a></span>
+                            <span><strong>Tél:</strong>{{ society.phone }}</span>
+                            <span><strong>E-mail:</strong><a href="mailto:{{ society.email }}">{{ society.email }}</a></span>
                         </address>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        &copy; Copyright {{ "now" | date("Y") }} - {{ salon.name }}
+                        &copy; Copyright {{ "now" | date("Y") }} - {{ society.name }}
                     </div>
 
                     <div class="col-md-6 text-right">

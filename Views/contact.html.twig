@@ -42,17 +42,17 @@
                 <div class="col-md-4">
                     <h4>Société</h4>
                     <div class="tiny-border"><span></span></div>
-                    <p>{{ salon.name }}</p>
+                    <p>{{ society.name }}</p>
                 </div>
                 <div class="col-md-4">
                     <h4>E-mail</h4>
                     <div class="tiny-border"><span></span></div>
-                    <p>{{ salon.email }}</p>
+                    <p>{{ society.email }}</p>
                 </div>
                 <div class="col-md-4">
                     <h4>Téléphone</h4>
                     <div class="tiny-border"><span></span></div>
-                    <p>{{ salon.phone }}</p>
+                    <p>{{ society.phone }}</p>
                 </div>
             </div>
         </div>
@@ -62,18 +62,20 @@
 {% endblock %}
 
 {% block js %}
-    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArNGSSl-KPS23l24EilPNQhfmEw_V8BtI&libraries=places&region=FR"></script>
-    <script>
-        $(document).ready(function () {
-            var latlng = new google.maps.LatLng({{ address.latitude }}, {{ address.longitude }});
-            var map = new google.maps.Map(document.getElementById('gmap'), {
-                zoom: 13,
-                center: latlng
-            });
-            new google.maps.Marker({
-                position: latlng,
-                map: map
-            });
-        })
-    </script>
+    {% if address.latitude is not empty %}
+        <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArNGSSl-KPS23l24EilPNQhfmEw_V8BtI&libraries=places&region=FR"></script>
+        <script>
+            $(document).ready(function () {
+                var latlng = new google.maps.LatLng({{ address.latitude }}, {{ address.longitude }});
+                var map = new google.maps.Map(document.getElementById('gmap'), {
+                    zoom: 13,
+                    center: latlng
+                });
+                new google.maps.Marker({
+                    position: latlng,
+                    map: map
+                });
+            })
+        </script>
+    {% endif %}
 {% endblock %}

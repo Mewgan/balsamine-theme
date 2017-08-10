@@ -2,8 +2,8 @@
 
 namespace Jet\Themes\Balsamine\Fixtures;
 
-use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Jet\Services\LoadFixture;
 
@@ -14,32 +14,36 @@ class LoadAddress extends AbstractFixture implements DependentFixtureInterface
 
     protected $data = [
         'balsamine-address' => [
+            'alias' => 'Adresse de la société',
             'address' => '19 Rue Portefoin',
             'city' => 'Paris 3',
             'postal_code' => '75003',
-            'society' => 'Balsamine Society',
             'country' => 'FRANCE',
+            'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         'balsamine-slider-address' => [
+            'alias' => 'Adresse de la société',
             'address' => '20 Rue Portefoin',
             'city' => 'Paris 3',
             'postal_code' => '75003',
-            'society' => 'Balsamine Slider Society',
             'country' => 'FRANCE',
+            'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         'balsamine-video-address' => [
+            'alias' => 'Adresse de la société',
             'address' => '30 Rue Portefoin',
             'city' => 'Paris 3',
             'postal_code' => '75003',
-            'society' => 'Balsamine Video Society',
             'country' => 'FRANCE',
+            'account' => 'sumugan.sinnarasa@desico.fr'
         ],
         'zoro-address' => [
+            'alias' => 'Adresse de la société',
             'address' => '45 Rue Alexandre Fourny',
             'city' => 'Champigny Sur Marne',
             'postal_code' => '94500',
-            'society' => 'Zoro Society',
             'country' => 'FRANCE',
+            'account' => 'zoro@onepiece.com'
         ]
     ];
 
@@ -60,7 +64,7 @@ class LoadAddress extends AbstractFixture implements DependentFixtureInterface
     function getDependencies()
     {
         return [
-            'Jet\Themes\Balsamine\Fixtures\LoadSociety'
+            'Jet\DataFixtures\LoadAccount',
         ];
     }
 }
